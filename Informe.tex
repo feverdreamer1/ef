@@ -46,6 +46,7 @@ Para dotar a la simulación de sentido físico, hemos empleado parámetros típi
 
 Finalmente, el trabajo evalúa la robustez de este canal de transporte analizando la \textit{frustración del sistema} ante dos patologías o perturbaciones biológicas localizadas en el elemento central de una cadena fija de 5 barreras: la hipertrofia dimensional de una célula (variación del ancho del pozo) y la calcificación o degradación de una interconexión celular (variación del ancho de la barrera).
 
+
 \section{Resultados}
 A continuación, se presentan los coeficientes de transmisión frente a la energía de los electrones incidentes. Todos los resultados han sido procesados y graficados mediante rutinas propias en Python a partir de los datos numéricos exportados del simulador.
 
@@ -58,12 +59,15 @@ En primer lugar, se estudia el régimen de cadenas cortas (de 2 a 5 barreras). L
   \label{fig:Junto}
 \end{figure}
 
+
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=1.0 \linewidth]{Separado.png}
   \caption{Coeficientes de Transmisión para $N=2$, $3$, $4$ y $5$ barreras, destacando zonas de alta transmitancia.}
   \label{fig:Separado}
 \end{figure}
+
 
 Posteriormente, extendemos el análisis al régimen macroscópico (de 8 a 200 barreras), asimilable a un filamento de micelio consolidado. La Figura \ref{fig:Junto_N} ilustra cómo los picos discretos se fusionan definitivamente en una banda continua. Finalmente, la Figura \ref{fig:Separado_N} muestra de forma individual cómo los bordes de esta banda de transmisión se vuelven completamente verticales y estables en cadenas largas, permitiendo una transmisión cercana a 1 en un rango continuo de energías.
 
@@ -106,9 +110,102 @@ A diferencia del caso anterior, aquí la frustración no se debe únicamente a u
   \label{fig:Frustracion_Fuerte}
 \end{figure}
 
+\section{Análisis de los resultados}
+
+
+
+Para un número elevado de barreras, como \(N=200\), la heteroestructura deja de comportarse como un conjunto pequeño de pozos acoplados y puede aproximarse por una red periódica unidimensional. En este límite, el sistema se asemeja al modelo de Kronig--Penney, formado por una sucesión periódica de pozos y barreras rectangulares.
+
+En nuestro caso, cada celda elemental está formada por un pozo de anchura
+\[
+L=5\,\mathrm{nm},
+\]
+y una barrera de anchura
+\[
+b=2\,\mathrm{nm}.
+\]
+Por tanto, el periodo de la red es
+\[
+a=L+b=7\,\mathrm{nm}.
+\]
+
+El potencial periódico puede escribirse como
+\[
+V(x+a)=V(x),
+\]
+con
+\[
+V(x)=
+\begin{cases}
+0, & \text{en el pozo},\\
+V_0, & \text{en la barrera},
+\end{cases}
+\]
+donde
+\[
+V_0=0.4\,\mathrm{eV}.
+\]
+
+Para energías inferiores a la altura de la barrera, \(E<V_0\), definimos
+\[
+k=\frac{\sqrt{2m^*E}}{\hbar},
+\qquad
+\kappa=\frac{\sqrt{2m^*(V_0-E)}}{\hbar}.
+\]
+
+Aplicando el teorema de Bloch a una celda periódica, la función de onda debe satisfacer
+\[
+\psi(x+a)=e^{iKa}\psi(x),
+\]
+donde \(K\) es el vector de onda de Bloch. La relación de dispersión del modelo de Kronig--Penney para barreras rectangulares viene dada por
+\[
+\cos(Ka)=
+\cos(kL)\cosh(\kappa b)
++
+\frac{\kappa^2-k^2}{2k\kappa}
+\sin(kL)\sinh(\kappa b).
+\]
+
+Esta ecuación determina qué valores de energía están permitidos en la red. Como el miembro izquierdo cumple necesariamente
+\[
+-1\leq \cos(Ka)\leq 1,
+\]
+las energías permitidas son aquellas para las que
+\[
+\left|
+\cos(kL)\cosh(\kappa b)
++
+\frac{\kappa^2-k^2}{2k\kappa}
+\sin(kL)\sinh(\kappa b)
+\right|\leq 1.
+\]
+
+Sustituyendo los parámetros de la simulación,
+\[
+m^*=0.067m_e,
+\qquad
+L=5\,\mathrm{nm},
+\qquad
+b=2\,\mathrm{nm},
+\qquad
+V_0=0.4\,\mathrm{eV},
+\]
+se obtiene que la primera banda permitida aparece aproximadamente en el intervalo
+\[
+0.077\,\mathrm{eV}\lesssim E \lesssim 0.127\,\mathrm{eV}.
+\]
+
+Este resultado concuerda con la simulación para \(N=200\), donde la región de alta transmitancia aparece precisamente como una banda ancha en torno a 0,080 eV. Así, los picos discretos observados para pocas barreras se interpretan, en el límite de muchas celdas acopladas, como la formación de una minibanda de conducción.
+
+Además, aparece una segunda región permitida, en el intervalo [0,296 0,400] eV (límite de barrera)
+que se corresponde con la segunda zona de transmisión observada en la gráfica de \(N=200\). Por tanto, el modelo de Kronig--Penney proporciona una justificación analítica de la aparición de bandas de transmisión en la cadena larga.
+
+La primera banda observada alrededor de \(0.1\,\mathrm{eV}\) procede del estado fundamental del pozo, mientras que la segunda banda, situada aproximadamente en torno a \(0,3\,\mathrm{eV}\), se asocia al segundo modo cuantizado permitido.
+Así, cada nivel ligado del pozo aislado evoluciona hacia una banda de conducción cuando el número de barreras aumenta significativamente.
 
 \newpage
-prueba
+
+\nocite{Kronig}
 \bibliographystyle{plain} 
 \bibliography{refs}
 \end{document}
