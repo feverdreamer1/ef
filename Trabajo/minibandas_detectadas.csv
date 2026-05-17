@@ -1,0 +1,11 @@
+archivo,E_inicio,E_fin,T_max
+1barrera.txt,0.065,0.5,0.693343
+2barreras.txt,0.125625,0.1625,0.997623
+2barreras.txt,0.395,0.6,0.999373
+3barreras.txt,0.120938,0.16875,0.999285
+3barreras.txt,0.4275,0.6,0.999577
+4barreras.txt,0.102344,0.1675,0.999994
+4barreras.txt,0.38,0.5,0.997633
+5barreras.txt,0.101172,0.169375,0.999957
+5barreras.txt,0.38125,0.5,0.998969
+minibandas_detectadas.csv,0.693343,0.999957,0.6
