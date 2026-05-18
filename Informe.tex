@@ -203,6 +203,35 @@ que se corresponde con la segunda zona de transmisión observada en la gráfica 
 La primera banda observada alrededor de \(0.1\,\mathrm{eV}\) procede del estado fundamental del pozo, mientras que la segunda banda, situada aproximadamente en torno a \(0,3\,\mathrm{eV}\), se asocia al segundo modo cuantizado permitido.
 Así, cada nivel ligado del pozo aislado evoluciona hacia una banda de conducción cuando el número de barreras aumenta significativamente.
 
+Para el escenario de la alteración morfológica en la célula fúngica central, aunque la expresión exacta del pozo infinito no es aplicable cuantitativamente a una heteroestructura finita acoplada, la tendencia física se mantiene.
+
+Supongamos
+
+\begin{equation}
+V(x) = \begin{cases}
+0, & \text{si } 0 \leq x \leq L, \\
+\infty, & \text{en otro caso.}
+\end{cases}
+\end{equation}
+
+Fuera del pozo, $\phi(x) = 0$. Dentro del pozo, la función de onda debe satisfacer la ecuación de Schrödinger independiente del tiempo:
+
+\begin{equation}
+  -\frac{\hbar^2}{2m}\frac{d^2\phi}{dx^2} = E\phi,
+\end{equation}
+
+cuya ecuación diferencial es formalmente análoga a la del oscilador armónico simple, admitiendo una solución de la forma
+
+\begin{equation}
+  \phi(x) = A\sin(kx) + B\cos(kx),
+\end{equation}
+
+donde $k = \sqrt{2mE}/\hbar$. Aplicando las condiciones de frontera $\phi(0) = 0$ y $\phi(L) = 0$, se obtiene que $B = 0$ y que $kL = n\pi$, con $n$ un número entero positivo. Por tanto, los niveles de energía permitidos para el pozo infinito son:
+
+\begin{equation}
+  E_n = \frac{\hbar^2 k_n^2}{2m} = \frac{\hbar^2 \pi^2 n^2}{2mL^2}.
+\end{equation}
+
 \newpage
 
 hellooo
