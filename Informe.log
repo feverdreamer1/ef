@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.20)  19 MAY 2026 10:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.20)  19 MAY 2026 10:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -697,14 +697,11 @@ File: LogoUGR.png Graphic file (type png)
 Package pdftex.def Info: LogoUGR.png  used on input line 146.
 (pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
  [3 <./Fig_Interfase_Rota.png> <./Fig_Frustracion_Fuerte.png>]
-
-LaTeX Warning: Citation `BenDaniel1966' on page 4 undefined on input line 154.
-
 File: LogoUGR.png Graphic file (type png)
 <use LogoUGR.png>
 Package pdftex.def Info: LogoUGR.png  used on input line 177.
 (pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
-[4] (Informe.bbl)
+ [4] (Informe.bbl)
 File: LogoUGR.png Graphic file (type png)
 <use LogoUGR.png>
 Package pdftex.def Info: LogoUGR.png  used on input line 186.
@@ -717,25 +714,21 @@ LaTeX Info: Redefining \% on input line 13.
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `Informe.out' has not changed.
 (rerunfilecheck)             Checksum: C817E2278575CDA701DB1403CCB18357;1418.
  ) 
 Here is how much of TeX's memory you used:
- 24581 strings out of 467691
- 461779 string characters out of 5414987
- 863301 words of memory out of 5000000
- 53211 multiletter control sequences out of 15000+600000
+ 24585 strings out of 467691
+ 461842 string characters out of 5414987
+ 863336 words of memory out of 5000000
+ 53214 multiletter control sequences out of 15000+600000
  639022 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,118p,923b,766s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/shara/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/shara/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/shara/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/shara/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/shara/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/shara/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/shara/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/shara/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/shara/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/shara/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/shara/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/shara/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/shara/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/shara/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/shara/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Informe.pdf (5 pages, 1629281 bytes).
+Output written on Informe.pdf (5 pages, 1630217 bytes).
 PDF statistics:
- 184 PDF objects out of 1000 (max. 8388607)
- 29 named destinations out of 1000 (max. 500000)
+ 186 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
  96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
