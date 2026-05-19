@@ -2,12 +2,12 @@
 ["bibtex Informe"] 0 "Informe.aux" "Informe.bbl" "Informe" 0 -1
   "./refs.bib" 1779181723 1813 b0c2aba792d26234e94ba32b69cbf200 ""
   "C:/Users/shara/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Informe.aux" 1779182268 962 c854f441f9adc1a5d21d70791f81644d "pdflatex"
+  "Informe.aux" 1779182279 962 c854f441f9adc1a5d21d70791f81644d "pdflatex"
   (generated)
   "Informe.bbl"
   "Informe.blg"
   (rewritten before read)
-["pdflatex"] 1779182267.35677 "c:/Users/shara/Desktop/Electronica Fisica/Trabajo/Informe/Informe.tex" "Informe.pdf" "Informe" 1779182270.43044 2
+["pdflatex"] 1779182277.59786 "c:/Users/shara/Desktop/Electronica Fisica/Trabajo/Informe/Informe.tex" "Informe.pdf" "Informe" 1779182281.34331 2
   "/@@par " 0 -1 0 ""
   "/relax " 0 -1 0 ""
   "C:/Users/shara/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1779090711 81117 0754b2bdd801bdb5b41468aa14a51bc6 ""
@@ -179,9 +179,9 @@
   "C:/Users/shara/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "Fig_Apilada_TsuEsaki.png" 1779179241 214623 745095f6aa0bb405f2ac2c28897f979a ""
   "Fig_Interfase_Rota.png" 1778932489 276525 1f20d018450dbc9c4d6093e79b6cd8c6 ""
-  "Informe.aux" 1779182268 962 c854f441f9adc1a5d21d70791f81644d "pdflatex"
+  "Informe.aux" 1779182279 962 c854f441f9adc1a5d21d70791f81644d "pdflatex"
   "Informe.bbl" 1779182263 1320 94ea03edbfbf6e06a331adc2274c435e "bibtex Informe"
-  "Informe.out" 1779182268 199 edeeb5f28cc573e6dd4baeb79f527d04 "pdflatex"
+  "Informe.out" 1779182279 199 edeeb5f28cc573e6dd4baeb79f527d04 "pdflatex"
   "Informe.tex" 1779182249 13953 476d1070ce360fc66eb4cb37e3b2294f ""
   "Junto.png" 1779179241 414052 6360785c13bb38ad8ebd5113e748196c ""
   "Junto_N.png" 1779179994 266745 4af3cbf37bc6f4a620be319bb274b8d7 ""
