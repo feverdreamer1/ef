@@ -652,17 +652,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <Junto.png, id=35, 460.3599pt x 323.5287pt>
 File: Junto.png Graphic file (type png)
 <use Junto.png>
-Package pdftex.def Info: Junto.png  used on input line 59.
-(pdftex.def)             Requested size: 218.51521pt x 153.56912pt.
+Package pdftex.def Info: Junto.png  used on input line 58.
+(pdftex.def)             Requested size: 455.24411pt x 319.93896pt.
 <Fig_Apilada_TsuEsaki.png, id=37, 479.8728pt x 379.1766pt>
 File: Fig_Apilada_TsuEsaki.png Graphic file (type png)
 <use Fig_Apilada_TsuEsaki.png>
-Package pdftex.def Info: Fig_Apilada_TsuEsaki.png  used on input line 65.
-(pdftex.def)             Requested size: 218.51521pt x 172.66447pt.
+Package pdftex.def Info: Fig_Apilada_TsuEsaki.png  used on input line 64.
+(pdftex.def)             Requested size: 455.24411pt x 359.7355pt.
 <LogoUGR.png, id=38, 401.5pt x 380.42125pt>
 File: LogoUGR.png Graphic file (type png)
 <use LogoUGR.png>
-Package pdftex.def Info: LogoUGR.png  used on input line 70.
+Package pdftex.def Info: LogoUGR.png  used on input line 67.
 (pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
  [1
 
@@ -670,53 +670,68 @@ Package pdftex.def Info: LogoUGR.png  used on input line 70.
 <Junto_N.png, id=61, 460.3599pt x 323.5287pt>
 File: Junto_N.png Graphic file (type png)
 <use Junto_N.png>
-Package pdftex.def Info: Junto_N.png  used on input line 77.
-(pdftex.def)             Requested size: 218.51521pt x 153.56912pt.
+Package pdftex.def Info: Junto_N.png  used on input line 73.
+(pdftex.def)             Requested size: 455.24411pt x 319.93896pt.
 <Fig_Apilada_TsuEsaki_N.png, id=62, 479.8728pt x 462.7689pt>
 File: Fig_Apilada_TsuEsaki_N.png Graphic file (type png)
 <use Fig_Apilada_TsuEsaki_N.png>
-Package pdftex.def Info: Fig_Apilada_TsuEsaki_N.png  used on input line 83.
-(pdftex.def)             Requested size: 218.51521pt x 210.72964pt.
+Package pdftex.def Info: Fig_Apilada_TsuEsaki_N.png  used on input line 79.
+(pdftex.def)             Requested size: 455.24411pt x 439.04187pt.
 File: LogoUGR.png Graphic file (type png)
 <use LogoUGR.png>
-Package pdftex.def Info: LogoUGR.png  used on input line 92.
+Package pdftex.def Info: LogoUGR.png  used on input line 82.
 (pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
- [2 <./Junto.png> <./Fig_Apilada_TsuEsaki.png> <./Junto_N.png> <./Fig_Apilada_TsuEsaki_N.png>]
-<Fig_Interfase_Rota.png, id=79, 516.2487pt x 323.5287pt>
+ [2 <./Junto.png>]
+File: LogoUGR.png Graphic file (type png)
+<use LogoUGR.png>
+Package pdftex.def Info: LogoUGR.png  used on input line 82.
+(pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
+ [3 <./Fig_Apilada_TsuEsaki.png>]
+File: LogoUGR.png Graphic file (type png)
+<use LogoUGR.png>
+Package pdftex.def Info: LogoUGR.png  used on input line 83.
+(pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
+ [4 <./Junto_N.png>]
+File: LogoUGR.png Graphic file (type png)
+<use LogoUGR.png>
+Package pdftex.def Info: LogoUGR.png  used on input line 89.
+(pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
+ [5 <./Fig_Apilada_TsuEsaki_N.png>]
+<Fig_Interfase_Rota.png, id=92, 516.2487pt x 323.5287pt>
 File: Fig_Interfase_Rota.png Graphic file (type png)
 <use Fig_Interfase_Rota.png>
-Package pdftex.def Info: Fig_Interfase_Rota.png  used on input line 99.
-(pdftex.def)             Requested size: 218.51521pt x 136.9425pt.
-<Fig_Frustracion_Fuerte.png, id=80, 516.2487pt x 323.5287pt>
+Package pdftex.def Info: Fig_Interfase_Rota.png  used on input line 92.
+(pdftex.def)             Requested size: 455.24411pt x 285.31334pt.
+<Fig_Frustracion_Fuerte.png, id=93, 516.2487pt x 323.5287pt>
 File: Fig_Frustracion_Fuerte.png Graphic file (type png)
 <use Fig_Frustracion_Fuerte.png>
-Package pdftex.def Info: Fig_Frustracion_Fuerte.png  used on input line 105.
-(pdftex.def)             Requested size: 218.51521pt x 136.9425pt.
+Package pdftex.def Info: Fig_Frustracion_Fuerte.png  used on input line 98.
+(pdftex.def)             Requested size: 455.24411pt x 285.31334pt.
 File: LogoUGR.png Graphic file (type png)
 <use LogoUGR.png>
-Package pdftex.def Info: LogoUGR.png  used on input line 146.
+Package pdftex.def Info: LogoUGR.png  used on input line 108.
 (pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
- [3 <./Fig_Interfase_Rota.png> <./Fig_Frustracion_Fuerte.png>]
-<image.png, id=93, 337.86224pt x 391.4625pt>
+ [6 <./Fig_Interfase_Rota.png> <./Fig_Frustracion_Fuerte.png>]
+<image.png, id=102, 337.86224pt x 391.4625pt>
 File: image.png Graphic file (type png)
 <use image.png>
-Package pdftex.def Info: image.png  used on input line 153.
+Package pdftex.def Info: image.png  used on input line 145.
 (pdftex.def)             Requested size: 227.62206pt x 263.73pt.
 File: LogoUGR.png Graphic file (type png)
 <use LogoUGR.png>
-Package pdftex.def Info: LogoUGR.png  used on input line 162.
+Package pdftex.def Info: LogoUGR.png  used on input line 149.
 (pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
- [4 <./image.png>] (Informe.bbl
+ [7]
 File: LogoUGR.png Graphic file (type png)
 <use LogoUGR.png>
-Package pdftex.def Info: LogoUGR.png  used on input line 33.
+Package pdftex.def Info: LogoUGR.png  used on input line 168.
 (pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
- [5])
+ [8 <./image.png>] (Informe.bbl)
 File: LogoUGR.png Graphic file (type png)
 <use LogoUGR.png>
-Package pdftex.def Info: LogoUGR.png  used on input line 196.
+Package pdftex.def Info: LogoUGR.png  used on input line 188.
 (pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
- [6] (Informe.aux
+ [9] (Informe.aux
 LaTeX Info: Redefining \. on input line 13.
 LaTeX Info: Redefining \% on input line 13.
 )
@@ -728,17 +743,17 @@ Package rerunfilecheck Info: File `Informe.out' has not changed.
 (rerunfilecheck)             Checksum: C817E2278575CDA701DB1403CCB18357;1418.
  ) 
 Here is how much of TeX's memory you used:
- 24636 strings out of 467691
- 458667 string characters out of 5425340
- 864489 words of memory out of 5000000
- 53262 multiletter control sequences out of 15000+600000
+ 24643 strings out of 467691
+ 458748 string characters out of 5425340
+ 864630 words of memory out of 5000000
+ 53266 multiletter control sequences out of 15000+600000
  639022 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,12n,118p,997b,877s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,118p,997b,793s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Informe.pdf (6 pages, 1676799 bytes).
+Output written on Informe.pdf (9 pages, 1679488 bytes).
 PDF statistics:
- 196 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
+ 210 PDF objects out of 1000 (max. 8388607)
+ 35 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
