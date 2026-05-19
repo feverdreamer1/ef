@@ -237,9 +237,6 @@ INPUT C:\Program Files\latex\tex\latex\tools\afterpage.sty
 INPUT C:\Program Files\latex\tex\latex\tools\afterpage.sty
 INPUT C:\Program Files\latex\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Program Files\latex\tex\latex\l3backend\l3backend-pdftex.def
-INPUT .\Informe.aux
-INPUT .\Informe.aux
-INPUT Informe.aux
 OUTPUT Informe.aux
 INPUT C:\Program Files\latex\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\latex\tex\context\base\mkii\supp-pdf.mkii

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.5.9)  19 MAY 2026 10:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.5.9)  19 MAY 2026 11:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -555,7 +555,8 @@ Package: afterpage 2023/07/04 v1.08 After-Page Package (DPC)
 )) (C:\Program Files\latex\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count337
-) (Informe.aux)
+)
+No file Informe.aux.
 \openout1 = `Informe.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
@@ -580,7 +581,7 @@ LaTeX Info: Redefining \. on input line 38.
 LaTeX Info: Redefining \% on input line 38.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported on input line 38.
- (C:\Program Files\latex\tex/context/base/mkii\supp-pdf.mkii
+(C:\Program Files\latex\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count338
 \scratchdimen=\dimen282
@@ -799,15 +800,15 @@ Package rerunfilecheck Info: Checksums for `Informe.out':
 ### semi simple group (level 1) entered at line 183 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 24627 strings out of 467691
- 458427 string characters out of 5425340
- 862976 words of memory out of 5000000
- 53255 multiletter control sequences out of 15000+600000
+ 24624 strings out of 467691
+ 458249 string characters out of 5425340
+ 862985 words of memory out of 5000000
+ 53254 multiletter control sequences out of 15000+600000
  639234 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,118p,1000b,831s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/latxfont/lasy10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Informe.pdf (5 pages, 1631564 bytes).
+Output written on Informe.pdf (5 pages, 1631575 bytes).
 PDF statistics:
  156 PDF objects out of 1000 (max. 8388607)
  30 named destinations out of 1000 (max. 500000)
