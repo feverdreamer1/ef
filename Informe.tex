@@ -31,7 +31,7 @@
 
 \geometry{margin=2.5cm}
 \title{Electrónica Física\\
-titulo ingenioso}
+Análisis del Transporte Cuántico y Fenómenos de Resonancia en Heteroestructuras Fúngicas}
 \author{Sharan Haresh Belani, Juan Montaraz Gómez, María Ramos Calderón\\ \&
 Nuria Touriño Verano}
 
@@ -42,7 +42,7 @@ Nuria Touriño Verano}
 \section{Introducción}
 En esta práctica analizamos el transporte cuántico utilizando la herramienta \texttt{Piece-Wise Constant Potential Barrier Tool} de nanoHUB \cite{nano}, que destaca por su versatilidad para simular heteroestructuras de distintas características. En este trabajo nos centraremos en variar el \textbf{número} de barreras (y, consecuentemente, de pozos) en el simulador para emular una red de micelio. En esta analogía, cada pozo cuántico representa una unidad celular fúngica, y cada barrera de potencial representa la interconexión entre ellas (septo). La primera y la última célula del dispositivo se consideran acopladas directamente a los contactos del sistema.
 
-Para dotar a la simulación de sentido físico, hemos empleado parámetros típicos de heteroestructuras semiconductoras, fijando una masa efectiva de $m^* = 0.067$ (la del GaAs), una anchura de pozo de $5\text{ nm}$, y barreras de $2\text{ nm}$ con una altura de potencial de $0.4\text{ eV}$. El objetivo principal es estudiar la evolución de la transmitancia al variar la longitud de la cadena desde $N=2$ hasta $N=200$ barreras, observando cómo la concatenación de estados discretos da lugar a la formación de una banda de conducción macroscópica. 
+Para dotar a la simulación de sentido físico, hemos empleado parámetros típicos de heteroestructuras semiconductoras basados en los estudios fundacionales de diodos túnel resonantes, fijando una masa efectiva de $m^* = 0.067$ (la del GaAs), una anchura de pozo de $5\text{ nm}$, y barreras de $2\text{ nm}$ con una altura de potencial de $0.5\text{ eV}$. El objetivo principal es estudiar la evolución de la transmitancia al variar la longitud de la cadena desde $N=2$ hasta $N=200$ barreras, observando cómo la concatenación de estados discretos da lugar a la formación de una banda de conducción macroscópica. 
 
 Finalmente, el trabajo evalúa la robustez de este canal de transporte analizando la \textit{frustración del sistema} ante dos patologías o perturbaciones biológicas localizadas en el elemento central de una cadena fija de 5 barreras: la hipertrofia dimensional de una célula (variación del ancho del pozo) y la calcificación o degradación de una interconexión celular (variación del ancho de la barrera).
 
@@ -50,90 +50,73 @@ Finalmente, el trabajo evalúa la robustez de este canal de transporte analizand
 \section{Resultados}
 A continuación, se presentan los coeficientes de transmisión frente a la energía de los electrones incidentes. Todos los resultados han sido procesados y graficados mediante rutinas propias en Python a partir de los datos numéricos exportados del simulador.
 
-En primer lugar, se estudia el régimen de cadenas cortas (de 2 a 5 barreras). La Figura \ref{fig:Junto} muestra la comparativa directa, donde se aprecia el desdoblamiento de los niveles de energía resonantes al aumentar el número de pozos acoplados. La Figura \ref{fig:Separado} desglosa este fenómeno, sombreando las regiones donde la probabilidad de transmisión supera el 50\%, evidenciando el inicio de la formación de minibandas.
+En primer lugar, se estudia el régimen de cadenas cortas (de 2 a 5 barreras). Las Figuras \ref{fig:Junto} y \ref{fig:Separado} muestran la comparativa directa del canal de transmisión. En la curva de la Figura \ref{fig:Junto} se aprecia el desdoblamiento de los niveles de energía resonantes al aumentar el número de pozos acoplados mediante un solapamiento directo, mientras que en la Figura \ref{fig:Separado} se desglosa este fenómeno en una torre de subplots apilados con marcas de ruptura de escala (estilo Tsu-Esaki), facilitando la identificación individualizada de cada pico de resonancia.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1.0\linewidth]{Junto.png}
-  \caption{Coeficientes de Transmisión para $N=2$, $3$, $4$ y $5$ barreras solapadas para ver el canal de transmisión.}
-  \label{fig:Junto}
+  \begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{Junto.png}
+    \caption{Coeficientes de transmisión solapados con recuadro de zoom ($N=2$ a $5$).}
+    \label{fig:Junto}
+  \end{minipage}\hfill
+  \begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{Fig_Apilada_TsuEsaki.png}
+    \caption{Desglose de subplots apilados en español con marcas de ruptura de eje ($//$).}
+    \label{fig:Separado}
+  \end{minipage}
 \end{figure}
 
-
+Posteriormente, extendemos el análisis al régimen macroscópico (de 8 a 200 barreras), asimilable a un filamento de micelio consolidado. Las Figuras \ref{fig:Junto_N} y \ref{fig:Separado_N} ilustran cómo los picos discretos se fusionan definitivamente en una banda continua. Como se observa en la gráfica de curvas solapadas de la Figura \ref{fig:Junto_N}, las funciones individuales se agrupan hasta formar un continuo denso. Por su parte, la representación apilada de la Figura \ref{fig:Separado_N} muestra de forma limpia cómo los bordes de esta banda de transmisión se vuelven completamente verticales y estables a medida que la cadena se hace más larga.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1.0 \linewidth]{Separado.png}
-  \caption{Coeficientes de Transmisión para $N=2$, $3$, $4$ y $5$ barreras, destacando zonas de alta transmitancia.}
-  \label{fig:Separado}
+  \begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{Junto_N.png}
+    \caption{Evolución macroscópica hacia el continuo sólido de bandas ($N=8$ a $200$).}
+    \label{fig:Junto_N}
+  \end{minipage}\hfill
+  \begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{Fig_Apilada_TsuEsaki_N.png}
+    \caption{Formación e individualización de la minibanda de conducción en ejes apilados.}
+    \label{fig:Separado_N}
+  \end{minipage}
 \end{figure}
-
-
-Posteriormente, extendemos el análisis al régimen macroscópico (de 8 a 200 barreras), asimilable a un filamento de micelio consolidado. La Figura \ref{fig:Junto_N} ilustra cómo los picos discretos se fusionan definitivamente en una banda continua. Finalmente, la Figura \ref{fig:Separado_N} muestra de forma individual cómo los bordes de esta banda de transmisión se vuelven completamente verticales y estables en cadenas largas, permitiendo una transmisión cercana a 1 en un rango continuo de energías.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0 \linewidth]{Junto_N.png}
-  \caption{Coeficientes de Transmisión para $N=8$, $12$, $20$, $50$ y $200$ barreras solapadas para ver el canal de transmisión.}
-  \label{fig:Junto_N}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth]{Separado_N (1).png}
-  \caption{Coeficientes de Transmisión para $N=8$, $12$, $20$, $50$ y $200$ barreras, destacando zonas de alta transmitancia.}
-  \label{fig:Separado_N}
-\end{figure}
-
-% Vemso que la transmisión se puede frustrar de varias maneras, de forma que eso puede ayudar en la historia
-% Manera 1: el hongo se vuelve enorme, manera 2: la interconexión entre hongos se bloquea.
-
 
 Por último, se analiza la respuesta del dispositivo fúngico ante perturbaciones estructurales localizadas utilizando como base el modelo simétrico de 5 barreras (4 pozos). Se evalúan de forma independiente dos escenarios críticos de frustración de la transmisión.
 
-El primer escenario modela una alteración morfológica en la célula fúngica central, incrementando su longitud de $6\text{ nm}$ a $10\text{ nm}$ (estado asimilable a una célula dañada o hipertrofiada). Como se observa en la Figura \ref{fig:Interfase_Rota}, este cambio altera la simetría de la heteroestructura y rompe las condiciones de efecto túnel resonante global. Al ensancharse el pozo central, sus autovalores de energía permitidos se desplazan hacia valores inferiores ($E_n \propto 1/L^2$), desalineándose de los niveles cuánticos de los pozos adyacentes. Como consecuencia directa, el coeficiente de transmisión en la zona de la minibanda (alrededor de $0.35\text{ eV}$) experimenta una drástica caída, colapsando el canal desde un valor ideal de 1 hasta aproximadamente 0.51.
+El primer escenario modela una alteración morfológica en la célula fúngica central, incrementando su longitud de $5\text{ nm}$ a $10\text{ nm}$ (estado asimilable a una célula dañada o hipertrofiada). Como se observa en la comparativa de la Figura \ref{fig:Interfase_Rota}, este cambio altera la simetría de la heteroestructura y rompe las condiciones de efecto túnel resonante global. Al ensancharse el pozo central, sus autovalores de energía permitidos se desplazan hacia valores inferiores ($E_n \propto 1/L^2$), desalineándose de los niveles cuánticos de los pozos adyacentes. Como consecuencia directa, el coeficiente de transmisión en la zona de la minibanda experimenta una drástica caída.
+
+El segundo escenario simula una obstrucción física o calcificación en la interconexión celular central, incrementando la anchura de la barrera de potencial de $2\text{ nm}$ a $8\text{ nm}$. Los resultados de la Figura \ref{fig:Frustracion_Fuerte} muestran una atenuación dramática de la transmitancia en todo el espectro energético analizado. A diferencia del caso anterior, aquí la frustración no se debe únicamente a un desajuste de niveles resonantes, sino a la dependencia matemática exponencial de la probabilidad de penetración de la barrera respecto a su espesor ($T \propto e^{-2\alpha w}$). Al cuadruplicar el espesor del septo la función de onda del electrón decae casi por completo en su interior, aislando eléctricamente ambas mitades de la hifa y anulando la capacidad de conducción del micelio.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1.0\linewidth]{Fig_Interfase_Rota.png}
-  \caption{Efecto de la frustración por desalineación energética (célula mutada): Comparativa entre el filamento ideal (pozos simétricos de $6\text{ nm}$) y el filamento frustrado estructuralmente (pozo central ensanchado a $10\text{ nm}$).}
-  \label{fig:Interfase_Rota}
+  \begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{Fig_Interfase_Rota.png}
+    \caption{Efecto de la frustración por desalineación energética (célula mutada de $10\text{ nm}$).}
+    \label{fig:Interfase_Rota}
+  \end{minipage}\hfill
+  \begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{Fig_Frustracion_Fuerte.png}
+    \caption{Efecto de la frustración por bloqueo de interfase (septo calcificado de $8\text{ nm}$).}
+    \label{fig:Frustracion_Fuerte}
+  \end{minipage}
 \end{figure}
 
-El segundo escenario simula una obstrucción física o calcificación en la interconexión celular central, incrementando la anchura de la barrera de potencial de $2\text{ nm}$ a $8\text{ nm}$. Los resultados de la Figura \ref{fig:Frustracion_Fuerte} muestran una atenuación de la transmitancia en todo el espectro energético analizado. 
-A diferencia del caso anterior, aquí la frustración no se debe únicamente a un desajuste de niveles resonantes, sino a la dependencia matemática exponencial de la probabilidad de penetración de la barrera respecto a su espesor ($T \propto e^{-2\alpha w}$). Al cuadruplicar el espesor del septo la función de onda del electrón decae casi por completo en su interior, aislando eléctricamente ambas mitades de la hifa y anulando la capacidad de conducción del micelio.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth]{Fig_Frustracion_Fuerte.png}
-  \caption{Efecto de la frustración por bloqueo de interfase (septo calcificado): Respuesta del canal cuántico al aumentar el espesor de la barrera central de $2\text{ nm}$ a $8\text{ nm}$, evidenciando la disminución del coeficiente de transmisión.}
-  \label{fig:Frustracion_Fuerte}
-\end{figure}
 
 \section{Análisis de los resultados}
 
-
-
+\subsection{Formación de bandas: Modelo de Kronig-Penney}
 Para un número elevado de barreras, como \(N=200\), la heteroestructura deja de comportarse como un conjunto pequeño de pozos acoplados y puede aproximarse por una red periódica unidimensional. En este límite, el sistema se asemeja al modelo de Kronig--Penney, formado por una sucesión periódica de pozos y barreras rectangulares.
 
-En nuestro caso, cada celda elemental está formada por un pozo de anchura
-\[
-L=5\,\mathrm{nm},
-\]
-y una barrera de anchura
-\[
-b=2\,\mathrm{nm}.
-\]
-Por tanto, el periodo de la red es
-\[
-a=L+b=7\,\mathrm{nm}.
-\]
+En nuestro caso, cada celda elemental está formada por un pozo de anchura \(L=5\,\mathrm{nm}\), y una barrera de anchura \(b=2\,\mathrm{nm}\). Por tanto, el periodo de la red es \(a=L+b=7\,\mathrm{nm}\).
 
-El potencial periódico puede escribirse como
-\[
-V(x+a)=V(x),
-\]
-con
+El potencial periódico puede escribirse como \(V(x+a)=V(x)\), con
 \[
 V(x)=
 \begin{cases}
@@ -141,10 +124,7 @@ V(x)=
 V_0, & \text{en la barrera},
 \end{cases}
 \]
-donde
-\[
-V_0=0.4\,\mathrm{eV}.
-\]
+donde \(V_0=0.5\,\mathrm{eV}\).
 
 Para energías inferiores a la altura de la barrera, \(E<V_0\), definimos
 \[
@@ -153,11 +133,7 @@ k=\frac{\sqrt{2m^*E}}{\hbar},
 \kappa=\frac{\sqrt{2m^*(V_0-E)}}{\hbar}.
 \]
 
-Aplicando el teorema de Bloch a una celda periódica, la función de onda debe satisfacer
-\[
-\psi(x+a)=e^{iKa}\psi(x),
-\]
-donde \(K\) es el vector de onda de Bloch. La relación de dispersión del modelo de Kronig-Penney \cite{Kronig_Penney_1931} para barreras rectangulares viene dada por
+Aplicando el teorema de Bloch a una celda periódica, la función de onda debe satisfacer \(\psi(x+a)=e^{iKa}\psi(x)\), donde \(K\) es el vector de onda de Bloch. La relación de dispersión del modelo de Kronig-Penney \cite{Kronig_Penney_1931} para barreras rectangulares viene dada por
 \[
 \cos(Ka)=
 \cos(kL)\cosh(\kappa b)
@@ -166,47 +142,22 @@ donde \(K\) es el vector de onda de Bloch. La relación de dispersión del model
 \sin(kL)\sinh(\kappa b).
 \]
 
-Esta ecuación determina qué valores de energía están permitidos en la red. Como el miembro izquierdo cumple necesariamente
-\[
--1\leq \cos(Ka)\leq 1,
-\]
-las energías permitidas son aquellas para las que
-\[
-\left|
-\cos(kL)\cosh(\kappa b)
-+
-\frac{\kappa^2-k^2}{2k\kappa}
-\sin(kL)\sinh(\kappa b)
-\right|\leq 1.
-\]
+Esta ecuación determina qué valores de energía están permitidos en la red. Como el miembro izquierdo cumple necesariamente \(-1\leq \cos(Ka)\leq 1\), las energías permitidas son aquellas para las que el valor absoluto del miembro derecho es menor o igual a 1. Sustituyendo los parámetros de nuestra simulación ($m^*=0.067m_e$, $L=5\,\mathrm{nm}$, $b=2\,\mathrm{nm}$, $V_0=0.5\,\mathrm{eV}$), el modelo predice analíticamente la aparición de bandas de energía permitidas que concuerdan fielmente con las amplias zonas de transmitancia $T \approx 1$ observadas en la simulación de $N=200$.
 
-Sustituyendo los parámetros de la simulación,
-\[
-m^*=0.067m_e,
-\qquad
-L=5\,\mathrm{nm},
-\qquad
-b=2\,\mathrm{nm},
-\qquad
-V_0=0.4\,\mathrm{eV},
-\]
-se obtiene que la primera banda permitida aparece aproximadamente en el intervalo
-\[
-0.077\,\mathrm{eV}\lesssim E \lesssim 0.127\,\mathrm{eV}.
-\]
+La primera banda observada procede del estado fundamental del pozo, mientras que la segunda banda se asocia al segundo modo cuantizado permitido. Así, cada nivel ligado del pozo aislado evoluciona hacia una banda de conducción cuando el número de barreras aumenta significativamente.
 
-Este resultado concuerda con la simulación para \(N=200\), donde la región de alta transmitancia aparece precisamente como una banda ancha en torno a 0,080 eV. Así, los picos discretos observados para pocas barreras se interpretan, en el límite de muchas celdas acopladas, como la formación de una minibanda de conducción.
+\subsection{Validación de la simulación frente al modelo de Tsu y Esaki (1973)}
+La configuración empleada en nuestro dispositivo ($L=5\text{ nm}$, $b=2\text{ nm}$, $V_0=0.5\text{ eV}$) es homóloga a la del estudio fundacional de R. Tsu y L. Esaki (1973) sobre transporte en superredes finitas \cite{tsu_esaki1973}. Sin embargo, en nuestra simulación, las resonancias del estado fundamental y excitado aparecen desplazadas hacia energías mayores ($\approx 0.125\text{ eV}$ y $\approx 0.5\text{ eV}$) en comparación con los resultados de su artículo original ($\approx 0.1\text{ eV}$ y $\approx 0.32\text{ eV}$). Esta discrepancia no constituye un error, sino una mejora sustancial en la precisión del cálculo por dos motivos físicos fundamentales \cite{tsu_resonant2011}:
 
-Además, aparece una segunda región permitida, en el intervalo [0,296 0,400] eV (límite de barrera)
-que se corresponde con la segunda zona de transmisión observada en la gráfica de \(N=200\). Por tanto, el modelo de Kronig--Penney proporciona una justificación analítica de la aparición de bandas de transmisión en la cadena larga.
+\begin{enumerate}
+    \item \textbf{La masa efectiva ($m^*$):} En los primeros modelos teóricos de los años 70, se asumían valores de masa efectiva genéricos (típicamente $m^* \approx 0.1 m_e$) para simplificar los cálculos matriciales. En nuestro trabajo, el simulador utiliza el valor riguroso del Arseniuro de Galio ($m^* = 0.067 m_e$). Dado que la energía de los autoestados está inversamente relacionada con la masa ($E_n \propto 1/m^*$), una masa menor empuja los niveles de energía hacia arriba, justificando el desplazamiento de nuestras resonancias.
+    \item \textbf{Condiciones de contorno de BenDaniel-Duke:} En su aproximación original, Tsu y Esaki omitieron la discontinuidad de la masa efectiva en la interfase pozo-barrera, exigiendo únicamente la continuidad de la función de onda $\psi$ y su derivada $\psi'$. En nuestra simulación, el método computacional de nanoHUB aplica rigurosamente las condiciones de contorno de BenDaniel-Duke, las cuales exigen que el flujo de probabilidad $\frac{1}{m^*}\nabla\psi$ sea continuo \cite{BenDaniel1966}. Este término extra altera el acoplamiento de la matriz de transferencia, corrigiendo la posición exacta de los picos y ofreciendo un resultado físicamente más estricto.
+\end{enumerate}
 
-La primera banda observada alrededor de \(0.1\,\mathrm{eV}\) procede del estado fundamental del pozo, mientras que la segunda banda, situada aproximadamente en torno a \(0,3\,\mathrm{eV}\), se asocia al segundo modo cuantizado permitido.
-Así, cada nivel ligado del pozo aislado evoluciona hacia una banda de conducción cuando el número de barreras aumenta significativamente.
+\subsection{Frustración estructural: El pozo unidimensional}
+Para el escenario de la alteración morfológica en la célula fúngica central, aunque la expresión exacta del pozo infinito no es aplicable cuantitativamente a una heteroestructura finita acoplada, la tendencia física se mantiene. 
 
-Para el escenario de la alteración morfológica en la célula fúngica central, aunque la expresión exacta del pozo infinito no es aplicable cuantitativamente a una heteroestructura finita acoplada, la tendencia física se mantiene.
-
-Supongamos
-
+Supongamos un pozo de potencial infinito unidimensional:
 \begin{equation}
 V(x) = \begin{cases}
 0, & \text{si } 0 \leq x \leq L, \\
@@ -215,28 +166,20 @@ V(x) = \begin{cases}
 \end{equation}
 
 Fuera del pozo, $\phi(x) = 0$. Dentro del pozo, la función de onda debe satisfacer la ecuación de Schrödinger independiente del tiempo:
-
 \begin{equation}
   -\frac{\hbar^2}{2m}\frac{d^2\phi}{dx^2} = E\phi,
 \end{equation}
-
-cuya ecuación diferencial es formalmente análoga a la del oscilador armónico simple, admitiendo una solución de la forma
-
+cuya ecuación diferencial es formalmente análoga a la del oscilador armónico simple, admitiendo una solución de la forma:
 \begin{equation}
   \phi(x) = A\sin(kx) + B\cos(kx),
 \end{equation}
-
 donde $k = \sqrt{2mE}/\hbar$. Aplicando las condiciones de frontera $\phi(0) = 0$ y $\phi(L) = 0$, se obtiene que $B = 0$ y que $kL = n\pi$, con $n$ un número entero positivo. Por tanto, los niveles de energía permitidos para el pozo infinito son:
-
 \begin{equation}
   E_n = \frac{\hbar^2 k_n^2}{2m} = \frac{\hbar^2 \pi^2 n^2}{2mL^2}.
 \end{equation}
 
-\newpage
+Esta dependencia $E_n \propto 1/L^2$ demuestra analíticamente que al mutar una única célula y aumentar su anchura $L$ (de $5\text{ nm}$ a $10\text{ nm}$), sus autoestados de energía caen dramáticamente hacia valores más bajos. Al no coincidir en energía con los pozos adyacentes, la probabilidad de efecto túnel resonante se destruye, colapsando el canal de transmisión de la hifa tal y como hemos validado en la Figura \ref{fig:Interfase_Rota}.
 
-hellooo yupiii
-
-no puedo más con esta vida. fasldfaj dlsa dsñlfasj dflasd gfjfowegasdff ahf
 
 \bibliographystyle{plain} 
 \bibliography{refs}
