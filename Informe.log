@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.5.9)  19 MAY 2026 10:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.5.9)  19 MAY 2026 10:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -555,12 +555,7 @@ Package: afterpage 2023/07/04 v1.08 After-Page Package (DPC)
 )) (C:\Program Files\latex\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count337
-) (Informe.aux
-LaTeX Info: Redefining \. on input line 13.
-LaTeX Info: Redefining \% on input line 13.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 13.
-)
+) (Informe.aux)
 \openout1 = `Informe.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
@@ -583,6 +578,8 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
 LaTeX Font Info:    ... okay on input line 38.
 LaTeX Info: Redefining \. on input line 38.
 LaTeX Info: Redefining \% on input line 38.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 38.
  (C:\Program Files\latex\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count338
@@ -637,101 +634,141 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 38.
-(Informe.out) (Informe.out)
 \@outlinefile=\write5
 \openout5 = `Informe.out'.
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 41.
- (C:\Program Files\latex\tex/latex/amsfonts\umsa.fd
+(C:\Program Files\latex\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
  (C:\Program Files\latex\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Junto.png, id=21, 460.3599pt x 323.0469pt>
+
+LaTeX Warning: Citation `nano' on page 1 undefined on input line 43.
+
+
+LaTeX Warning: Reference `fig:Junto' on page 1 undefined on input line 53.
+
+
+LaTeX Warning: Reference `fig:Separado' on page 1 undefined on input line 53.
+
+
+LaTeX Warning: Reference `fig:Junto' on page 1 undefined on input line 53.
+
+
+LaTeX Warning: Reference `fig:Separado' on page 1 undefined on input line 53.
+
+<Junto.png, id=6, 460.3599pt x 323.5287pt>
 File: Junto.png Graphic file (type png)
 <use Junto.png>
-Package pdftex.def Info: Junto.png  used on input line 57.
-(pdftex.def)             Requested size: 455.24411pt x 319.46251pt.
-<LogoUGR.png, id=23, 401.5pt x 380.42125pt>
-File: LogoUGR.png Graphic file (type png)
-<use LogoUGR.png>
-Package pdftex.def Info: LogoUGR.png  used on input line 61.
-(pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
- [1
-
-{C:/Users/monta/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./LogoUGR.png>]
-<Separado.png, id=42, 451.4466pt x 489.9906pt>
-File: Separado.png Graphic file (type png)
-<use Separado.png>
-Package pdftex.def Info: Separado.png  used on input line 66.
-(pdftex.def)             Requested size: 455.24411pt x 494.1165pt.
+Package pdftex.def Info: Junto.png  used on input line 59.
+(pdftex.def)             Requested size: 218.51521pt x 153.56912pt.
+<Fig_Apilada_TsuEsaki.png, id=8, 479.8728pt x 379.1766pt>
+File: Fig_Apilada_TsuEsaki.png Graphic file (type png)
+<use Fig_Apilada_TsuEsaki.png>
+Package pdftex.def Info: Fig_Apilada_TsuEsaki.png  used on input line 65.
+(pdftex.def)             Requested size: 218.51521pt x 172.66447pt.
+<LogoUGR.png, id=9, 401.5pt x 380.42125pt>
 File: LogoUGR.png Graphic file (type png)
 <use LogoUGR.png>
 Package pdftex.def Info: LogoUGR.png  used on input line 70.
 (pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
- [2 <./Junto.png>]
-<Junto_N.png, id=50, 451.4466pt x 323.5287pt>
+[1
+
+{C:/Users/monta/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./LogoUGR.png>]
+
+LaTeX Warning: Reference `fig:Junto_N' on page 2 undefined on input line 71.
+
+
+LaTeX Warning: Reference `fig:Separado_N' on page 2 undefined on input line 71.
+
+
+LaTeX Warning: Reference `fig:Junto_N' on page 2 undefined on input line 71.
+
+
+LaTeX Warning: Reference `fig:Separado_N' on page 2 undefined on input line 71.
+
+<Junto_N.png, id=27, 460.3599pt x 323.5287pt>
 File: Junto_N.png Graphic file (type png)
 <use Junto_N.png>
-Package pdftex.def Info: Junto_N.png  used on input line 76.
-(pdftex.def)             Requested size: 455.24411pt x 326.25293pt.
+Package pdftex.def Info: Junto_N.png  used on input line 77.
+(pdftex.def)             Requested size: 218.51521pt x 153.56912pt.
+<Fig_Apilada_TsuEsaki_N.png, id=28, 479.8728pt x 462.7689pt>
+File: Fig_Apilada_TsuEsaki_N.png Graphic file (type png)
+<use Fig_Apilada_TsuEsaki_N.png>
+Package pdftex.def Info: Fig_Apilada_TsuEsaki_N.png  used on input line 83.
+(pdftex.def)             Requested size: 218.51521pt x 210.72964pt.
+
+LaTeX Warning: Reference `fig:Interfase_Rota' on page 2 undefined on input line 91.
+
 File: LogoUGR.png Graphic file (type png)
 <use LogoUGR.png>
-Package pdftex.def Info: LogoUGR.png  used on input line 80.
+Package pdftex.def Info: LogoUGR.png  used on input line 92.
 (pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
- [3 <./Separado.png>]
-<Separado_N (1).png, id=58, 451.4466pt x 601.7682pt>
-File: Separado_N (1).png Graphic file (type png)
-<use Separado_N (1).png>
-Package pdftex.def Info: Separado_N (1).png  used on input line 83.
-(pdftex.def)             Requested size: 455.24411pt x 606.83531pt.
-File: LogoUGR.png Graphic file (type png)
-<use LogoUGR.png>
-Package pdftex.def Info: LogoUGR.png  used on input line 87.
-(pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
- [4 <./Junto_N.png>]
-File: LogoUGR.png Graphic file (type png)
-<use LogoUGR.png>
-Package pdftex.def Info: LogoUGR.png  used on input line 95.
-(pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
- [5 <./Separado_N (1).png>]
-<Fig_Interfase_Rota.png, id=70, 516.2487pt x 323.5287pt>
+[2 <./Junto.png> <./Fig_Apilada_TsuEsaki.png> <./Junto_N.png> <./Fig_Apilada_TsuEsaki_N.png>]
+
+LaTeX Warning: Reference `fig:Frustracion_Fuerte' on page 3 undefined on input line 93.
+
+<Fig_Interfase_Rota.png, id=44, 516.2487pt x 323.5287pt>
 File: Fig_Interfase_Rota.png Graphic file (type png)
 <use Fig_Interfase_Rota.png>
-Package pdftex.def Info: Fig_Interfase_Rota.png  used on input line 98.
-(pdftex.def)             Requested size: 455.24411pt x 285.31334pt.
-<Fig_Frustracion_Fuerte.png, id=72, 516.2487pt x 323.5287pt>
+Package pdftex.def Info: Fig_Interfase_Rota.png  used on input line 99.
+(pdftex.def)             Requested size: 218.51521pt x 136.9425pt.
+<Fig_Frustracion_Fuerte.png, id=45, 516.2487pt x 323.5287pt>
 File: Fig_Frustracion_Fuerte.png Graphic file (type png)
 <use Fig_Frustracion_Fuerte.png>
-Package pdftex.def Info: Fig_Frustracion_Fuerte.png  used on input line 108.
-(pdftex.def)             Requested size: 455.24411pt x 285.31334pt.
+Package pdftex.def Info: Fig_Frustracion_Fuerte.png  used on input line 105.
+(pdftex.def)             Requested size: 218.51521pt x 136.9425pt.
+
+LaTeX Warning: Citation `Kronig_Penney_1931' on page 3 undefined on input line 136.
+
 File: LogoUGR.png Graphic file (type png)
 <use LogoUGR.png>
-Package pdftex.def Info: LogoUGR.png  used on input line 112.
+Package pdftex.def Info: LogoUGR.png  used on input line 146.
 (pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
- [6 <./Fig_Interfase_Rota.png>]
+[3 <./Fig_Interfase_Rota.png> <./Fig_Frustracion_Fuerte.png>]
+
+LaTeX Warning: Citation `tsu_esaki1973' on page 4 undefined on input line 150.
+
+
+LaTeX Warning: Citation `tsu_resonant2011' on page 4 undefined on input line 150.
+
+
+LaTeX Warning: Citation `BenDaniel1966' on page 4 undefined on input line 154.
+
 File: LogoUGR.png Graphic file (type png)
 <use LogoUGR.png>
-Package pdftex.def Info: LogoUGR.png  used on input line 159.
+Package pdftex.def Info: LogoUGR.png  used on input line 177.
 (pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
- [7 <./Fig_Frustracion_Fuerte.png>]
+[4]
+
+LaTeX Warning: Reference `fig:Interfase_Rota' on page 5 undefined on input line 181.
+
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 183.
+(C:\Program Files\latex\tex/latex/base\ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+) (Informe.bbl)
 File: LogoUGR.png Graphic file (type png)
 <use LogoUGR.png>
-Package pdftex.def Info: LogoUGR.png  used on input line 230.
+Package pdftex.def Info: LogoUGR.png  used on input line 191.
 (pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
- [8]
-File: LogoUGR.png Graphic file (type png)
-<use LogoUGR.png>
-Package pdftex.def Info: LogoUGR.png  used on input line 235.
-(pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
- [9] (Informe.bbl)
-File: LogoUGR.png Graphic file (type png)
-<use LogoUGR.png>
-Package pdftex.def Info: LogoUGR.png  used on input line 244.
-(pdftex.def)             Requested size: 455.24411pt x 431.37442pt.
- [10] (Informe.aux
+ [5]
+
+c:/Users/monta/OneDrive/Escritorio/estudio/Estudio/Universidad/Quinto curso/Segundo cuatrimestre/electronica/trabajo_electronica/ef/Informe.tex:191: LaTeX Error: \begin{quoting} on input line 183 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.191 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(Informe.aux
 LaTeX Info: Redefining \. on input line 13.
 LaTeX Info: Redefining \% on input line 13.
 )
@@ -739,21 +776,40 @@ LaTeX Info: Redefining \% on input line 13.
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
-Package rerunfilecheck Info: File `Informe.out' has not changed.
-(rerunfilecheck)             Checksum: 1A7B5669AA68E79929ADDC609DA847F4;384.
- ) 
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `Informe.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Informe.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  C817E2278575CDA701DB1403CCB18357;1418.
+ )
+(\end occurred inside a group at level 3)
+
+### semi simple group (level 3) entered at line 183 (\begingroup)
+### semi simple group (level 2) entered at line 183 (\begingroup)
+### semi simple group (level 1) entered at line 183 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 24617 strings out of 467691
- 458202 string characters out of 5425340
- 863823 words of memory out of 5000000
- 53248 multiletter control sequences out of 15000+600000
- 639022 words of font info for 81 fonts, out of 8000000 for 9000
+ 24627 strings out of 467691
+ 458427 string characters out of 5425340
+ 862976 words of memory out of 5000000
+ 53255 multiletter control sequences out of 15000+600000
+ 639234 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,118p,968b,764s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Informe.pdf (10 pages, 1728063 bytes).
+ 99i,13n,118p,1000b,831s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/latxfont/lasy10.pfb><C:/Program Files/latex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Informe.pdf (5 pages, 1631564 bytes).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
- 72 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 

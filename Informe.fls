@@ -250,14 +250,8 @@ INPUT C:\Program Files\latex\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\latex\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\latex\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\latex\tex\latex\graphics\color.sty
-INPUT .\Informe.out
-INPUT .\Informe.out
-INPUT Informe.out
-INPUT Informe.out
-OUTPUT Informe.pdf
-INPUT .\Informe.out
-INPUT .\Informe.out
 OUTPUT Informe.out
+OUTPUT Informe.pdf
 INPUT C:\Program Files\latex\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Program Files\latex\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Program Files\latex\fonts\tfm\public\cm\cmr8.tfm
@@ -311,6 +305,13 @@ INPUT .\Junto.png
 INPUT .\Junto.png
 INPUT .\Junto.png
 INPUT .\Junto.png
+INPUT .\Fig_Apilada_TsuEsaki.png
+INPUT .\Fig_Apilada_TsuEsaki.png
+INPUT .\Fig_Apilada_TsuEsaki.png
+INPUT .\Fig_Apilada_TsuEsaki.png
+INPUT .\Fig_Apilada_TsuEsaki.png
+INPUT .\Fig_Apilada_TsuEsaki.png
+INPUT .\Fig_Apilada_TsuEsaki.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
@@ -319,17 +320,6 @@ INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT C:\Users\monta\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
-INPUT .\Separado.png
-INPUT .\Separado.png
-INPUT .\Separado.png
-INPUT .\Separado.png
-INPUT .\Separado.png
-INPUT .\Separado.png
-INPUT .\Separado.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
 INPUT .\Junto_N.png
 INPUT .\Junto_N.png
 INPUT .\Junto_N.png
@@ -337,21 +327,13 @@ INPUT .\Junto_N.png
 INPUT .\Junto_N.png
 INPUT .\Junto_N.png
 INPUT .\Junto_N.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\Separado_N (1).png
-INPUT .\Separado_N (1).png
-INPUT .\Separado_N (1).png
-INPUT .\Separado_N (1).png
-INPUT .\Separado_N (1).png
-INPUT .\Separado_N (1).png
-INPUT .\Separado_N (1).png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
+INPUT .\Fig_Apilada_TsuEsaki_N.png
+INPUT .\Fig_Apilada_TsuEsaki_N.png
+INPUT .\Fig_Apilada_TsuEsaki_N.png
+INPUT .\Fig_Apilada_TsuEsaki_N.png
+INPUT .\Fig_Apilada_TsuEsaki_N.png
+INPUT .\Fig_Apilada_TsuEsaki_N.png
+INPUT .\Fig_Apilada_TsuEsaki_N.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
@@ -378,17 +360,14 @@ INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
+INPUT C:\Program Files\latex\tex\latex\base\ulasy.fd
+INPUT C:\Program Files\latex\tex\latex\base\ulasy.fd
+INPUT C:\Program Files\latex\tex\latex\base\ulasy.fd
+INPUT C:\Program Files\latex\fonts\tfm\public\latex-fonts\lasy10.tfm
 INPUT .\Informe.bbl
 INPUT .\Informe.bbl
 INPUT Informe.bbl
+INPUT C:\Program Files\latex\fonts\tfm\public\latex-fonts\lasy10.tfm
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
@@ -416,13 +395,15 @@ INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\cm\cmsy6.pfb
+INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\cm\cmsy6.pfb
 INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\cm\cmtt10.pfb
-INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\symbols\msam10.pfb
-INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\symbols\msam10.pfb
+INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\latxfont\lasy10.pfb
+INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\latxfont\lasy10.pfb
 INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\symbols\msbm10.pfb
 INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\symbols\msbm10.pfb
