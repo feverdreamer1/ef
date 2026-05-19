@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex Informe"] 1779179896.41445 "Informe.aux" "Informe.bbl" "Informe" 1779179903.14891 0
+["bibtex Informe"] 1779179896.41445 "Informe.aux" "Informe.bbl" "Informe" 1779180069.49858 0
   "./refs.bib" 1779120962 902 37ac7e5db69c0852eaec00b7cb626324 ""
   "C:/Program Files/latex/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Informe.aux" 1779179901 4471 6d656399beb4fb33831ce0ad992b57b0 "pdflatex"
+  "Informe.aux" 1779180068 4471 6d656399beb4fb33831ce0ad992b57b0 "pdflatex"
   (generated)
   "Informe.bbl"
   "Informe.blg"
   (rewritten before read)
-["pdflatex"] 1779179896.97704 "c:/Users/monta/OneDrive/Escritorio/estudio/Estudio/Universidad/Quinto curso/Segundo cuatrimestre/electronica/trabajo_electronica/ef/Informe.tex" "Informe.pdf" "Informe" 1779179903.15014 0
+["pdflatex"] 1779180063.15052 "c:/Users/monta/OneDrive/Escritorio/estudio/Estudio/Universidad/Quinto curso/Segundo cuatrimestre/electronica/trabajo_electronica/ef/Informe.tex" "Informe.pdf" "Informe" 1779180069.4997 0
   "C:/Program Files/latex/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1233951848 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "C:/Program Files/latex/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1233951848 1120 200be8b775682cdf80acad4be5ef57e4 ""
   "C:/Program Files/latex/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -191,16 +191,16 @@
   "C:/Users/monta/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "Fig_Frustracion_Fuerte.png" 1779120962 287892 dcef3d7332d4342b88fe1aad8a1f0892 ""
   "Fig_Interfase_Rota.png" 1779120962 276525 1f20d018450dbc9c4d6093e79b6cd8c6 ""
-  "Informe.aux" 1779179901 4471 6d656399beb4fb33831ce0ad992b57b0 "pdflatex"
+  "Informe.aux" 1779180068 4471 6d656399beb4fb33831ce0ad992b57b0 "pdflatex"
   "Informe.bbl" 1779179896 784 cdf37a57d775a87e7ffb220f52c5923d "bibtex Informe"
-  "Informe.out" 1779179901 384 1a7b5669aa68e79929addc609da847f4 "pdflatex"
-  "Informe.tex" 1779179888 12132 6233d001464d42d6e5c039bcd68cbb05 ""
+  "Informe.out" 1779180068 384 1a7b5669aa68e79929addc609da847f4 "pdflatex"
+  "Informe.tex" 1779180062 12167 f0748d296aad3498ec7b078fb80a2572 ""
   "Junto.png" 1779120962 411896 525c9078048699e8d1c0998c63001697 ""
   "Junto_N.png" 1779120962 241157 e19fc3e75b3d26e23b66fc900c022c0b ""
   "LogoUGR.png" 1779120962 38741 58da8e5e13cb0415e81b2872ee3b99ea ""
   "Separado.png" 1779120962 267596 1e2374dab63e6ddfcd38260b2c01c013 ""
   "Separado_N (1).png" 1779120962 329581 e8e9730de0f4ee32f39970dcfc5f2fb8 ""
-  "c:/Users/monta/OneDrive/Escritorio/estudio/Estudio/Universidad/Quinto curso/Segundo cuatrimestre/electronica/trabajo_electronica/ef/Informe.tex" 1779179888 12132 6233d001464d42d6e5c039bcd68cbb05 ""
+  "c:/Users/monta/OneDrive/Escritorio/estudio/Estudio/Universidad/Quinto curso/Segundo cuatrimestre/electronica/trabajo_electronica/ef/Informe.tex" 1779180062 12167 f0748d296aad3498ec7b078fb80a2572 ""
   (generated)
   "Informe.aux"
   "Informe.log"
