@@ -362,13 +362,28 @@ INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
+INPUT .\image.png
+INPUT .\image.png
+INPUT .\image.png
+INPUT .\image.png
+INPUT .\image.png
+INPUT .\image.png
+INPUT .\image.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
+INPUT C:\Program Files\latex\tex\latex\base\ulasy.fd
+INPUT C:\Program Files\latex\tex\latex\base\ulasy.fd
+INPUT C:\Program Files\latex\tex\latex\base\ulasy.fd
+INPUT C:\Program Files\latex\fonts\tfm\public\latex-fonts\lasy10.tfm
 INPUT .\Informe.bbl
 INPUT .\Informe.bbl
 INPUT Informe.bbl
+INPUT .\LogoUGR.png
+INPUT .\LogoUGR.png
+INPUT .\LogoUGR.png
+INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
@@ -404,5 +419,7 @@ INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\cm\cmtt10.pfb
+INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\latxfont\lasy10.pfb
+INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\latxfont\lasy10.pfb
 INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\symbols\msbm10.pfb
 INPUT C:\Program Files\latex\fonts\type1\public\amsfonts\symbols\msbm10.pfb
