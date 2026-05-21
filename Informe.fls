@@ -250,8 +250,14 @@ INPUT C:\Program Files\latex\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\latex\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\latex\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\latex\tex\latex\graphics\color.sty
-OUTPUT Informe.out
+INPUT .\Informe.out
+INPUT .\Informe.out
+INPUT Informe.out
+INPUT Informe.out
 OUTPUT Informe.pdf
+INPUT .\Informe.out
+INPUT .\Informe.out
+OUTPUT Informe.out
 INPUT C:\Program Files\latex\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Program Files\latex\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Program Files\latex\fonts\tfm\public\cm\cmr8.tfm
@@ -386,6 +392,10 @@ INPUT .\LogoUGR.png
 INPUT .\Informe.bbl
 INPUT .\Informe.bbl
 INPUT Informe.bbl
+INPUT .\LogoUGR.png
+INPUT .\LogoUGR.png
+INPUT .\LogoUGR.png
+INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
