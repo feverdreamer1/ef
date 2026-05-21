@@ -325,7 +325,15 @@ INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
+<<<<<<< HEAD
 INPUT C:\Users\maria\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+=======
+INPUT C:\Users\monta\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT .\LogoUGR.png
+INPUT .\LogoUGR.png
+INPUT .\LogoUGR.png
+INPUT .\LogoUGR.png
+>>>>>>> 050d6b228a108afac5c5dd8e442f4a0f624e138a
 INPUT .\Junto_N.png
 INPUT .\Junto_N.png
 INPUT .\Junto_N.png
@@ -340,18 +348,6 @@ INPUT .\Fig_Apilada_TsuEsaki_N.png
 INPUT .\Fig_Apilada_TsuEsaki_N.png
 INPUT .\Fig_Apilada_TsuEsaki_N.png
 INPUT .\Fig_Apilada_TsuEsaki_N.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
@@ -374,6 +370,10 @@ INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
+INPUT .\LogoUGR.png
+INPUT .\LogoUGR.png
+INPUT .\LogoUGR.png
+INPUT .\LogoUGR.png
 INPUT .\image.png
 INPUT .\image.png
 INPUT .\image.png
@@ -381,6 +381,10 @@ INPUT .\image.png
 INPUT .\image.png
 INPUT .\image.png
 INPUT .\image.png
+INPUT .\LogoUGR.png
+INPUT .\LogoUGR.png
+INPUT .\LogoUGR.png
+INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
@@ -392,10 +396,6 @@ INPUT .\LogoUGR.png
 INPUT .\Informe.bbl
 INPUT .\Informe.bbl
 INPUT Informe.bbl
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
-INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
