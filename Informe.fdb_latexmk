@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex Informe"] 1779374355.4405 "Informe.aux" "Informe.bbl" "Informe" 1779376717.2253 0
+["bibtex Informe"] 1779376748.47987 "Informe.aux" "Informe.bbl" "Informe" 1779376754.63869 0
   "./refs.bib" 1779371421 1813 b0c2aba792d26234e94ba32b69cbf200 ""
   "C:/Program Files/latex/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Informe.aux" 1779376715 4751 d77e205691f0bdcb16e7922859b1755e "pdflatex"
+  "Informe.aux" 1779376753 4751 d77e205691f0bdcb16e7922859b1755e "pdflatex"
   (generated)
   "Informe.bbl"
   "Informe.blg"
   (rewritten before read)
-["pdflatex"] 1779376710.88785 "c:/Users/monta/OneDrive/Escritorio/estudio/Estudio/Universidad/Quinto curso/Segundo cuatrimestre/electronica/trabajo_electronica/ef/Informe.tex" "Informe.pdf" "Informe" 1779376717.22642 0
+["pdflatex"] 1779376749.03352 "c:/Users/monta/OneDrive/Escritorio/estudio/Estudio/Universidad/Quinto curso/Segundo cuatrimestre/electronica/trabajo_electronica/ef/Informe.tex" "Informe.pdf" "Informe" 1779376754.63982 0
   "C:/Program Files/latex/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1233951848 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "C:/Program Files/latex/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1233951848 1120 200be8b775682cdf80acad4be5ef57e4 ""
   "C:/Program Files/latex/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -193,14 +193,14 @@
   "Fig_Apilada_TsuEsaki_N.png" 1779371421 261540 b5b224affd2c3c49bcc3e87a7576ee0f ""
   "Fig_Frustracion_Fuerte.png" 1779371421 287892 dcef3d7332d4342b88fe1aad8a1f0892 ""
   "Fig_Interfase_Rota.png" 1779371421 276525 1f20d018450dbc9c4d6093e79b6cd8c6 ""
-  "Informe.aux" 1779376715 4751 d77e205691f0bdcb16e7922859b1755e "pdflatex"
-  "Informe.bbl" 1779374355 1320 94ea03edbfbf6e06a331adc2274c435e "bibtex Informe"
-  "Informe.out" 1779376715 1418 c817e2278575cda701db1403ccb18357 "pdflatex"
-  "Informe.tex" 1779376709 16482 74a367bcdb0907d94bfc38373ecdc3a8 ""
+  "Informe.aux" 1779376753 4751 d77e205691f0bdcb16e7922859b1755e "pdflatex"
+  "Informe.bbl" 1779376748 1320 94ea03edbfbf6e06a331adc2274c435e "bibtex Informe"
+  "Informe.out" 1779376753 1418 c817e2278575cda701db1403ccb18357 "pdflatex"
+  "Informe.tex" 1779376747 16485 7c894cf00db8d0669b334f7aeb1e0dbb ""
   "Junto.png" 1779371421 439512 7a01673913b06961edc6f935ea05eb7a ""
   "Junto_N.png" 1779371421 266745 4af3cbf37bc6f4a620be319bb274b8d7 ""
   "LogoUGR.png" 1779371421 38741 58da8e5e13cb0415e81b2872ee3b99ea ""
-  "c:/Users/monta/OneDrive/Escritorio/estudio/Estudio/Universidad/Quinto curso/Segundo cuatrimestre/electronica/trabajo_electronica/ef/Informe.tex" 1779376709 16482 74a367bcdb0907d94bfc38373ecdc3a8 ""
+  "c:/Users/monta/OneDrive/Escritorio/estudio/Estudio/Universidad/Quinto curso/Segundo cuatrimestre/electronica/trabajo_electronica/ef/Informe.tex" 1779376747 16485 7c894cf00db8d0669b334f7aeb1e0dbb ""
   "image.png" 1779371421 67227 3eedd01ccd764a15c7b21156f47bdba9 ""
   (generated)
   "Informe.aux"
