@@ -153,7 +153,7 @@ Sin embargo, en nuestra simulación, las resonancias del estado fundamental y ex
 \end{enumerate}
 
 Nótese que las energías resonantes para el caso de triple barrera se desdoblan en dobletes, y las del caso de cinco barreras se desdoblan en cuadrupletes, como podemos observar también en nuestra simulación.
-Las anchuras de línea están determinadas aproximadamente por la probabilidad de efecto túnel a través de la anchura de la barrera. Para $n$ barreras, se producirá un desdoblamiento en $(n-1)$ niveles. Para un $n$ grande, estas energías resonantes convergerán finalmente hacia el modelo de bandas que comentaremos posteriormente \cite{tsu_esaki1973}.
+Las anchuras de línea están determinadas aproximadamente por la probabilidad de efecto túnel a través de la anchura de la barrera. Para $N$ barreras, se producirá un desdoblamiento en $(N-1)$ niveles. Para un $N$ grande, estas energías resonantes convergerán finalmente hacia el modelo de bandas que comentaremos posteriormente \cite{tsu_esaki1973}.
 
 Para estructuras simétricas ($T_L = T_R$, y por tanto $\rho_L = \rho_R \equiv \rho$), la condición para obtener un efecto túnel resonante perfecto ($T = 1$) exige la anulación del término oscilatorio en el denominador, lo que impone la regla de interferencia constructiva:
 \begin{equation}
@@ -161,7 +161,7 @@ Para estructuras simétricas ($T_L = T_R$, y por tanto $\rho_L = \rho_R \equiv \
 \end{equation}
 donde el desfase $\rho$ provocado por la penetración de la función de onda en los "muros" de espesor finito $b$ se define analíticamente como:
 \begin{equation}
-\rho = \arctan\left ( \frac{2k\kappa}{\kappa^2 - k^2} \coth(\kappa b) \right)
+\rho = \arctan \left( \frac{2k\kappa}{\kappa^2 - k^2} \coth(\kappa b) \right)
 \end{equation}
 siendo $\kappa = \sqrt{2m^*(V_0-E)}/\hbar$ el factor de decaimiento en la región clásicamente prohibida. Resolviendo numéricamente este sistema de ecuaciones trascendentales para los parámetros de nuestro diseño ($m^* = 0.067m_e$, $L = 5\text{ nm}$, $b = 2\text{ nm}$, $V_0 = 0.5\text{ eV}$), el desfase adicional $\rho$ en las interfases compensa de manera exacta el término espacial $2kL$, prediciendo las energías de resonancia fundamental ($n=1$) y excitada ($n=2$) justamente en los valores de $0.1056\text{ eV}$ y $0.405\text{ eV}$ validados por el simulador.
 
@@ -191,8 +191,6 @@ donde $k = \sqrt{2mE}/\hbar$. Aplicando las condiciones de frontera $\phi(0) = 0
 \end{equation}
 
 Esta dependencia $E_n \propto 1/L^2$ demuestra analíticamente que al mutar una única célula y aumentar su anchura $L$ (de $5\text{ nm}$ a $10\text{ nm}$), sus autoestados de energía caen dramáticamente hacia valores más bajos. Al no coincidir en energía con los pozos adyacentes, la probabilidad de efecto túnel resonante se destruye, colapsando el canal de transmisión de la hifa tal y como hemos validado en la Figura \ref{fig:Interfase_Rota}.
-
-cojones colgones
 
 \bibliographystyle{plain} 
 \bibliography{refs}
