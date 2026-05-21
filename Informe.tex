@@ -41,12 +41,23 @@ Nuria Touriño Verano}
 
 \section{Introducción}
 En esta práctica analizamos el transporte cuántico utilizando la herramienta \texttt{Piece-Wise Constant Potential Barrier Tool} de nanoHUB \cite{nano}, que destaca por su versatilidad para simular heteroestructuras de distintas características. En este trabajo nos centraremos en variar el \textbf{número} de barreras (y, consecuentemente, de pozos) en el simulador para emular una red de micelio. En esta analogía, cada pozo cuántico representa una unidad celular fúngica, y cada barrera de potencial representa la interconexión entre ellas (septo). La primera y la última célula del dispositivo se consideran acopladas directamente a los contactos del sistema.
-
-Para dotar a la simulación de sentido físico, hemos empleado parámetros típicos de heteroestructuras semiconductoras basados en los estudios fundacionales de diodos túnel resonantes, fijando una masa efectiva de $m^* = 0.067$ (la del GaAs), una anchura de pozo de $5\text{ nm}$, y barreras de $2\text{ nm}$ con una altura de potencial de $0.5\text{ eV}$. El objetivo principal es estudiar la evolución de la transmitancia al variar la longitud de la cadena desde $N=2$ hasta $N=200$ barreras, observando cómo la concatenación de estados discretos da lugar a la formación de una banda de conducción macroscópica. 
+Se ha fijado una anchura de pozo de 5 nm, barreras de 2 nm con una altura de potencial de 0.5 eV, y una masa efectiva de $m^* = 0.067 m_e$ (correspondiente al Arseniuro de Galio, GaAs). En un cristal semiconductor, esta masa efectiva es una magnitud macroscópica que engloba las complejas interacciones del electrón con el potencial periódico de la red atómica. Esto permite tratarlo matemáticamente como una partícula libre mucho más ligera que en el vacío, lo cual favorece la aparición de fenómenos de confinamiento a escala nanométrica. Bajo este marco paramétrico, el objetivo principal es estudiar la evolución de la transmitancia al variar la longitud de la cadena desde $N=2$ hasta $N=200$ barreras, revelando cómo la concatenación de estados discretos da lugar a la emergencia de una minibanda de conducción macroscópica
 
 El trabajo evalúa también la robustez de este canal de transporte analizando la \textit{frustración del sistema} ante dos patologías o perturbaciones biológicas localizadas en el elemento central de una cadena fija de 5 barreras: la hipertrofia dimensional de una célula (variación del ancho del pozo) y la calcificación o degradación de una interconexión celular (variación del ancho de la barrera).
 
+\subsection{Contexto biológico}
+El reino de los hongos presenta una arquitectura de red única. Su unidad estructural básica es la \textbf{hifa}, un filamento tubular microscópico que crece y se ramifica para formar una gran red interconectada conocida como \textbf{micelio}. Esta estructura es la que permite al hongo explorar el terreno y transportar nutrientes, agua y señales eléctricas a largas distancias.
 
+Las hifas no son tubos huecos y continuos, sino que están divididas en compartimentos o células individuales mediante unas paredes transversales denominadas \textbf{septos}. Sin embargo, estos septos no aíslan las células por completo; poseen poros centrales que actúan como cuellos de botella o válvulas, permitiendo y regulando el flujo de materia y señales entre compartimentos adyacentes.
+
+En nuestro estudio, proponemos la siguiente analogía:
+\begin{itemize}
+    \item La \textbf{hifa completa} se asimila a nuestro canal de conducción (el cable cuántico).
+    \item Cada \textbf{célula fúngica} se modela como un \textbf{pozo de potencial}, actuando como la región donde las partículas (o señales) residen temporalmente.
+    \item El \textbf{septo} se representa mediante una \textbf{barrera de potencial} de espesor finito. El paso a través de su poro biológico se simula mediante el fenómeno de \textbf{efecto túnel cuántico}.
+\end{itemize}
+
+De este modo, la propagación de una señal a lo largo del micelio queda matemáticamente descrita por la transmitancia de un electrón atravesando una superred de pozos y barreras acopladas.
 \section{Resultados}
 A continuación, se presentan los coeficientes de transmisión frente a la energía de los electrones incidentes. Todos los resultados han sido procesados y graficados mediante rutinas propias en Python a partir de los datos numéricos exportados del simulador.
 
@@ -76,7 +87,7 @@ Posteriormente, extendemos el análisis al régimen macroscópico (de 8 a 200 ba
 \end{figure}
   \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\linewidth, height=0.42 \textheight]{Fig_Apilada_TsuEsaki_N.png}
+    \includegraphics[width=\linewidth, height=0.52 \textheight]{Fig_Apilada_TsuEsaki_N.png}
     \caption{Formación e individualización de la minibanda de conducción en ejes apilados.}
     \label{fig:Separado_N}
 \end{figure}
@@ -137,6 +148,8 @@ Aplicando el teorema de Bloch a una celda periódica, la función de onda debe s
 Esta ecuación determina qué valores de energía están permitidos en la red. Como el miembro izquierdo cumple necesariamente \(-1\leq \cos(Ka)\leq 1\), las energías permitidas son aquellas para las que el valor absoluto del miembro derecho es menor o igual a 1. Sustituyendo los parámetros de nuestra simulación ($m^*=0.067m_e$, $L=5\,\mathrm{nm}$, $b=2\,\mathrm{nm}$, $V_0=0.5\,\mathrm{eV}$), el modelo predice analíticamente la aparición de bandas de energía permitidas que concuerdan fielmente con las amplias zonas de transmitancia $T \approx 1$ observadas en la simulación de $N=200$.
 
 La primera banda observada procede del estado fundamental del pozo, mientras que la segunda banda se asocia al segundo modo cuantizado permitido. Así, cada nivel ligado del pozo aislado evoluciona hacia una banda de conducción cuando el número de barreras aumenta significativamente.
+
+
 \subsection{Validación de la simulación frente al modelo de Tsu y Esaki (1973)}
 La configuración empleada en nuestro dispositivo ($L=5\text{ nm}$, $b=2\text{ nm}$, $V_0=0.5\text{ eV}$) es homóloga a la del estudio fundacional de R. Tsu y L. Esaki (1973) sobre transporte en redes finitas \cite{tsu_esaki1973}, cuyos resultados se muestran a continuación:
 \begin{figure}[H]
@@ -145,15 +158,18 @@ La configuración empleada en nuestro dispositivo ($L=5\text{ nm}$, $b=2\text{ n
   \caption{Resultados de Tsu y Esaki (\cite{tsu_esaki1973}) para una red de 5 barreras con parámetros similares a los nuestros.}
   \label{fig:TsuEsaki}
 \end{figure}
-Sin embargo, en nuestra simulación, las resonancias del estado fundamental y excitado aparecen desplazadas hacia energías mayores en comparación con los resultados de su artículo original ($\approx 0.1\text{ eV}$ y $\approx 0.32\text{ eV}$) para N=2. Tras analizar los datos numéricos en crudo exportados de la simulación, se observa con total precisión que estos picos de transmitancia máxima ($T \approx 1$) se localizan exactamente en $E_1 = 0.1056\text{ eV}$ y $E_2 = 0.405\text{ eV}$. Esta discrepancia frente al modelo histórico no constituye un error, sino una mejora sustancial en la precisión del cálculo por dos motivos físicos fundamentales \cite{tsu_resonant2011}:
+Sin embargo, en nuestra simulación, las resonancias del estado fundamental y excitado aparecen desplazadas hacia energías mayores en comparación con los resultados de su artículo original ($\approx 0.1\text{ eV}$ y $\approx 0.32\text{ eV}$) para $N=2$. Tras analizar los datos numéricos en crudo exportados de la simulación, se observa con total precisión que estos picos de transmitancia máxima ($T \approx 1$) se localizan exactamente en $E_1 = 0.1056\text{ eV}$ y $E_2 = 0.405\text{ eV}$. Esta discrepancia frente al modelo histórico no constituye un error, sino una mejora sustancial en la precisión del cálculo por dos motivos físicos fundamentales \cite{tsu_resonant2011}:
 
 \begin{enumerate}
     \item \textbf{La masa efectiva ($m^*$):} En los primeros modelos teóricos de los años 70, se asumían valores de masa efectiva genéricos (típicamente $m^* \approx 0.1 m_e$) para simplificar los cálculos matriciales. En nuestro trabajo, el simulador utiliza el valor riguroso del Arseniuro de Galio ($m^* = 0.067 m_e$). Dado que la energía de los autoestados está inversamente relacionada con la masa ($E_n \propto 1/m^*$), una masa menor empuja los niveles de energía hacia arriba, justificando el desplazamiento de nuestras resonancias.
     \item \textbf{Condiciones de contorno de BenDaniel-Duke:} En su aproximación original, Tsu y Esaki omitieron la discontinuidad de la masa efectiva en la interfase pozo-barrera, exigiendo únicamente la continuidad de la función de onda $\psi$ y su derivada $\psi'$. En nuestra simulación, el método computacional de nanoHUB aplica rigurosamente las condiciones de contorno de BenDaniel-Duke, las cuales exigen que el flujo de probabilidad $\frac{1}{m^*}\nabla\psi$ sea continuo \cite{BenDaniel1966}. Este término extra altera el acoplamiento de la matriz de transferencia, corrigiendo la posición exacta de los picos y ofreciendo un resultado físicamente más estricto.
 \end{enumerate}
 
-Nótese que las energías resonantes para el caso de triple barrera se desdoblan en dobletes, y las del caso de cinco barreras se desdoblan en cuadrupletes, como podemos observar también en nuestra simulación.
-Las anchuras de línea están determinadas aproximadamente por la probabilidad de efecto túnel a través de la anchura de la barrera. Para $N$ barreras, se producirá un desdoblamiento en $(N-1)$ niveles. Para un $N$ grande, estas energías resonantes convergerán finalmente hacia el modelo de bandas que comentaremos posteriormente \cite{tsu_esaki1973}.
+Para consolidar la validez física de estos máximos, el canal abierto de doble barrera ($N=2$) puede describirse analíticamente mediante el modelo del interferómetro cuántico de Fabry-Pérot \cite{bastard1991}. El coeficiente de transmisión de flujo global $T$ se obtiene sumando las amplitudes de probabilidad de las múltiples reflexiones de la función de onda dentro de la cavidad, resultando en la expresión exacta:
+\begin{equation}
+T = \frac{T_L T_R}{(1 - \sqrt{R_L R_R})^2 + 4\sqrt{R_L R_R}\sin^2\left(\frac{\phi}{2}\right)}
+\end{equation}
+donde $T_{L,R}$ y $R_{L,R}$ son los coeficientes de transmisión y reflexión de las barreras izquierda y derecha, mientras que la fase total acumulada por la onda en un ciclo completo dentro del pozo viene dada por $\phi = 2kL + \rho_L + \rho_R$. En esta expresión, $k = \sqrt{2m^*E}/\hbar$ es el vector de onda espacial, y $\rho_L, \rho_R$ representan los desfases cuánticos introducidos al reflejarse en las barreras de espesor finito ($b=2\text{ nm}$).
 
 Para estructuras simétricas ($T_L = T_R$, y por tanto $\rho_L = \rho_R \equiv \rho$), la condición para obtener un efecto túnel resonante perfecto ($T = 1$) exige la anulación del término oscilatorio en el denominador, lo que impone la regla de interferencia constructiva:
 \begin{equation}
@@ -165,7 +181,7 @@ donde el desfase $\rho$ provocado por la penetración de la función de onda en 
 \end{equation}
 siendo $\kappa = \sqrt{2m^*(V_0-E)}/\hbar$ el factor de decaimiento en la región clásicamente prohibida. Resolviendo numéricamente este sistema de ecuaciones trascendentales para los parámetros de nuestro diseño ($m^* = 0.067m_e$, $L = 5\text{ nm}$, $b = 2\text{ nm}$, $V_0 = 0.5\text{ eV}$), el desfase adicional $\rho$ en las interfases compensa de manera exacta el término espacial $2kL$, prediciendo las energías de resonancia fundamental ($n=1$) y excitada ($n=2$) justamente en los valores de $0.1056\text{ eV}$ y $0.405\text{ eV}$ validados por el simulador.
 
-Nótese que las energías resonantes para el caso de triple barrera se desdoblan en dobletes, y las del caso de cinco barreras se desdoblan en cuadrupletes. Las anchuras de línea están determinadas aproximadamente por la probabilidad de efecto túnel a través de la anchura de la barrera. Para $n$ barreras, se producirá un desdoblamiento en $(n-1)$ niveles. Para un $n$ grande, estas energías resonantes convergerán finalmente hacia el modelo de bandas que comentaremos posteriormente \cite{tsu_esaki1973}.
+Nótese que las energías resonantes para el caso de triple barrera se desdoblan en dobletes, y las del caso de cinco barreras se desdoblan en cuadrupletes, como podemos observar también en nuestra simulación. Las anchuras de línea están determinadas aproximadamente por la probabilidad de efecto túnel a través de la anchura de la barrera. Para $N$ barreras, se producirá un desdoblamiento en $(N-1)$ niveles. Para un $N$ grande, estas energías resonantes convergerán finalmente hacia el modelo de bandas que comentaremos posteriormente \cite{tsu_esaki1973}.
 \subsection{Frustración estructural: El pozo unidimensional}
 Para el escenario de la alteración morfológica en la célula fúngica central, aunque la expresión exacta del pozo infinito no es aplicable cuantitativamente a una heteroestructura finita acoplada, la tendencia física se mantiene. 
 
@@ -191,7 +207,16 @@ donde $k = \sqrt{2mE}/\hbar$. Aplicando las condiciones de frontera $\phi(0) = 0
 \end{equation}
 
 Esta dependencia $E_n \propto 1/L^2$ demuestra analíticamente que al mutar una única célula y aumentar su anchura $L$ (de $5\text{ nm}$ a $10\text{ nm}$), sus autoestados de energía caen dramáticamente hacia valores más bajos. Al no coincidir en energía con los pozos adyacentes, la probabilidad de efecto túnel resonante se destruye, colapsando el canal de transmisión de la hifa tal y como hemos validado en la Figura \ref{fig:Interfase_Rota}.
+\subsection{Limitaciones del modelo}
+Aunque el método matricial empleado captura con precisión la física fundamental del efecto túnel resonante y la formación de minibandas, se basa en una aproximación. En la traslación de este modelo a un dispositivo físico real a temperatura ambiente, o a su analogía biofísica, intervendrían fenómenos adicionales que atenuarían la transmitancia ideal observada ($T=1$):
+\begin{itemize}
+    \item \textbf{Scattering y decoherencia cuántica:} El modelo asume que el electrón mantiene su fase cuántica intacta durante las múltiples reflexiones de Fabry-Pérot. En la realidad, la dispersión con fonones (responsables de las vibraciones térmicas de la red) o la interacción con impurezas y defectos de la interfase provocan eventos inelásticos. Estos eventos rompen la coherencia de fase de la función de onda, lo que se traduciría en un ensanchamiento espectral de las resonancias y en una disminución de la amplitud máxima del coeficiente de transmisión.
+    \item \textbf{Dimensión:} Nuestro análisis asume un perfil de potencial estrictamente unidimensional (1D). En sistemas reales, los electrones poseen momentos transversales que actúan como una energía cinética paralela a las barreras. Esta distribución de energías transversales provoca que no todos los electrones resuenen a la misma energía longitudinal, difuminando los bordes abruptos de la minibanda de conducción.
+    \item \textbf{Temperatura:} El modelo se basa en un análisis a temperatura cero, donde la función de distribución de los electrones es un escalón de Heaviside. A temperatura ambiente, la función de distribución de Fermi-Dirac se suaviza, lo que implica que algunos electrones con energías ligeramente por debajo o por encima de las resonancias también contribuirían al transporte dando lugar a una transmitancia menor.
+    \item \textbf{Efectos de carga espacial:} El simulador calcula el paso de electrones individuales. En un dispositivo real, los electrones pasan un tiempo finito rebotando dentro de las cavidades antes de salir, generando una acumulación de carga negativa. Esta nube estacionaria repele a los nuevos electrones entrantes, lo que empuja hacia arriba el fondo del pozo de potencial. Al elevarse el nivel del pozo, la energía exacta de la resonancia se desajusta, rompiendo la condición de transmisión perfecta calculada teóricamente. 
+\end{itemize}
 
+\newpage
 \bibliographystyle{plain} 
 \bibliography{refs}
 \end{document}
