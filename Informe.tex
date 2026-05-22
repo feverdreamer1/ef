@@ -39,6 +39,10 @@ Nuria Touriño Verano}
 
 \maketitle
 
+\renewcommand{\contentsname}{Índice}
+\tableofcontents
+\newpage
+
 \section{Introducción}
 En esta práctica analizamos el transporte cuántico utilizando la herramienta \texttt{Piece-Wise Constant Potential Barrier Tool} de nanoHUB \cite{nano}, que destaca por su versatilidad para simular heteroestructuras de distintas características. En este trabajo nos centraremos en variar el \textbf{número} de barreras (y, consecuentemente, de pozos) en el simulador para emular una red de micelio. En esta analogía, cada pozo cuántico representa una unidad celular fúngica, y cada barrera de potencial representa la interconexión entre ellas (septo). La primera y la última célula del dispositivo se consideran acopladas directamente a los contactos del sistema.
 Se ha fijado una anchura de pozo de 5 nm, barreras de 2 nm con una altura de potencial de 0.5 eV, y una masa efectiva de $m^* = 0.067 m_e$ (correspondiente al Arseniuro de Galio, GaAs). En un cristal semiconductor, esta masa efectiva es una magnitud macroscópica que engloba las complejas interacciones del electrón con el potencial periódico de la red atómica. Esto permite tratarlo matemáticamente como una partícula libre mucho más ligera que en el vacío, lo cual favorece la aparición de fenómenos de confinamiento a escala nanométrica. Bajo este marco paramétrico, el objetivo principal es estudiar la evolución de la transmitancia al variar la longitud de la cadena desde $N=2$ hasta $N=200$ barreras, revelando cómo la concatenación de estados discretos da lugar a la emergencia de una minibanda de conducción macroscópica
