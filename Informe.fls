@@ -159,8 +159,8 @@ INPUT C:\Program Files\latex\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
 INPUT C:\Program Files\latex\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
 INPUT C:\Program Files\latex\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
 INPUT C:\Program Files\latex\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
-INPUT C:\Users\monta\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
-INPUT C:\Users\monta\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\latex\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\latex\tex\latex\xcolor\xcolor.sty
 INPUT C:\Program Files\latex\tex\latex\graphics-cfg\color.cfg
 INPUT C:\Program Files\latex\tex\latex\graphics-cfg\color.cfg
 INPUT C:\Program Files\latex\tex\latex\graphics-cfg\color.cfg
@@ -319,31 +319,35 @@ INPUT .\Junto.png
 INPUT .\Junto.png
 INPUT .\Junto.png
 INPUT .\Junto.png
-INPUT .\Fig_Apilada_TsuEsaki.png
-INPUT .\Fig_Apilada_TsuEsaki.png
-INPUT .\Fig_Apilada_TsuEsaki.png
-INPUT .\Fig_Apilada_TsuEsaki.png
-INPUT .\Fig_Apilada_TsuEsaki.png
-INPUT .\Fig_Apilada_TsuEsaki.png
-INPUT .\Fig_Apilada_TsuEsaki.png
-INPUT .\Junto_N.png
-INPUT .\Junto_N.png
-INPUT .\Junto_N.png
-INPUT .\Junto_N.png
-INPUT .\Junto_N.png
-INPUT .\Junto_N.png
-INPUT .\Junto_N.png
-INPUT .\Fig_Apilada_TsuEsaki_N.png
-INPUT .\Fig_Apilada_TsuEsaki_N.png
-INPUT .\Fig_Apilada_TsuEsaki_N.png
-INPUT .\Fig_Apilada_TsuEsaki_N.png
-INPUT .\Fig_Apilada_TsuEsaki_N.png
-INPUT .\Fig_Apilada_TsuEsaki_N.png
-INPUT .\Fig_Apilada_TsuEsaki_N.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
+INPUT .\Fig_Apilada_TsuEsaki.png
+INPUT .\Fig_Apilada_TsuEsaki.png
+INPUT .\Fig_Apilada_TsuEsaki.png
+INPUT .\Fig_Apilada_TsuEsaki.png
+INPUT .\Fig_Apilada_TsuEsaki.png
+INPUT .\Fig_Apilada_TsuEsaki.png
+INPUT .\Fig_Apilada_TsuEsaki.png
+INPUT .\Junto_N.png
+INPUT .\Junto_N.png
+INPUT .\Junto_N.png
+INPUT .\Junto_N.png
+INPUT .\Junto_N.png
+INPUT .\Junto_N.png
+INPUT .\Junto_N.png
+INPUT .\LogoUGR.png
+INPUT .\LogoUGR.png
+INPUT .\LogoUGR.png
+INPUT .\LogoUGR.png
+INPUT .\Fig_Apilada_TsuEsaki_N.png
+INPUT .\Fig_Apilada_TsuEsaki_N.png
+INPUT .\Fig_Apilada_TsuEsaki_N.png
+INPUT .\Fig_Apilada_TsuEsaki_N.png
+INPUT .\Fig_Apilada_TsuEsaki_N.png
+INPUT .\Fig_Apilada_TsuEsaki_N.png
+INPUT .\Fig_Apilada_TsuEsaki_N.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
 INPUT .\LogoUGR.png
