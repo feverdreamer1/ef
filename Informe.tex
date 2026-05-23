@@ -226,7 +226,23 @@ donde $k = \sqrt{2mE}/\hbar$. Aplicando las condiciones de frontera $\phi(0) = 0
   E_n = \frac{\hbar^2 k_n^2}{2m} = \frac{\hbar^2 \pi^2 n^2}{2mL^2}.
 \end{equation}
 
-Esta dependencia $E_n \propto 1/L^2$ demuestra analíticamente que al mutar una única célula y aumentar su anchura $L$ (de $5\text{ nm}$ a $10\text{ nm}$), sus autoestados de energía caen dramáticamente hacia valores más bajos. Al no coincidir en energía con los pozos adyacentes, la probabilidad de efecto túnel resonante se destruye, colapsando el canal de transmisión de la hifa tal y como hemos validado en la Figura \ref{fig:Interfase_Rota}.
+Esta dependencia $E_n \propto 1/L^2$ demuestra analíticamente que al mutar una única célula y aumentar su anchura $L$ (de $5\text{ nm}$ a $10\text{ nm}$), sus autoestados de energía caen dramáticamente hacia valores más bajos. Al no coincidir en energía con los pozos adyacentes, la probabilidad de efecto túnel resonante se destruye, colapsando el channel de transmisión de la hifa tal y como hemos validado en la Figura \ref{fig:Interfase_Rota}.
+
+\subsection{Tiempo de vida medio}
+Los electrones que permiten el transporte de información a lo largo de la red de hongos presentan un tiempo de vida medio $\tau$ en el 
+interior de cada pozo, es decir, antes de escapaz por efecto túnel, los electrones permanecen un tiempo rebotando dentro de la cavidad. 
+Siguiendo la página 77 del capítulo 2 de \cite{tsu_resonant2011}, el tiempo de vida medio se relaciona con el factor de calidad $Q=\omega\tau=E/\Delta E$, 
+siendo $\omega$ la frecuencia angular verificando $E=\hbar\omega$ y $\Delta E$ el ancho a media altura asociado al pico de resonancia con energía $E$.
+Entnonces, puede escribirse
+\begin{equation*}
+  \tau=\frac{E}{\omega\Delta E}=\frac{\hbar}{\Delta E}.
+\end{equation*}
+
+En vista de la expresión, el tiempo de vida medio se relaciona con la inversa del ancho del pico de resonancia. Se ha comentado previamente 
+cómo el aumento en el número de barreras se traducía en un desdoblamiento de los picos de resonancia, como podía observarse sobre todo en las 
+figuras \ref{fig:Separado} y \ref{fig:Separado_N} y por tanto, disminuía la anchura de cada pico. Así, una mayor complejidad en la red de hongos
+implica un aumento de $\tau$, los electrones permanecen más tiempo en cada pozo y presentan una energía más definida. 
+
 \subsection{Limitaciones del modelo}
 Aunque el método matricial empleado captura con precisión la física fundamental del efecto túnel resonante y la formación de minibandas, se basa en una aproximación. En la traslación de este modelo a un dispositivo físico real a temperatura ambiente, o a su analogía biofísica, intervendrían fenómenos adicionales que atenuarían la transmitancia ideal observada ($T=1$):
 \begin{itemize}
