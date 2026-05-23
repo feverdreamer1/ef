@@ -116,7 +116,34 @@ Por último, se analiza la respuesta del dispositivo fúngico ante perturbacione
 
 El primer escenario modela una alteración morfológica en la célula fúngica central, incrementando su longitud de $5\text{ nm}$ a $10\text{ nm}$ (estado asimilable a una célula dañada o hipertrofiada). Como se observa en la comparativa de la Figura \ref{fig:Interfase_Rota}, este cambio altera la simetría de la heteroestructura y rompe las condiciones de efecto túnel resonante global. Al ensancharse el pozo central, sus autovalores de energía permitidos se desplazan hacia valores inferiores ($E_n \propto 1/L^2$), desalineándose de los niveles cuánticos de los pozos adyacentes. Como consecuencia directa, el coeficiente de transmisión en la zona de la minibanda experimenta una drástica caída.
 
-El segundo escenario simula una obstrucción física o calcificación en la interconexión celular central, incrementando la anchura de la barrera de potencial de $2\text{ nm}$ a $8\text{ nm}$. Los resultados de la Figura \ref{fig:Frustracion_Fuerte} muestran una atenuación dramática de la transmitancia en todo el espectro energético analizado. A diferencia del caso anterior, aquí la frustración no se debe únicamente a un desajuste de niveles resonantes, sino a la dependencia matemática exponencial de la probabilidad de penetración de la barrera respecto a su espesor ($T \propto e^{-2\alpha w}$). Al cuadruplicar el espesor del septo la función de onda del electrón decae casi por completo en su interior, aislando eléctricamente ambas mitades de la hifa y anulando la capacidad de conducción del micelio.
+El segundo escenario simula una obstrucción física o calcificación en la interconexión celular central, incrementando la anchura de la 
+barrera de potencial de $2\text{ nm}$ a $8\text{ nm}$. Los resultados de la Figura \ref{fig:Frustracion_Fuerte} muestran una atenuación 
+dramática de la transmitancia en todo el espectro energético analizado. A diferencia del caso anterior, aquí la frustración no se debe 
+únicamente a un desajuste de niveles resonantes, sino a la dependencia matemática exponencial de la probabilidad de penetración de la 
+barrera respecto a su espesor. Para ver esto, consideramos un electrón que actúa como una partícula libre y consideramos:
+\begin{equation*}
+V(x) = \begin{cases}
+0, & x < 0 \\
+V_0, & 0 < x < w \\
+0, & x > w,
+\end{cases}
+\end{equation*} 
+donde $w$ es el espesor de la barrera y el origen de coordenadas se sitúa en la interfase izquierda. Para una energía $E < V_0$, 
+dividimos el problema en zonas:
+\begin{equation*}
+\psi(x)=\begin{cases}
+Ae^{ikx}+Be^{-ikx}, & x < 0 \\
+Ce^{\kappa x}+De^{-\kappa x}, & 0 < x < w \\
+Fe^{ikx}, & x > w
+\end{cases} \text{ con } k=\frac{\sqrt{2m^*E}}{\hbar}, \quad \kappa = \frac{\sqrt{2m^*(V_0-E)}}{\hbar}.
+\end{equation*}
+Aplicando las condiciones de contorno de continuidad de la función de onda y su derivada en $x=0$ y $x=w$, se obtiene el coeficiente de transmisión:
+\begin{equation*}
+T = \left|\frac{F}{A}\right|^2 = \left[1+\frac{V_0^2sinh^2(\kappa w)}{4E(V_0-E)}\right]^{-1}.
+\end{equation*}
+Para barreras suficientemente anchas, $\kappa w\gg 1$, se cumple que $sinh^2(\kappa w) \approx \frac{1}{4}e^{2\kappa w}$, luego $T$ 
+cae exponencialmente con el espesor de la barrera. Al cuadruplicar el espesor del septo la función de onda del electrón decae 
+casi por completo en su interior, aislando eléctricamente ambas mitades de la hifa y anulando la capacidad de conducción del micelio.
 
 \begin{figure}[H]
   \centering
@@ -149,14 +176,9 @@ V_0, & \text{en la barrera},
 \]
 donde \(V_0=0.5\,\mathrm{eV}\).
 
-Para energías inferiores a la altura de la barrera, \(E<V_0\), definimos
-\[
-k=\frac{\sqrt{2m^*E}}{\hbar},
-\qquad
-\kappa=\frac{\sqrt{2m^*(V_0-E)}}{\hbar}.
-\]
-
-Aplicando el teorema de Bloch a una celda periódica, la función de onda debe satisfacer \(\psi(x+a)=e^{iKa}\psi(x)\), donde \(K\) es el vector de onda de Bloch. La relación de dispersión del modelo de Kronig-Penney \cite{Kronig_Penney_1931} para barreras rectangulares viene dada por
+Usando la notación de $k$ y $\kappa$ empleada previamente, se aplica el teorema de Bloch a una celda periódica, la función de onda debe 
+satisfacer \(\psi(x+a)=e^{iKa}\psi(x)\), donde \(K\) es el vector de onda de Bloch. La relación de dispersión del modelo de Kronig-Penney 
+\cite{Kronig_Penney_1931} para barreras rectangulares viene dada por
 \[
 \cos(Ka)=
 \cos(kL)\cosh(\kappa b)
