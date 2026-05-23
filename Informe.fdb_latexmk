@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex Informe"] 1779543882.62434 "Informe.aux" "Informe.bbl" "Informe" 1779546002.3166 0
+["bibtex Informe"] 1779552970.31288 "Informe.aux" "Informe.bbl" "Informe" 1779552977.44551 0
   "./refs.bib" 1779461332 2031 23c0a577d46f6ac991281c2bfd2a7f62 ""
   "C:/Program Files/latex/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Informe.aux" 1779546001 5320 13ab1156df9056da4ee608e819fb91b6 "pdflatex"
+  "Informe.aux" 1779552976 5456 d250869eaeeb118e219cdd6714037f36 "pdflatex"
   (generated)
   "Informe.bbl"
   "Informe.blg"
   (rewritten before read)
-["pdflatex"] 1779545996.82966 "c:/Users/monta/OneDrive/Escritorio/estudio/Estudio/Universidad/Quinto curso/Segundo cuatrimestre/electronica/trabajo_electronica/ef/Informe.tex" "Informe.pdf" "Informe" 1779546002.31802 0
+["pdflatex"] 1779552970.77897 "c:/Users/monta/OneDrive/Escritorio/estudio/Estudio/Universidad/Quinto curso/Segundo cuatrimestre/electronica/trabajo_electronica/ef/Informe.tex" "Informe.pdf" "Informe" 1779552977.4467 0
   "C:/Program Files/latex/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1233951848 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "C:/Program Files/latex/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1233951848 1120 200be8b775682cdf80acad4be5ef57e4 ""
   "C:/Program Files/latex/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -164,6 +164,7 @@
   "C:/Program Files/latex/tex/latex/pgf/utilities/pgffor.sty" 1756451144 348 ee405e64380c11319f0e249fed57e6c5 ""
   "C:/Program Files/latex/tex/latex/pgf/utilities/pgfkeys.sty" 1756451144 274 5ae372b7df79135d240456a1c6f2cf9a ""
   "C:/Program Files/latex/tex/latex/pgf/utilities/pgfrcs.sty" 1756451144 325 f9f16d12354225b7dd52a3321f085955 ""
+  "C:/Program Files/latex/tex/latex/setspace/setspace.sty" 1670403145 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
   "C:/Program Files/latex/tex/latex/tools/afterpage.sty" 1761901070 4085 a232e76240e3ea7c5ba84e416088b083 ""
   "C:/Program Files/latex/tex/latex/tools/bm.sty" 1761901070 13389 9f718787b5d641dbc0271856c125f004 ""
   "C:/Program Files/latex/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
@@ -193,14 +194,14 @@
   "Fig_Apilada_TsuEsaki_N.png" 1779371421 261540 b5b224affd2c3c49bcc3e87a7576ee0f ""
   "Fig_Frustracion_Fuerte.png" 1779371421 287892 dcef3d7332d4342b88fe1aad8a1f0892 ""
   "Fig_Interfase_Rota.png" 1779371421 276525 1f20d018450dbc9c4d6093e79b6cd8c6 ""
-  "Informe.aux" 1779546001 5320 13ab1156df9056da4ee608e819fb91b6 "pdflatex"
-  "Informe.bbl" 1779543882 1510 a32692dcf2e642bd6cf75d5ad8f1809a "bibtex Informe"
-  "Informe.out" 1779546001 1915 e4e63df0d6abf893325d2404b3d6f595 "pdflatex"
-  "Informe.tex" 1779545995 25654 07d1a06b1de8bf0d28eac28c35dffeb0 ""
+  "Informe.aux" 1779552976 5456 d250869eaeeb118e219cdd6714037f36 "pdflatex"
+  "Informe.bbl" 1779552970 1510 a32692dcf2e642bd6cf75d5ad8f1809a "bibtex Informe"
+  "Informe.out" 1779552976 1915 e4e63df0d6abf893325d2404b3d6f595 "pdflatex"
+  "Informe.tex" 1779552932 26968 dbf0910d61ee5a6871f4e428d51c8f98 ""
   "Junto.png" 1779371421 439512 7a01673913b06961edc6f935ea05eb7a ""
   "Junto_N.png" 1779371421 266745 4af3cbf37bc6f4a620be319bb274b8d7 ""
   "LogoUGR.png" 1779371421 38741 58da8e5e13cb0415e81b2872ee3b99ea ""
-  "c:/Users/monta/OneDrive/Escritorio/estudio/Estudio/Universidad/Quinto curso/Segundo cuatrimestre/electronica/trabajo_electronica/ef/Informe.tex" 1779545995 25654 07d1a06b1de8bf0d28eac28c35dffeb0 ""
+  "c:/Users/monta/OneDrive/Escritorio/estudio/Estudio/Universidad/Quinto curso/Segundo cuatrimestre/electronica/trabajo_electronica/ef/Informe.tex" 1779552932 26968 dbf0910d61ee5a6871f4e428d51c8f98 ""
   "image.png" 1779371421 67227 3eedd01ccd764a15c7b21156f47bdba9 ""
   (generated)
   "Informe.aux"
