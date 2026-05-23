@@ -1,9 +1,0 @@
-\babel@toc {spanish}{}\relax 
-\contentsline {section}{\numberline {1}Introducción}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Contexto biológico}{2}{subsection.1.1}%
-\contentsline {section}{\numberline {2}Resultados}{2}{section.2}%
-\contentsline {section}{\numberline {3}Análisis de los resultados}{7}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Formación de bandas: Modelo de Kronig-Penney}{7}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Validación de la simulación frente al modelo de Tsu y Esaki (1973)}{8}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Frustración estructural: El pozo unidimensional}{10}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Limitaciones del modelo}{11}{subsection.3.4}%
