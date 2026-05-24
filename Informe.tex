@@ -281,14 +281,17 @@ cómo el aumento en el número de barreras se traducía en un desdoblamiento de 
 figuras \ref{fig:Separado} y \ref{fig:Separado_N} y por tanto, disminuía la anchura de cada pico. Así, una mayor complejidad en la red de hongos
 implica un aumento de $\tau$, los electrones permanecen más tiempo en cada pozo y presentan un pico de resonancia más definido, por lo que 
 aunque la señal eléctrica tarda más tiempo en atravesar cada hongo, la energía es más precisa, mientras que en el caso de tener pocas barreras, 
-se tendría una señal más rápida para un rango de energías más amplio, por lo que la información que se transmite sería más difusa. Cuantitativamente, 
-usando los datos exportados, la diferencia entre el tiempo de vida medio para el primer pico en el caso $N=2$ y $N=200$ viene dado a continuación:
+se tendría una señal más rápida para un rango de energías más amplio, por lo que la información que se transmite sería más difusa. Sin embargo, 
+el concepto de tiempo de vida medio para un número $N$ alto carece de sentido físico, pues al estar empleando la noción de función de onda 
+de Bloch, esta se encuentra deslocalizada y $\tau$ indicará el tiempo que tarda el eletrón en atravesar todo el dispositivo.
+
+Cuantitativamente, usando los datos exportados, la diferencia entre el tiempo de vida medio para el primer pico en el caso $N=2$ y $N=5$ viene dado a continuación:
 \begin{equation*}
-  \tau_{N=2}=\frac{\hbar}{0.108375-0.1025}=1.12\cdot10^{-13}\;s,\qquad \tau_{N=200}=\frac{\hbar}{0.0900708-0.090058}=5.14\cdot10^{-11}\;s
+  \tau_{N=2}=\frac{\hbar}{0.108375-0.1025}=1.12\cdot10^{-13}\;s,\qquad \tau_{N=5}=\frac{\hbar}{0.09125-0.090625}=1.05\cdot10^{-12}\;s
 \end{equation*}
 
 donde se ha considerado el primer valor de energía que supera o iguala a la energía asociada a la mitad del valor máximo de transmitancia 
-y como puede observarse, existe una diferencia de dos órdenes de magnitud.
+y como puede observarse, aumenta con $N$.
 
 \subsection{Limitaciones del modelo}
 Aunque el método matricial empleado captura con precisión la física fundamental del efecto túnel resonante y la formación de minibandas, se basa en una aproximación. En la traslación de este modelo a un dispositivo físico real a temperatura ambiente, o a su analogía biofísica, intervendrían fenómenos adicionales que atenuarían la transmitancia ideal observada ($T=1$):
