@@ -155,9 +155,9 @@ Fe^{ikx}, & x > w
 \end{equation*}
 Aplicando las condiciones de contorno de continuidad de la función de onda y su derivada en $x=0$ y $x=w$, se obtiene el coeficiente de transmisión:
 \begin{equation*}
-T = \left|\frac{F}{A}\right|^2 = \left[1+\frac{V_0^2sinh^2(\kappa w)}{4E(V_0-E)}\right]^{-1}.
+T = \left|\frac{F}{A}\right|^2 = \left[1+\frac{V_0^2\sinh^2(\kappa w)}{4E(V_0-E)}\right]^{-1}.
 \end{equation*}
-Para barreras suficientemente anchas, ($\kappa w\gg 1$), se cumple que $sinh^2(\kappa w) \approx \frac{1}{4}e^{2\kappa w}$, luego $T$ 
+Para barreras suficientemente anchas, ($\kappa w\gg 1$), se cumple que $\sinh^2(\kappa w) \approx \frac{1}{4}e^{2\kappa w}$, luego $T$ 
 cae exponencialmente con el espesor de la barrera. Al cuadruplicar el espesor del septo la función de onda del electrón decae 
 casi por completo en su interior, aislando eléctricamente ambas mitades de la hifa y anulando la capacidad de conducción del micelio.
 
@@ -264,14 +264,14 @@ donde $k = \sqrt{2mE}/\hbar$. Aplicando las condiciones de frontera $\phi(0) = 0
   E_n = \frac{\hbar^2 k_n^2}{2m} = \frac{\hbar^2 \pi^2 n^2}{2mL^2}.
 \end{equation}
 
-Esta dependencia $E_n \propto 1/L^2$ demuestra analíticamente que al mutar una única célula y aumentar su anchura $L$ (de $5\text{ nm}$ a $10\text{ nm}$), sus autoestados de energía caen dramáticamente hacia valores más bajos. Al no coincidir en energía con los pozos adyacentes, la probabilidad de efecto túnel resonante se destruye, colapsando el channel de transmisión de la hifa tal y como hemos validado en la Figura \ref{fig:Interfase_Rota}.
+Esta dependencia $E_n \propto 1/L^2$ demuestra analíticamente que al mutar una única célula y aumentar su anchura $L$ (de $5\text{ nm}$ a $10\text{ nm}$), sus autoestados de energía caen dramáticamente hacia valores más bajos. Al no coincidir en energía con los pozos adyacentes, la probabilidad de efecto túnel resonante se destruye, colapsando el canal de transmisión de la hifa tal y como hemos validado en la Figura \ref{fig:Interfase_Rota}.
 
 \subsection{Tiempo de vida medio}
 Los electrones que permiten el transporte de información a lo largo de la red de hongos presentan un tiempo de vida medio $\tau$ en el 
-interior de cada pozo, es decir, antes de escapaz por efecto túnel, los electrones permanecen un tiempo rebotando dentro de la cavidad. 
+interior de cada pozo, es decir, antes de escapar por efecto túnel, los electrones permanecen un tiempo rebotando dentro de la cavidad. 
 Siguiendo la página 77 del capítulo 2 de \cite{tsu_resonant2011}, el tiempo de vida medio se relaciona con el factor de calidad $Q=\omega\tau=E/\Delta E$, 
 siendo $\omega$ la frecuencia angular verificando $E=\hbar\omega$ y $\Delta E$ el ancho a media altura asociado al pico de resonancia con energía $E$.
-Entnonces, puede escribirse
+Entonces, puede escribirse
 \begin{equation*}
   \tau=\frac{E}{\omega\Delta E}=\frac{\hbar}{\Delta E}.
 \end{equation*}
@@ -288,7 +288,7 @@ usando los datos exportados, la diferencia entre el tiempo de vida medio para el
 \end{equation*}
 
 donde se ha considerado el primer valor de energía que supera o iguala a la energía asociada a la mitad del valor máximo de transmitancia 
-y como puede observarse, existe un una diferencia de dos órdenes de magnitud.
+y como puede observarse, existe una diferencia de dos órdenes de magnitud.
 
 \subsection{Limitaciones del modelo}
 Aunque el método matricial empleado captura con precisión la física fundamental del efecto túnel resonante y la formación de minibandas, se basa en una aproximación. En la traslación de este modelo a un dispositivo físico real a temperatura ambiente, o a su analogía biofísica, intervendrían fenómenos adicionales que atenuarían la transmitancia ideal observada ($T=1$):
@@ -298,9 +298,19 @@ Aunque el método matricial empleado captura con precisión la física fundament
     \item \textbf{Temperatura:} El modelo se basa en un análisis a temperatura cero, donde la función de distribución de los electrones es un escalón de Heaviside. A temperatura ambiente, la función de distribución de Fermi-Dirac se suaviza, lo que implica que algunos electrones con energías ligeramente por debajo o por encima de las resonancias también contribuirían al transporte dando lugar a una transmitancia menor.
     \item \textbf{Efectos de carga espacial:} El simulador calcula el paso de electrones individuales. En un dispositivo real, los electrones pasan un tiempo finito rebotando dentro de las cavidades antes de salir, generando una acumulación de carga negativa. Esta nube estacionaria repele a los nuevos electrones entrantes, lo que empuja hacia arriba el fondo del pozo de potencial. Al elevarse el nivel del pozo, la energía exacta de la resonancia se desajusta, rompiendo la condición de transmisión perfecta calculada teóricamente. 
 \end{itemize}
+\section{Conclusiones}
 
-\newpage
-cojones colgones
+En esta práctica se ha empleado el simulador \texttt{Piece-Wise Constant Potential Barrier Tool} de nanoHUB \cite{nano} para analizar el transporte cuántico a través de una red de pozos y barreras. El hilo conductor de la práctica ha sido la analogía entre la red de pozos y barreras y la estructura del micelio de los hongos, modlando los pozos como células fúngicas y las barreras como septos. En un primer lugar, se ha observado cómo el aumento del número de barreras provoca un desdoblamiento de los niveles energéticos en los que se produce resonancia, lo que significa que la señal tiene cada vez más ``caminos'' para cruzar, acabando por formar una minibanda de conducción cuando la red crece lo suficiente, un comportamiento macroscópico que se ha corroborado de forma analítica mediante el modelo de Kronig-Penney.
+
+Por otro lado, uno de los puntos del trabajo ha sido comprobar que la simulación es más exacta que los modelos clásicos de los años 70, como el estudio de Tsu y Esaki. Al comparar las gráficas obtenidas con las de dicho estudio, se constató que los picos de resonancia se situaban en energías un poco más altas. Esta discrepancia se debe a que se ha empleado una masa efectiva más cercana a la realidad y a que el simulador aplica rigurosamente las condiciones de contorno de BenDaniel-Duke, lo que corrige la posición exacta de los picos.
+
+También se ha calculado analíticamente el caso más sencillo de dos barreras. Para ello, se ha usado el modelo del interferómetro de Fabry-Pérot, que analiza el pozo como si la onda rebotara entre dos espejos. Al resolver las ecuaciones, se obtuvieron exactamente los mismos números para las energías donde la transmisión es máxima ($0.1056\text{ eV}$ y $0.405\text{ eV}$).
+
+Asimismo, se han calculado los tiempos de vida medio de los electrones en el interior de los pozos.
+
+Finalmente, se ha puesto a prueba la resistencia de esta red simulando ``enfermedades'' o defectos. Se ha comprobado que el sistema es muy delicado: si una célula muta y se hace más grande, sus energías cambian y ya no encajan con las de las vecinas, cortando el paso de la señal. de la misma manera, si la pared entre dos células (el septo) se hace muy gruesa, el electrón se topa con un muro demasiado ancho y resulta incapaz de atravesarlo por efecto túnel.
+
+En conclusión, para que la red funcione y transmita información de forma perfecta, necesita ser muy simétrica y ordenada. Aunque en la vida real factores como el calor, el choque con otras partículas o las impurezas harían que la transmisión no fuera del $100\%$, este modelo ha permitido entender con una gran precisión cómo se comporta la física cuántica detrás de la propagación de señales en esta estructura.\newpage
 \bibliographystyle{plain} 
 \bibliography{refs}
 \end{document}
