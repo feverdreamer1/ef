@@ -177,6 +177,22 @@ casi por completo en su interior, aislando eléctricamente ambas mitades de la h
 
 \section{Análisis de los resultados}
 
+\subsection{Fundamentos del $resonant tunneling$}
+
+Un pozo cuántico ideal está rodeado por barreras de anchura infinita a ambos lados, de modo que la partícula permanece esencialmente confinada en el interior del pozo. En este caso, la probabilidad de encontrar al electrón lejos de la región confinada tiende a cero, y los estados con energía \(E<V_0\) se denominan \textit{estados ligados} (\textit{bound states}). 
+
+En nuestro modelo, sin embargo, las barreras poseen una anchura finita, lo que permite que el electrón escape mediante efecto túnel. Como consecuencia, los estados ligados dejan de existir estrictamente y son reemplazados por \textit{estados cuasi-ligados} o \textit{resonantes}. Aunque el electrón permanece temporalmente localizado dentro del pozo, existe una probabilidad finita de fuga a través de las barreras. Estos estados poseen un tiempo de vida finito \(\tau\), de manera que su energía presenta un ensanchamiento característico del orden de \(\hbar/\tau\).
+
+Si consideramos electrones incidentes con energía \(E\), la probabilidad de transmisión viene dada por el coeficiente de transmisión \(T\), que lejos de la resonancia puede aproximarse como el producto de las transmisiones asociadas a cada barrera,
+\[
+T \approx T_L T_R .
+\]
+Sin embargo, la característica fundamental del túnel resonante es que, para energías próximas a la resonancia, la transmisión puede incrementarse drásticamente respecto a este valor. En estructuras simétricas con barreras idénticas, se alcanza transmisión perfecta en el centro de la resonancia, independientemente de lo pequeños que sean \(T_L\) y \(T_R\). Además, la anchura del pico resonante es proporcional a la suma de ambas transmisiones, de modo que barreras más opacas producen resonancias más estrechas.
+
+Si extendemos la estructura de doble barrera aumentando el número de barreras y pozos alternados, obtenemos una estructura conocida como \textbf{superlattice}. En este régimen, los electrones pueden tunelizar entre pozos vecinos, lo que destruye nuevamente los estados ligados individuales y da lugar a la formación de \textit{minibandas}. La \textbf{superlattice} genera así un potencial periódico artificial, por lo que pueden aplicarse la teoría general de cristales unidimensionales y el teorema de Bloch.
+
+A diferencia de los cristales naturales, donde la periodicidad viene determinada por la red atómica, en una superred el periodo está fijado por el grosor de las capas semiconductoras, típicamente del orden de nanómetros. Como consecuencia, las energías características asociadas a las minibandas y minigaps son mucho menores, situándose habitualmente en la escala de los meV. Una de las principales ventajas de estas estructuras es la posibilidad de diseñar de manera controlada la estructura electrónica del sistema mediante la modificación de parámetros como el espesor de los pozos y barreras o la composición de los materiales empleados.
+
 \subsection{Formación de bandas: Modelo de Kronig-Penney}
 Para un número elevado de barreras, como \(N=200\), la heteroestructura deja de comportarse como un conjunto pequeño de pozos acoplados y puede aproximarse por una red periódica unidimensional. En este límite, el sistema se asemeja al modelo de Kronig--Penney, formado por una sucesión periódica de pozos y barreras rectangulares.
 
