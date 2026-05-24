@@ -57,7 +57,7 @@ Nuria Touriño Verano}
 
 \section{Introducción}
 En esta práctica analizamos el transporte cuántico utilizando la herramienta \texttt{Piece-Wise Constant Potential Barrier Tool} de nanoHUB \cite{nano}, que destaca por su versatilidad para simular heteroestructuras de distintas características. En este trabajo nos centraremos en variar el \textbf{número} de barreras (y, consecuentemente, de pozos) en el simulador para emular una red de micelio. En esta analogía, cada pozo cuántico representa una unidad celular fúngica, y cada barrera de potencial representa la interconexión entre ellas (septo). La primera y la última célula del dispositivo se consideran acopladas directamente a los contactos del sistema.
-Se ha fijado una anchura de pozo de 5 nm, barreras de 2 nm con una altura de potencial de 0.5 eV, y una masa efectiva de $m^* = 0.067 m_e$ (correspondiente al Arseniuro de Galio, GaAs). En un cristal semiconductor, esta masa efectiva es una magnitud macroscópica que engloba las complejas interacciones del electrón con el potencial periódico de la red atómica. Esto permite tratarlo matemáticamente como una partícula libre mucho más ligera que en el vacío, lo cual favorece la aparición de fenómenos de confinamiento a escala nanométrica. Bajo este marco paramétrico, el objetivo principal es estudiar la evolución de la transmitancia al variar la longitud de la cadena desde $N=2$ hasta $N=200$ barreras, revelando cómo la concatenación de estados discretos da lugar a la emergencia de una minibanda de conducción macroscópica
+Se ha fijado una anchura de pozo de 5 nm, barreras de 2 nm con una altura de potencial de 0.5 eV, y una masa efectiva de $m^* = 0.067 m_e$ (correspondiente al Arseniuro de Galio, GaAs). En un cristal semiconductor, esta masa efectiva es una magnitud macroscópica que engloba las complejas interacciones del electrón con el potencial periódico de la red atómica. Esto permite tratarlo matemáticamente como una partícula libre mucho más ligera que en el vacío, lo cual favorece la aparición de fenómenos de confinamiento a escala nanométrica. Bajo este marco paramétrico, el objetivo principal es estudiar la evolución de la transmitancia al variar la longitud de la cadena desde $N=2$ hasta $N=200$ barreras, revelando cómo la concatenación de estados discretos da lugar a la emergencia de una minibanda de conducción macroscópica.
 
 El trabajo evalúa también la robustez de este canal de transporte analizando la \textit{frustración del sistema} ante dos patologías o perturbaciones biológicas localizadas en el elemento central de una cadena fija de 5 barreras: la hipertrofia dimensional de una célula (variación del ancho del pozo) y la calcificación o degradación de una interconexión celular (variación del ancho de la barrera).
 
@@ -117,7 +117,7 @@ En primer lugar, se estudia el régimen de cadenas cortas (de 2 a 5 barreras). L
     \label{fig:Junto}
 \end{figure}
 
-Partiendo de que el rango de energías es el mismo para todas las curvas que aparecen en la gráfica, se observa que según aumenta el número de barreras, las curvas presentan una transmitancia cada vez menor al principio, correspondiéndose con la intuición de que a mayor número de barreras, la probabilidad de que una partícula pueda atraversarlas es cada vez menor.
+Partiendo de que el rango de energías es el mismo para todas las curvas que aparecen en la gráfica, se observa que según aumenta el número de barreras, las curvas presentan una transmitancia cada vez menor al principio, correspondiéndose con la intuición de que a mayor número de barreras, la probabilidad de que una partícula pueda atravesarlas es cada vez menor.
 Lo siguiente que se aprecia es que los primeros picos de resonancia se localizan en un pequeño entorno de $0.1\;eV$ de energía, independientemente del número de barreras y tras abandonar esta zona, las curvas pasan a tener un mínimo que es más pronunciado cuanto mayor es la cantidad de barreras para luego volver a un comportamiento similar en el que ocurren varios máximos de transmitancia en una zona de energía más alta, en torno a $0.4\;eV$.
 Energías más elevadas superarían las barreras de potencial, por lo que la transmitancia sería cada vez más cercana a 1, así que no resulta interesante analizarlas más a fondo. Los entornos mencionados pueden estudiarse más en profundidad en la imagen \ref{fig:Separado} a continuación:
 
@@ -313,7 +313,7 @@ implica un aumento de $\tau$, los electrones permanecen más tiempo en cada pozo
 aunque la señal eléctrica tarda más tiempo en atravesar cada hongo, la energía es más precisa, mientras que en el caso de tener pocas barreras, 
 se tendría una señal más rápida para un rango de energías más amplio, por lo que la información que se transmite sería más difusa. Sin embargo, 
 el concepto de tiempo de vida medio para un número $N$ alto carece de sentido físico, pues al estar empleando la noción de función de onda 
-de Bloch, esta se encuentra deslocalizada y $\tau$ indicará el tiempo que tarda el eletrón en atravesar todo el dispositivo.
+de Bloch, esta se encuentra deslocalizada y $\tau$ indicará el tiempo que tarda el electrón en atravesar todo el dispositivo.
 
 Cuantitativamente, usando los datos exportados, la diferencia entre el tiempo de vida medio para el primer pico en el caso $N=2$ y $N=5$ viene dado a continuación:
 \begin{equation*}
@@ -341,7 +341,7 @@ También se ha calculado analíticamente el caso más sencillo de dos barreras. 
 
 Asimismo, se han calculado los tiempos de vida medio de los electrones en el interior de los pozos.
 
-Finalmente, se ha puesto a prueba la resistencia de esta red simulando ``enfermedades'' o defectos. Se ha comprobado que el sistema es muy delicado: si una célula muta y se hace más grande, sus energías cambian y ya no encajan con las de las vecinas, cortando el paso de la señal. de la misma manera, si la pared entre dos células (el septo) se hace muy gruesa, el electrón se topa con un muro demasiado ancho y resulta incapaz de atravesarlo por efecto túnel.
+Finalmente, se ha puesto a prueba la resistencia de esta red simulando ``enfermedades'' o defectos. Se ha comprobado que el sistema es muy delicado: si una célula muta y se hace más grande, sus energías cambian y ya no encajan con las de las vecinas, cortando el paso de la señal. De la misma manera, si la pared entre dos células (el septo) se hace muy gruesa, el electrón se topa con un muro demasiado ancho y resulta incapaz de atravesarlo por efecto túnel.
 
 En conclusión, para que la red funcione y transmita información de forma perfecta, necesita ser muy simétrica y ordenada. Aunque en la vida real factores como el calor, el choque con otras partículas o las impurezas harían que la transmisión no fuera del $100\%$, este modelo ha permitido entender con una gran precisión cómo se comporta la física cuántica detrás de la propagación de señales en esta estructura.\newpage
 \bibliographystyle{plain} 
