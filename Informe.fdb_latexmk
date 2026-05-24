@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex Informe"] 1779612848.75572 "Informe.aux" "Informe.bbl" "Informe" 1779612853.76319 0
-  "./refs.bib" 1779553735 2031 23c0a577d46f6ac991281c2bfd2a7f62 ""
+["bibtex Informe"] 1779614037.01046 "Informe.aux" "Informe.bbl" "Informe" 1779614041.87482 0
+  "./refs.bib" 1779613987 2239 0aa9d6cfefc894db9b69e2076a15032b ""
   "C:/Users/ntouv/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Informe.aux" 1779612852 5863 116d2667ca4dd47fa9fb3162c4e29a57 "pdflatex"
+  "Informe.aux" 1779614041 6377 0c63b10da3b475246999050f2b2db06b "pdflatex"
   (generated)
   "Informe.bbl"
   "Informe.blg"
   (rewritten before read)
-["pdflatex"] 1779612849.19939 "c:/Users/ntouv/OneDrive/Escritorio/5DGFYM/ElectronicaFisica/Trabajo/ef/Informe.tex" "Informe.pdf" "Informe" 1779612853.76389 0
+["pdflatex"] 1779614037.32705 "c:/Users/ntouv/OneDrive/Escritorio/5DGFYM/ElectronicaFisica/Trabajo/ef/Informe.tex" "Informe.pdf" "Informe" 1779614041.87555 0
   "C:/Users/ntouv/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1779551048 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/ntouv/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1778950109 13350272 bc5703102791c775f1ed2896a8f168e2 ""
   "C:/Users/ntouv/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1233951848 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -194,14 +194,15 @@
   "Fig_Apilada_TsuEsaki_N.png" 1779553735 261540 b5b224affd2c3c49bcc3e87a7576ee0f ""
   "Fig_Frustracion_Fuerte.png" 1779553735 287892 dcef3d7332d4342b88fe1aad8a1f0892 ""
   "Fig_Interfase_Rota.png" 1779553735 276525 1f20d018450dbc9c4d6093e79b6cd8c6 ""
-  "Informe.aux" 1779612852 5863 116d2667ca4dd47fa9fb3162c4e29a57 "pdflatex"
-  "Informe.bbl" 1779612849 1510 a32692dcf2e642bd6cf75d5ad8f1809a "bibtex Informe"
-  "Informe.out" 1779612852 2389 aaaeb48d2d054d427eef5f2888936b59 "pdflatex"
-  "Informe.tex" 1779612843 33055 553e609ba2c7f8b470b9a8002c9fbed5 ""
+  "Informe.aux" 1779614041 6377 0c63b10da3b475246999050f2b2db06b "pdflatex"
+  "Informe.bbl" 1779614037 1686 9b0fd3c7a752f76ecdcb01a9ef26d2d8 "bibtex Informe"
+  "Informe.out" 1779614041 2389 aaaeb48d2d054d427eef5f2888936b59 "pdflatex"
+  "Informe.tex" 1779614031 33338 3d9f41b8a359a51df679c7243342fcb3 ""
   "Junto.png" 1779553735 439512 7a01673913b06961edc6f935ea05eb7a ""
   "Junto_N.png" 1779553735 266745 4af3cbf37bc6f4a620be319bb274b8d7 ""
+  "LigadovsResonante.png" 1779612013 27367 ef080df1f5f1d1e80e94fb438c3f8b46 ""
   "LogoUGR.png" 1779553735 38741 58da8e5e13cb0415e81b2872ee3b99ea ""
-  "c:/Users/ntouv/OneDrive/Escritorio/5DGFYM/ElectronicaFisica/Trabajo/ef/Informe.tex" 1779612843 33055 553e609ba2c7f8b470b9a8002c9fbed5 ""
+  "c:/Users/ntouv/OneDrive/Escritorio/5DGFYM/ElectronicaFisica/Trabajo/ef/Informe.tex" 1779614031 33338 3d9f41b8a359a51df679c7243342fcb3 ""
   "image.png" 1779553735 67227 3eedd01ccd764a15c7b21156f47bdba9 ""
   (generated)
   "Informe.aux"
