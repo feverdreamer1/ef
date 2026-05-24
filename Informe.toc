@@ -1,0 +1,17 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducción}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Contexto biológico}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Fundamentos teóricos}{4}{subsection.1.2}%
+\contentsline {subsubsection}{Fundamentos del túnel resonante y formación de minibandas}{4}{section*.2}%
+\contentsline {section}{\numberline {2}Resultados}{6}{section.2}%
+\contentsline {section}{\numberline {3}Análisis de los resultados}{11}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Validación de la simulación frente al modelo de Tsu y Esaki (1973)}{11}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Acoplamiento túnel entre pozos: aproximación \textit {tight-binding}}{14}{subsection.3.2}%
+\contentsline {subsubsection}{Caso $N=3$: Sistema de doble pozo cuántico}{15}{section*.3}%
+\contentsline {subsubsection}{Caso $N=4$: Cadena de tres pozos acoplados}{15}{section*.4}%
+\contentsline {subsubsection}{Caso $N=5$: Cadena de cuatro pozos acoplados}{16}{section*.5}%
+\contentsline {subsection}{\numberline {3.3}Formación de bandas: Modelo de Kronig-Penney}{17}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Frustración estructural: El pozo unidimensional}{18}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Tiempo de vida medio}{19}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Limitaciones del modelo}{20}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Conclusiones}{21}{section.4}%

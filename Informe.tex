@@ -25,6 +25,8 @@
 \setlength{\parskip}{0.9em} % Separación entre párrafos
 \setlength{\parindent}{0pt} % Sin sangría
 
+\setcounter{secnumdepth}{2} % No numerar subsubsectio
+
 \geometry{
  left=2cm,
  right=2cm,
@@ -54,6 +56,10 @@ Nuria Touriño Verano}
 \begin{document}
 
 \maketitle
+
+\renewcommand{\contentsname}{Índice}
+\tableofcontents
+\newpage
 
 \section{Introducción}
 En esta práctica analizamos el transporte cuántico utilizando la herramienta \texttt{Piece-Wise Constant Potential Barrier Tool} de nanoHUB \cite{nano}, que destaca por su versatilidad para simular heteroestructuras de distintas características. En este trabajo nos centraremos en variar el \textbf{número} de barreras (y, consecuentemente, de pozos) en el simulador para emular una red de micelio. En esta analogía, cada pozo cuántico representa una unidad celular fúngica, y cada barrera de potencial representa la interconexión entre ellas (septo). La primera y la última célula del dispositivo se consideran acopladas directamente a los contactos del sistema.
@@ -210,37 +216,6 @@ casi por completo en su interior, aislando eléctricamente ambas mitades de la h
 
 \section{Análisis de los resultados}
 
-\subsection{Formación de bandas: Modelo de Kronig-Penney}
-Para un número elevado de barreras, como \(N=200\), la heteroestructura deja de comportarse como un conjunto pequeño de pozos acoplados y puede aproximarse por una red periódica unidimensional. En este límite, el sistema se asemeja al modelo de Kronig--Penney, formado por una sucesión periódica de pozos y barreras rectangulares.
-
-En nuestro caso, cada celda elemental está formada por un pozo de anchura \(L=5\,\mathrm{nm}\), y una barrera de anchura \(b=2\,\mathrm{nm}\). Por tanto, el periodo de la red es \(a=L+b=7\,\mathrm{nm}\).
-
-El potencial periódico puede escribirse como \(V(x+a)=V(x)\), con
-\[
-V(x)=
-\begin{cases}
-0, & \text{en el pozo},\\
-V_0, & \text{en la barrera},
-\end{cases}
-\]
-donde \(V_0=0.5\,\mathrm{eV}\).
-
-Usando la notación de $k$ y $\kappa$ empleada previamente, se aplica el teorema de Bloch a una celda periódica, la función de onda debe 
-satisfacer \(\psi(x+a)=e^{iKa}\psi(x)\), donde \(K\) es el vector de onda de Bloch. La relación de dispersión del modelo de Kronig-Penney 
-\cite{Kronig_Penney_1931} para barreras rectangulares viene dada por
-\[
-\cos(Ka)=
-\cos(kL)\cosh(\kappa b)
-+
-\frac{\kappa^2-k^2}{2k\kappa}
-\sin(kL)\sinh(\kappa b).
-\]
-
-Esta ecuación determina qué valores de energía están permitidos en la red. Como el miembro izquierdo cumple necesariamente \(-1\leq \cos(Ka)\leq 1\), las energías permitidas son aquellas para las que el valor absoluto del miembro derecho es menor o igual a 1. Sustituyendo los parámetros de nuestra simulación ($m^*=0.067m_e$, $L=5\,\mathrm{nm}$, $b=2\,\mathrm{nm}$, $V_0=0.5\,\mathrm{eV}$), el modelo predice analíticamente la aparición de bandas de energía permitidas que concuerdan fielmente con las amplias zonas de transmitancia $T \approx 1$ observadas en la simulación de $N=200$.
-
-La primera banda observada procede del estado fundamental del pozo, mientras que la segunda banda se asocia al segundo modo cuantizado permitido. Así, cada nivel ligado del pozo aislado evoluciona hacia una banda de conducción cuando el número de barreras aumenta significativamente.
-
-
 \subsection{Validación de la simulación frente al modelo de Tsu y Esaki (1973)}
 La configuración empleada en nuestro dispositivo ($L=5\text{ nm}$, $b=2\text{ nm}$, $V_0=0.5\text{ eV}$) es homóloga a la del estudio fundacional de R. Tsu y L. Esaki (1973) sobre transporte en redes finitas \cite{tsu_esaki1973}, cuyos resultados se muestran a continuación:
 \begin{figure}[H]
@@ -273,6 +248,179 @@ donde el desfase $\rho$ provocado por la penetración de la función de onda en 
 siendo $\kappa = \sqrt{2m^*(V_0-E)}/\hbar$ el factor de decaimiento en la región clásicamente prohibida. Resolviendo numéricamente este sistema de ecuaciones trascendentales para los parámetros de nuestro diseño ($m^* = 0.067m_e$, $L = 5\text{ nm}$, $b = 2\text{ nm}$, $V_0 = 0.5\text{ eV}$), el desfase adicional $\rho$ en las interfases compensa de manera exacta el término espacial $2kL$, prediciendo las energías de resonancia fundamental ($n=1$) y excitada ($n=2$) justamente en los valores de $0.1056\text{ eV}$ y $0.405\text{ eV}$ validados por el simulador.
 
 Nótese que las energías resonantes para el caso de triple barrera se desdoblan en dobletes, y las del caso de cinco barreras se desdoblan en cuadrupletes, como podemos observar también en nuestra simulación. Las anchuras de línea están determinadas aproximadamente por la probabilidad de efecto túnel a través de la anchura de la barrera. Para $N$ barreras, se producirá un desdoblamiento en $(N-1)$ niveles. Para un $N$ grande, estas energías resonantes convergerán finalmente hacia el modelo de bandas que comentaremos posteriormente \cite{tsu_esaki1973}.
+
+
+\subsection{Acoplamiento túnel entre pozos: aproximación \textit{tight-binding}}
+
+Partiendo del caso elemental de doble barrera ($N=2$), donde el sistema presenta un único estado resonante dominante, el aumento progresivo del número de pozos revela un fenómeno de desdoblamiento energético. Los máximos de transmisión dejan de aparecer como resonancias aisladas y evolucionan hacia estructuras cada vez más densas, indicando que los estados cuasi ligados de pozos vecinos comienzan a acoplarse mediante efecto túnel.
+
+Aunque las simulaciones se han realizado mediante el método de matriz de transferencia, la evolución de los picos resonantes en régimen de cadenas cortas ($N=3,4,5$) puede analizarse cuantitativamente mediante un modelo efectivo tipo \textit{tight-binding}.
+
+En dicho modelo, desarrollado en física del estado sólido \cite{kittel2005}, los electrones se consideran inicialmente localizados alrededor de determinados sitios de la red cristalina, mientras que el solapamiento entre funciones de onda vecinas introduce un acoplamiento débil que permite el transporte electrónico entre sitios próximos. En un cristal real, los estados locales corresponden a orbitales atómicos. En nuestro caso, puede considerarse que cada pozo cuántico desempeña el papel de un ``sitio efectivo'', pues alberga un estado resonante parcialmente localizado. Debido a que las barreras poseen espesor finito, la función de onda penetra evanescentemente en las regiones vecinas, produciendo un solapamiento entre estados de pozos contiguos y permitiendo el acoplamiento túnel entre ellos.
+
+La descripción anterior se basa en varias hipótesis físicas razonables para nuestra heteroestructura. En primer lugar, todos los pozos se consideran idénticos, con anchura fija $L=5\,\mathrm{nm}$, de modo que cada uno de ellos presenta aproximadamente el mismo estado resonante local. Además, se supone que el acoplamiento túnel dominante ocurre únicamente entre pozos vecinos, despreciándose el solapamiento directo entre regiones más alejadas.
+
+Bajo estas hipótesis, el sistema puede modelarse como una cadena finita de $M=N-1$ pozos acoplados. La diagonalización del Hamiltoniano discreto asociado conduce a un conjunto de niveles energéticos:
+\[
+E_m = E_0 - 2t\cos\left(\frac{m\pi}{M+1}\right),
+\qquad m=1,\dots,M,
+\]
+donde $E_0$ representaría la energía resonante del pozo aislado y $t$ cuantifica el acoplamiento túnel efectivo entre pozos vecinos.
+
+\subsubsection{Caso $N=3$: Sistema de doble pozo cuántico}
+El caso $N=3$ proporciona una primera validación cuantitativa del modelo. Tomando el máximo resonante del caso $N=2$ como energía local $E_0$, la aparición de dos picos para $N=3$ se interpreta como el desdoblamiento simétrico de dicho nivel debido al acoplamiento túnel entre los dos pozos. 
+
+El modelo \textit{tight-binding} predice, para $M=2$ pozos:
+\[
+E_1=E_0-t, \qquad E_2=E_0+t.
+\]
+
+A partir de los máximos resonantes obtenidos en la simulación:
+\[
+E_1^{\mathrm{sim}}=0.0960938\,\mathrm{eV},
+\qquad
+E_2^{\mathrm{sim}}=0.116563\,\mathrm{eV},
+\]
+el parámetro de acoplamiento túnel puede estimarse directamente a partir del desdoblamiento energético del doblete:
+\[
+t=\frac{E_2-E_1}{2}\simeq 10.23\,\mathrm{meV}.
+\]
+
+Usando este valor y tomando como referencia el estado resonante del caso $N=2$, el modelo \textit{tight-binding} predice las energías:
+\[
+E_1^{\mathrm{TB}}\approx 0.0953904\,\mathrm{eV},
+\qquad
+E_2^{\mathrm{TB}}\approx 0.1158596\,\mathrm{eV}.
+\]
+
+El error absoluto obtenido es del orden de $7\times 10^{-4}\,\mathrm{eV}$, lo que muestra que el doblete observado se encuentra prácticamente centrado respecto al nivel resonante del caso $N=2$. Esta comparación debe entenderse como una validación semi-cuantitativa del mecanismo de desdoblamiento, ya que el parámetro $t$ se ha estimado a partir de la propia separación entre los dos picos simulados. Esta comparación indica, no obstante, un acuerdo notable entre el modelo efectivo y la simulación.
+
+\subsubsection{Caso $N=4$: Cadena de tres pozos acoplados}
+El caso $N=4$ resulta especialmente ilustrativo, ya que el sistema contiene $M=N-1=3$ pozos acoplados. El modelo \textit{tight-binding} predice entonces la aparición de un triplete energético dado por:
+\[
+E_m=E_0-2t\cos\left(\frac{m\pi}{M+1}\right),
+\qquad m=1,2,3.
+\]
+
+Para $M=3$, esta expresión toma la forma:
+\[
+E_1=E_0-\sqrt{2}t,
+\qquad
+E_2=E_0,
+\qquad
+E_3=E_0+\sqrt{2}t.
+\]
+
+A partir de las simulaciones obtenemos que los máximos resonantes de la primera minibanda aparecen en las energías:
+\[
+E_1^{\mathrm{sim}}=0.0925781\,\mathrm{eV},
+\qquad
+E_2^{\mathrm{sim}}=0.105625\,\mathrm{eV},
+\qquad
+E_3^{\mathrm{sim}}=0.121719\,\mathrm{eV}.
+\]
+
+En los casos de cadenas finitas, $E_0$ debe entenderse como una energía local efectiva. Aunque el valor de referencia viene dado por la resonancia del caso $N=2$, el centro energético del multiplete puede desplazarse ligeramente al considerar una estructura finita y abierta. Por tanto, tomando como referencia el nivel central, $E_0=0.105625\,\mathrm{eV}$, el acoplamiento túnel efectivo puede estimarse a partir de la separación entre los niveles extremos:
+\[
+t=\frac{E_3-E_1}{2\sqrt{2}} \simeq 0.010303\,\mathrm{eV}.
+\]
+
+Con este valor, el modelo \textit{tight-binding} predice las energías:
+\[
+E_1^{\mathrm{TB}}\approx 0.091053\,\mathrm{eV},
+\qquad
+E_2^{\mathrm{TB}}=0.105625\,\mathrm{eV},
+\qquad
+E_3^{\mathrm{TB}}\approx 0.120197\,\mathrm{eV}.
+\]
+
+Los errores absolutos respecto a los resultados simulados son del orden de $10^{-3}\,\mathrm{eV}$, lo que indica un acuerdo notable teniendo en cuenta que el modelo \textit{tight-binding} constituye una aproximación discreta efectiva.
+
+\subsubsection{Caso $N=5$: Cadena de cuatro pozos acoplados}
+En este caso, el sistema contiene $M=4$ pozos cuánticos acoplados, por lo que el modelo \textit{tight-binding} predice el desdoblamiento del nivel resonante original en un cuadruplete energético. Las energías en este modelo vienen dadas por:
+\[
+E_m=E_0-2t\cos\left(\frac{m\pi}{5}\right),
+\qquad m=1,2,3,4.
+\]
+
+A partir de las simulaciones obtenidas mediante el método de matriz de transferencia, los máximos resonantes de la primera minibanda aparecen en:
+\[
+E_1^{\mathrm{sim}}=0.0908984\,\mathrm{eV},
+\qquad
+E_2^{\mathrm{sim}}=0.0996094\,\mathrm{eV},
+\]
+\[
+E_3^{\mathrm{sim}}=0.112187\,\mathrm{eV},
+\qquad
+E_4^{\mathrm{sim}}=0.124375\,\mathrm{eV}.
+\]
+
+A diferencia del caso $M=3$, donde el nivel central coincide directamente con $E_0$, para $M=4$ no existe un estado exactamente centrado. Por ello, el parámetro $E_0$ se estima como el centro energético medio del cuadruplete:
+\[
+E_0 \simeq \frac{E_1+E_2+E_3+E_4}{4}\simeq 0.10677\,\mathrm{eV}.
+\]
+
+Una vez fijado este valor, el parámetro de acoplamiento $t$ puede determinarse ajustando la separación energética observada al patrón cosenoidal predicho por el modelo \textit{tight-binding}. El ajuste proporciona:
+\[
+t\simeq 0.01032\,\mathrm{eV}=10.32\,\mathrm{meV}.
+\]
+
+Con estos parámetros, las energías predichas por el modelo resultan:
+\[
+E_1^{\mathrm{TB}}\approx 0.0900640\,\mathrm{eV},
+\qquad
+E_2^{\mathrm{TB}}\approx 0.1003873\,\mathrm{eV},
+\]
+\[
+E_3^{\mathrm{TB}}\approx 0.1131476\,\mathrm{eV},
+\qquad
+E_4^{\mathrm{TB}}\approx 0.1234709\,\mathrm{eV}.
+\]
+
+Los errores absolutos respecto a las simulaciones permanecen por debajo de $10^{-3}\,\mathrm{eV}$, es decir, del orden del meV. Por tanto, el comportamiento observado para $N=5$ refuerza claramente la interpretación física basada en pozos cuánticos acoplados.
+
+La relativa estabilidad del parámetro de acoplamiento $t$ al variar el número total de pozos (valores del orden de $t\sim 10\,\mathrm{meV}$), resulta coherente con la hipótesis fundamental del modelo \textit{tight-binding}, donde el acoplamiento electrónico depende principalmente del solapamiento local entre pozos vecinos y no de la longitud global de la cadena. La ligerísima tendencia al alza de $t$ refleja las sutiles correcciones energéticas introducidas por el acoplamiento de los pozos de los extremos a los contactos externos abiertos del simulador.
+
+En conjunto, los resultados muestran que el progresivo desdoblamiento de las resonancias puede interpretarse de forma natural como consecuencia del acoplamiento túnel entre pozos vecinos, reproduciendo de manera efectiva la física básica de formación de minibandas en estructuras periódicas finitas.
+
+
+
+
+\subsection{Formación de bandas: Modelo de Kronig-Penney}
+Para un número elevado de barreras, como \(N=200\), la heteroestructura deja de comportarse como un conjunto pequeño de pozos acoplados y puede aproximarse por una red periódica unidimensional. En este límite, el sistema se asemeja al modelo de Kronig--Penney, formado por una sucesión periódica de pozos y barreras rectangulares.
+
+En nuestro caso, cada celda elemental está formada por un pozo de anchura \(L=5\,\mathrm{nm}\), y una barrera de anchura \(b=2\,\mathrm{nm}\). Por tanto, el periodo de la red es \(a=L+b=7\,\mathrm{nm}\).
+
+El potencial periódico puede escribirse como \(V(x+a)=V(x)\), con
+\[
+V(x)=
+\begin{cases}
+0, & \text{en el pozo},\\
+V_0, & \text{en la barrera},
+\end{cases}
+\]
+donde \(V_0=0.5\,\mathrm{eV}\).
+
+Usando la notación de $k$ y $\kappa$ empleada previamente, se aplica el teorema de Bloch a una celda periódica, la función de onda debe 
+satisfacer \(\psi(x+a)=e^{iKa}\psi(x)\), donde \(K\) es el vector de onda de Bloch. La relación de dispersión del modelo de Kronig-Penney 
+\cite{Kronig_Penney_1931} para barreras rectangulares viene dada por
+\[
+\cos(Ka)=
+\cos(kL)\cosh(\kappa b)
++
+\frac{\kappa^2-k^2}{2k\kappa}
+\sin(kL)\sinh(\kappa b).
+\]
+
+Esta ecuación determina qué valores de energía están permitidos en la red. Como el miembro izquierdo cumple necesariamente \(-1\leq \cos(Ka)\leq 1\), las energías permitidas son aquellas para las que el valor absoluto del miembro derecho es menor o igual a 1. Sustituyendo los parámetros de nuestra simulación ($m^*=0.067m_e$, $L=5\,\mathrm{nm}$, $b=2\,\mathrm{nm}$, $V_0=0.5\,\mathrm{eV}$), el modelo predice analíticamente la aparición de bandas de energía permitidas que concuerdan fielmente con las amplias zonas de transmitancia $T \approx 1$ observadas en la simulación de $N=200$.
+
+La primera banda observada procede del estado fundamental del pozo, mientras que la segunda banda se asocia al segundo modo cuantizado permitido. Así, cada nivel ligado del pozo aislado evoluciona hacia una banda de conducción cuando el número de barreras aumenta significativamente.
+
+
+
+
+
+
 \subsection{Frustración estructural: El pozo unidimensional}
 Para el escenario de la alteración morfológica en la célula fúngica central, aunque la expresión exacta del pozo infinito no es aplicable cuantitativamente a una heteroestructura finita acoplada, la tendencia física se mantiene. 
 
