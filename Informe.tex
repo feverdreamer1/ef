@@ -17,7 +17,7 @@
 \usepackage{cleveref}
 \usepackage{background}
 \usepackage{tikz}
-
+\usepackage{ocgx2}
 %Configuración de márgenes y formato
 \usepackage{setspace}
 \setstretch{1.05}          % Interlineado más amplio
@@ -144,10 +144,50 @@ Por ello, extendemos el análisis al régimen macroscópico (de 8 a 200 barreras
 
 \begin{figure}[H]
   \centering
-    \includegraphics[width=\linewidth, height=0.42 \textheight]{Junto_N.png}
-    \caption{Evolución macroscópica hacia el continuo sólido de bandas ($N=8$ a $200$).}
-    \label{fig:Junto_N}
+  \begin{tikzpicture}
+    
+    \node at (0,0) {
+      \begin{ocg}{Capa 8}{capa8}{on}
+        \includegraphics[width=0.8\textwidth]{N_8.png}
+      \end{ocg}
+    };
+    \node at (0,0) {
+      \begin{ocg}{Capa 12}{capa12}{off}
+        \includegraphics[width=0.8\textwidth]{N_12.png}
+      \end{ocg}
+    };
+    \node at (0,0) {
+      \begin{ocg}{Capa 20}{capa20}{off}
+        \includegraphics[width=0.8\textwidth]{N_20.png}
+      \end{ocg}
+    };
+    \node at (0,0) {
+      \begin{ocg}{Capa 50}{capa50}{off}
+        \includegraphics[width=0.8\textwidth]{N_50.png}
+      \end{ocg}
+    };
+    \node at (0,0) {
+      \begin{ocg}{Capa 200}{capa200}{off}
+        \includegraphics[width=0.8\textwidth]{N_200.png}
+      \end{ocg}
+    };
+
+    \tikzstyle{boton}=[draw=blue!80, fill=blue!10, rounded corners, inner sep=6pt, font=\bfseries]
+
+    \node[boton] at (-4, -5.5) {\actionsocg{}{capa8}{capa12 capa20 capa50 capa200}{N = 8}};
+    \node[boton] at (-2, -5.5) {\actionsocg{}{capa12}{capa8 capa20 capa50 capa200}{N = 12}};
+    \node[boton] at (0, -5.5)  {\actionsocg{}{capa20}{capa8 capa12 capa50 capa200}{N = 20}};
+    \node[boton] at (2, -5.5)  {\actionsocg{}{capa50}{capa8 capa12 capa20 capa200}{N = 50}};
+    \node[boton] at (4, -5.5)  {\actionsocg{}{capa200}{capa8 capa12 capa20 capa50}{N = 200}};
+
+  \end{tikzpicture}
+  
+  \caption{Evolución macroscópica hacia el continuo de bandas. (Gráfico interactivo: requiere visor PDF compatible como Acrobat Reader o Foxit. Haz clic en los botones para alternar el número de barreras).}
+  \label{fig:Junto_N}
 \end{figure}
+
+
+
 
 Como se observa en la gráfica de curvas solapadas de la Figura \ref{fig:Junto_N}, las funciones individuales se agrupan hasta formar un continuo denso. 
 Además, aunque estudiando los casos con menor número de barreras de las figuras \ref{fig:Junto} y \ref{fig:Separado} 

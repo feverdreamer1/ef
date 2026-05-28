@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex Informe"] 1779694389.71108 "Informe.aux" "Informe.bbl" "Informe" 1779694395.79491 0
+["bibtex Informe"] 1779982351.67004 "Informe.aux" "Informe.bbl" "Informe" 1779982358.2117 0
   "./refs.bib" 1779692262 2429 412c0d077b70e1673e0cced1879ca5f9 ""
   "C:/Users/shara/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Informe.aux" 1779694394 7147 71fcc5139c5b0a6198ba6b28235da9a0 "pdflatex"
+  "Informe.aux" 1779982357 9861 8831fc013093a51ae4b85aa1d164b4f4 "pdflatex"
   (generated)
   "Informe.bbl"
   "Informe.blg"
   (rewritten before read)
-["pdflatex"] 1779694390.21304 "c:/Users/shara/Desktop/Electronica Fisica/Trabajo/Informe/Informe.tex" "Informe.pdf" "Informe" 1779694395.79591 0
+["pdflatex"] 1779982352.02504 "c:/Users/shara/Desktop/Electronica Fisica/Trabajo/Informe/Informe.tex" "Informe.pdf" "Informe" 1779982358.21277 0
   "C:/Users/shara/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1779602171 81117 0754b2bdd801bdb5b41468aa14a51bc6 ""
   "C:/Users/shara/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1776677213 13350272 3804f8ee6f1efd377dd77ec86271258d ""
   "C:/Users/shara/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1233951848 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -173,7 +173,10 @@
   "C:/Users/shara/AppData/Local/Programs/MiKTeX/tex/latex/kvoptions/kvoptions.sty" 1656236481 22555 6d8e155cfef6d82c3d5c742fea7c992e ""
   "C:/Users/shara/AppData/Local/Programs/MiKTeX/tex/latex/kvsetkeys/kvsetkeys.sty" 1665066333 13815 760b0c02f691ea230f5359c4e1de23a7 ""
   "C:/Users/shara/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1774811737 30909 7dedb28cb21a1e79c47a35a35ae3c507 ""
+  "C:/Users/shara/AppData/Local/Programs/MiKTeX/tex/latex/media9/pdfbase.sty" 1726498873 101085 7a695eb850a3ff917185daa25fd56ee2 ""
   "C:/Users/shara/AppData/Local/Programs/MiKTeX/tex/latex/multirow/multirow.sty" 1731767677 6696 886c9f3087d0b973ed2c19aa79cb3023 ""
+  "C:/Users/shara/AppData/Local/Programs/MiKTeX/tex/latex/ocgx2/ocgbase.sty" 1726498821 21269 3639b280a82cb97074ba74beb2720ea2 ""
+  "C:/Users/shara/AppData/Local/Programs/MiKTeX/tex/latex/ocgx2/ocgx2.sty" 1726498821 109685 e7151206690798735288cbfb775a320e ""
   "C:/Users/shara/AppData/Local/Programs/MiKTeX/tex/latex/pgf/basiclayer/pgf.sty" 1756451144 1090 bae35ef70b3168089ef166db3e66f5b2 ""
   "C:/Users/shara/AppData/Local/Programs/MiKTeX/tex/latex/pgf/basiclayer/pgfcore.sty" 1756451144 373 00b204b1d7d095b892ad31a7494b0373 ""
   "C:/Users/shara/AppData/Local/Programs/MiKTeX/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty" 1756451144 21013 f4ff83d25bb56552493b030f27c075ae ""
@@ -196,16 +199,20 @@
   "Fig_Apilada_TsuEsaki_N.png" 1779179995 261540 b5b224affd2c3c49bcc3e87a7576ee0f ""
   "Fig_Frustracion_Fuerte.png" 1778932221 287892 dcef3d7332d4342b88fe1aad8a1f0892 ""
   "Fig_Interfase_Rota.png" 1778932489 276525 1f20d018450dbc9c4d6093e79b6cd8c6 ""
-  "Informe.aux" 1779694394 7147 71fcc5139c5b0a6198ba6b28235da9a0 "pdflatex"
-  "Informe.bbl" 1779694390 1829 af422c2d85b3be67752f39a0ae013d85 "bibtex Informe"
-  "Informe.out" 1779694394 3767 8fa17eeae2bafbc9ccdd53ed1189b535 "pdflatex"
-  "Informe.tex" 1779694379 42668 51a1842fdc45201cf98cff6622dedccb ""
-  "Informe.toc" 1779694394 1549 7020e47032971a9211a47c7e6ca4075b "pdflatex"
+  "Informe.aux" 1779982357 9861 8831fc013093a51ae4b85aa1d164b4f4 "pdflatex"
+  "Informe.bbl" 1779982351 1829 af422c2d85b3be67752f39a0ae013d85 "bibtex Informe"
+  "Informe.out" 1779982357 3767 8fa17eeae2bafbc9ccdd53ed1189b535 "pdflatex"
+  "Informe.tex" 1779982337 44085 d99d7403198761c492ad8055a821ea08 ""
+  "Informe.toc" 1779982357 1549 7020e47032971a9211a47c7e6ca4075b "pdflatex"
   "Junto.png" 1779308141 439512 7a01673913b06961edc6f935ea05eb7a ""
-  "Junto_N.png" 1779179994 266745 4af3cbf37bc6f4a620be319bb274b8d7 ""
   "LigadovsResonante.png" 1779623541 27367 ef080df1f5f1d1e80e94fb438c3f8b46 ""
   "LogoUGR.png" 1777482615 38741 58da8e5e13cb0415e81b2872ee3b99ea ""
-  "c:/Users/shara/Desktop/Electronica Fisica/Trabajo/Informe/Informe.tex" 1779694379 42668 51a1842fdc45201cf98cff6622dedccb ""
+  "N_12.png" 1779981690 201805 95c38b15b8e8646a195c1949213f1a23 ""
+  "N_20.png" 1779981690 193969 f5eadcfe03671dff690075c31bf7665a ""
+  "N_200.png" 1779981692 148115 5a618a664fb15661c0ef6112b640df59 ""
+  "N_50.png" 1779981691 172759 9e62f007c6d7c0dbe3f3b838cedb3294 ""
+  "N_8.png" 1779981689 187059 25ac7c2c246814037c957a4142c7f671 ""
+  "c:/Users/shara/Desktop/Electronica Fisica/Trabajo/Informe/Informe.tex" 1779982337 44085 d99d7403198761c492ad8055a821ea08 ""
   "image.png" 1779181145 67227 3eedd01ccd764a15c7b21156f47bdba9 ""
   (generated)
   "Informe.aux"
