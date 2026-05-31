@@ -9,7 +9,7 @@
 \usepackage{amsmath}
 \usepackage{ocgx2}
 \usepackage{url}
-
+\usepackage{float}
 \usepackage{geometry}
 \geometry{margin=2.5cm}
 
@@ -238,7 +238,7 @@ Un pozo cuántico ideal está rodeado por barreras de anchura infinita a ambos l
 En nuestro modelo, sin embargo, las barreras poseen una anchura finita, lo que permite que el electrón escape mediante efecto túnel. Como consecuencia, los estados ligados dejan de existir estrictamente y son reemplazados por \textit{estados cuasi-ligados} o \textit{resonantes}. Aunque el electrón permanece temporalmente localizado dentro del pozo, existe una probabilidad finita de fuga a través de las barreras. Estos estados poseen un tiempo de vida finito \(\tau\), de manera que su energía presenta un ensanchamiento característico del orden de \(\hbar/\tau\).
 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
     \centering
     \includegraphics[width=\linewidth]{LigadovsResonante.png}
@@ -262,7 +262,7 @@ Hemos conseguido ya nuestra primera cepa de hifa aislada. Sin embargo, antes de 
 
 En primer lugar, se estudia el régimen de cadenas cortas (de 2 a 5 barreras). Las Figuras \ref{fig:Junto} y \ref{fig:Separado} muestran la comparativa directa del canal de transmisión. En la curva de la Figura \ref{fig:Junto} se aprecia el desdoblamiento de los niveles de energía resonantes al aumentar el número de pozos acoplados mediante un solapamiento directo, mientras que en la Figura \ref{fig:Separado} se muestran apilados, facilitando la identificación individualizada de cada pico de resonancia.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
     \centering
     \includegraphics[width=\linewidth, height=0.42 \textheight]{Junto.png}
@@ -286,7 +286,7 @@ Esto nos lleva a pensar que a medida que el número de pozos aumenta, los máxim
 
 La configuración empleada en nuestro dispositivo ($L=5\text{ nm}$, $b=2\text{ nm}$, $V_0=0.5\text{ eV}$) es homóloga a la del estudio fundacional de R. Tsu y L. Esaki (1973) sobre transporte en redes finitas \cite{tsu_esaki1973}, cuyos resultados se muestran a continuación:
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.45\textwidth]{image.png}
   \caption{Resultados de Tsu y Esaki (\cite{tsu_esaki1973}) para una red de 5 barreras con parámetros similares a los nuestros.}
@@ -472,7 +472,7 @@ A medida que el número de barreras aumenta, los picos de resonancia se van desd
 Esto nos lleva a pensar que a medida que el número de pozos aumenta, los máximos que se apreciaban pasarán a formar parte de un continuo en el que no podrán diferenciarse del resto.
 Por ello, extendemos el análisis al régimen macroscópico (de 8 a 200 barreras), asimilable a un filamento de micelio consolidado. Las Figuras \ref{fig:Junto_N} y \ref{fig:Separado_N} ilustran cómo los picos discretos se fusionan definitivamente en una banda continua.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \begin{tikzpicture}
     
@@ -523,7 +523,7 @@ Además, aunque estudiando los casos con menor número de barreras de las figura
 podía verse cómo la zona de picos resonantes era una región definida, es ahora donde puede apreciarse dicha región con claridad. De hecho, 
 en la imagen \ref{fig:Separado_N} siguiente: 
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth, height=0.52 \textheight]{Fig_Apilada_TsuEsaki_N.png}
     \caption{Formación e individualización de la minibanda de conducción en ejes apilados.}
@@ -595,7 +595,7 @@ Lo que más temíamos ha ocurrido.
 
 Al intentar replicar nuestro mismo experimento con otro micelio de las mismas características, observamos en este caso que, cuando se desarrollaban ya 5 septos, algunas presentaban un mayor crecimiento en la célula fúngica central, incrementando su longitud de 5nm a 10 nm. Al simular esta situación, observamos que este cambio alteraba la simetría de la heteroestructura, y rompía las condiciones de efecto túnel resonante global, como se observa en la comparativa de la Figura \ref{fig:Interfase_Rota}.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
     \includegraphics[width=0.8\linewidth, height=0.3 \textheight]{Fig_Interfase_Rota.png}
     \caption{Efecto de la frustración por desalineación energética (célula mutada de $10\text{ nm}$).}
@@ -656,7 +656,7 @@ Para barreras suficientemente anchas, ($\kappa w\gg 1$), se cumple que $\sinh^2(
 cae exponencialmente con el espesor de la barrera. Al cuadruplicar el espesor del septo la función de onda del electrón decae 
 casi por completo en su interior, aislando eléctricamente ambas mitades de la hifa y anulando la capacidad de conducción del micelio.
  
-  \begin{figure}[h]
+  \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth, height=0.3 \textheight]{Fig_Frustracion_Fuerte.png}
     \caption{Efecto de la frustración por bloqueo de interfase (septo calcificado de $8\text{ nm}$).}
@@ -675,7 +675,7 @@ Han pasado casi cinco meses desde la primera anotación de este cuaderno.
 
 Al iniciar esta investigación, los hongos no eran más que una curiosidad biológica encontrada en un artículo olvidado de principios del siglo XXI. Hoy sabemos que una red miceliar puede reproducir, al menos de forma aproximada, algunos de los mecanismos fundamentales que hicieron posible la revolución electrónica de la antigua civilización.
 
-Hemos empleado el simulador \texttt{Piece-Wise Constant Potential Barrier Tool} de nanoHUB \cite{nano} para analizar el transporte cuántico a través de una red de pozos y barreras. El hilo conductor ha sido la analogía entre la red de pozos y barreras y la estructura del micelio de los hongos, modlando los pozos como células fúngicas y las barreras como septos. En un primer lugar, se ha observado cómo el aumento del número de barreras provoca un desdoblamiento de los niveles energéticos en los que se produce resonancia, lo que significa que la señal tiene cada vez más ``caminos'' para cruzar, acabando por formar una minibanda de conducción cuando la red crece lo suficiente, un comportamiento macroscópico que se ha corroborado de forma analítica mediante el modelo de Kronig-Penney.
+Hemos empleado el simulador \texttt{Piece-Wise Constant Potential Barrier Tool} de nanoHUB \cite{nano} para analizar el transporte cuántico a través de una red de pozos y barreras. El hilo conductor ha sido la analogía entre la red de pozos y barreras y la estructura del micelio de los hongos, modelando los pozos como células fúngicas y las barreras como septos. En un primer lugar, se ha observado cómo el aumento del número de barreras provoca un desdoblamiento de los niveles energéticos en los que se produce resonancia, lo que significa que la señal tiene cada vez más ``caminos'' para cruzar, acabando por formar una minibanda de conducción cuando la red crece lo suficiente, un comportamiento macroscópico que se ha corroborado de forma analítica mediante el modelo de Kronig-Penney.
 
 Por otro lado, uno de los puntos del trabajo ha sido comprobar que la simulación es más exacta que los modelos clásicos de los años 70, como el estudio de Tsu y Esaki \cite{tsu_esaki1973}. Al comparar las gráficas obtenidas con las de dicho estudio, se constató que los picos de resonancia se situaban en energías un poco más altas. Esta discrepancia se debe a que se ha empleado una masa efectiva más cercana a la realidad y a que el simulador aplica rigurosamente las condiciones de contorno de BenDaniel-Duke, lo que corrige la posición exacta de los picos.
 
