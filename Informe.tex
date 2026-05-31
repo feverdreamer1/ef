@@ -1,25 +1,158 @@
-\documentclass[11pt,a4paper]{article}
-\usepackage[utf8]{inputenc}
+\documentclass[a4paper,12pt]{article}
+
+% -------------------------------------------------
+% PAQUETES
+% -------------------------------------------------
 \usepackage[spanish]{babel}
-\usepackage{amsmath, amssymb, amsthm, amsfonts}
-\usepackage{graphicx}
-\usepackage{geometry}
-\usepackage{float}
-\usepackage{bm}
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linktoc=all,
-    linkcolor=blue,
-}
-\usepackage{multirow}
-\usepackage{comment}
-\usepackage{cleveref}
-\usepackage{background}
-\usepackage{tikz}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
 \usepackage{ocgx2}
-%Configuración de márgenes y formato
+\usepackage{url}
+
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{xcolor}
 \usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{setspace}
+
+\pagestyle{empty}
+
+\usepackage{geometry}
+\geometry{
+ left=2cm,
+ right=2cm,
+ top=2.2cm,
+ bottom=2.2cm
+}
+
+% -------------------------------------------------
+% COLORES
+% -------------------------------------------------
+\definecolor{ink}{RGB}{40,40,40}
+\definecolor{paperline}{RGB}{120,100,80}
+\definecolor{stampred}{RGB}{120,20,20}
+
+% -------------------------------------------------
+% DOCUMENTO
+% -------------------------------------------------
+\begin{document}
+
+% Fondo estilo papel/cuaderno
+\begin{tikzpicture}[remember picture,overlay]
+
+    % Fondo claro
+    \fill[black!3] 
+    (current page.south west) rectangle 
+    (current page.north east);
+
+    % Marco exterior
+    \draw[line width=2pt, paperline]
+    ([xshift=1.2cm,yshift=1.2cm]current page.south west)
+    rectangle
+    ([xshift=-1.2cm,yshift=-1.2cm]current page.north east);
+
+    % Líneas horizontales tipo cuaderno
+    \foreach \y in {-13,-12.2,...,13}
+    {
+        \draw[paperline!25]
+        ([xshift=1.5cm,yshift=\y cm]current page.center)
+        -- 
+        ([xshift=-1.5cm,yshift=\y cm]current page.center);
+    }
+
+    % Línea vertical roja típica de cuaderno
+    \draw[line width=1.2pt, red!50]
+    ([xshift=-5cm,yshift=1.3cm]current page.south)
+    --
+    ([xshift=-5cm,yshift=-1.3cm]current page.north);
+
+\end{tikzpicture}
+
+\vspace*{2cm}
+
+\begin{center}
+
+% -------------------------------------------------
+% ENCABEZADO
+% -------------------------------------------------
+
+{\Large\scshape Archivo de Investigación}
+
+\vspace{1cm}
+
+{\Huge\bfseries CUADERNO DE BITÁCORA}
+
+\vspace{0.5cm}
+
+\rule{0.75\textwidth}{0.6pt}
+
+\vspace{0.8cm}
+
+{\LARGE
+Proyecto Micelio
+
+}
+
+\vspace{0.5cm}
+
+{\large
+Cuaderno de campo sobre la reconstrucción de la electrónica tras la Gran Tormenta Solar
+}
+
+\vspace{2cm}
+
+% -------------------------------------------------
+% BLOQUE CENTRAL
+% -------------------------------------------------
+
+\begin{minipage}{0.75\textwidth}
+
+\setstretch{1.3}
+
+\textbf{Investigador/a:} Dr. S. Haresh, Dr. J. Montaraz, Dra. M. Ramos, Dra. N. Touriño \\[0.6cm]
+
+\textbf{Institución:} Universidad de Granada \\[0.6cm]
+
+\textbf{Departamento / Grupo:} Electrónica, Facultad de Ciencias de la Universidad de Granada \\[0.6cm]
+
+
+\end{minipage}
+
+\vfill
+
+% -------------------------------------------------
+% SELLO
+% -------------------------------------------------
+
+\begin{tikzpicture}
+\node[
+draw=stampred,
+line width=2pt,
+rounded corners=2pt,
+rotate=-8,
+text=stampred,
+inner sep=10pt
+]
+{
+\Huge\bfseries CONFIDENCIAL
+};
+\end{tikzpicture}
+
+\vspace{1.2cm}
+
+{\small
+``Las observaciones más importantes suelen comenzar como anotaciones desordenadas.''
+}
+
+\end{center}
+
+%Configuración de márgenes y formato
+
 \setstretch{1.05}          % Interlineado más amplio
 
 \setlength{\parskip}{0.9em} % Separación entre párrafos
@@ -27,42 +160,29 @@
 
 \setcounter{secnumdepth}{2} % No numerar subsubsectio
 
-\geometry{
- left=2cm,
- right=2cm,
- top=2.2cm,
- bottom=2.2cm
-}
-%hasta aquí es el cambio
 
-
-\backgroundsetup{
-  scale=1,
-  color=black,
-  opacity=0.15,
-  angle=0,
-  position=current page.south west,
-  vshift=3.8cm,
-  hshift=1cm,
-  contents={\includegraphics[width=\textwidth]{LogoUGR.png}}
-}
-
-\geometry{margin=2.5cm}
-\title{Electrónica Física\\
-titulo ingenioso}
-\author{Sharan Haresh Belani, Juan Montaraz Gómez, María Ramos Calderón\\ \&
-Nuria Touriño Verano}
-
-\begin{document}
-
-\maketitle
-
-\renewcommand{\contentsname}{Índice}
-\tableofcontents
 \newpage
 
-\section{Introducción}
-En esta práctica analizamos el transporte cuántico utilizando la herramienta \texttt{Piece-Wise Constant Potential Barrier Tool} de nanoHUB \cite{nano}, que destaca por su versatilidad para simular heteroestructuras de distintas características. En este trabajo nos centraremos en variar el \textbf{número} de barreras (y, consecuentemente, de pozos) en el simulador para emular una red de micelio. En esta analogía, cada pozo cuántico representa una unidad celular fúngica, y cada barrera de potencial representa la interconexión entre ellas (septo). La primera y la última célula del dispositivo se consideran acopladas directamente a los contactos del sistema.
+
+Año 2300.
+
+Han transcurrido varias décadas desde la Gran Tormenta Solar, un evento que inutilizó la inmensa mayoría de los dispositivos electrónicos del planeta. La infraestructura tecnológica sobre la que se sustentaba la civilización colapsó en cuestión de días, provocando un retroceso científico y económico sin precedentes.
+
+La reconstrucción resultó aún más difícil debido al agotamiento de numerosos materiales estratégicos empleados durante siglos por la industria microelectrónica. El acceso a la computación avanzada quedó restringido a una pequeña élite capaz de controlar las escasas reservas restantes y las pocas instalaciones que sobrevivieron al desastre.
+
+En este contexto, iniciamos una búsqueda desesperada de nuevas arquitecturas para el procesamiento de información. El objetivo es encontrar sistemas capaces de reproducir el comportamiento de los antiguos dispositivos semiconductores sin depender de los materiales tradicionales.
+
+Durante nuestras investigaciones encontramos una antigua publicación científica fechada en 2024. En ella se describía un concepto experimental denominado Fungal Computer Interface, basado en las sorprendentes capacidades de procesamiento y adaptación de las redes miceliares.
+
+Aquella idea aparentemente olvidada contenía una posibilidad revolucionaria: utilizar estructuras biológicas inspiradas en hongos como soporte para nuevos dispositivos electrónicos.
+
+Lo que sigue es el cuaderno de bitácora de esta investigación.
+
+
+\newpage
+
+\begin{abstract}
+    En esta práctica analizamos el transporte cuántico utilizando la herramienta \texttt{Piece-Wise Constant Potential Barrier Tool} de nanoHUB \cite{nano}, que destaca por su versatilidad para simular heteroestructuras de distintas características. En este trabajo nos centraremos en variar el \textbf{número} de barreras (y, consecuentemente, de pozos) en el simulador para emular una red de micelio. En esta analogía, cada pozo cuántico representa una unidad celular fúngica, y cada barrera de potencial representa la interconexión entre ellas (septo). La primera y la última célula del dispositivo se consideran acopladas directamente a los contactos del sistema.
 Se ha fijado una anchura de pozo de $5\text{ nm}$, barreras de $2\text{ nm}$ con una altura de potencial de $0.5\text{ eV}$, y una masa efectiva de $m^* = 0.067 m_e$ (correspondiente al Arseniuro de Galio, GaAs). 
 En el vacío, un electrón tiene una masa fija ($m_e$). Sin embargo, cuando viaja por dentro de un cristal semiconductor, interactúa constantemente con las fuerzas de los átomos que lo rodean. 
 
@@ -71,7 +191,29 @@ Al usar el valor del GaAs, estamos asumiendo que el electrón se comporta de for
 Bajo este marco paramétrico, el objetivo principal es estudiar la evolución de la transmitancia al variar la longitud de la cadena desde $N=2$ hasta $N=200$ barreras, revelando cómo la concatenación de estados discretos da lugar a la emergencia de una minibanda de conducción macroscópica.
 El trabajo evalúa también la robustez de este canal de transporte analizando la \textit{frustración del sistema} ante dos patologías o perturbaciones biológicas localizadas en el elemento central de una cadena fija de 5 barreras: la hipertrofia dimensional de una célula (variación del ancho del pozo) y la calcificación o degradación de una interconexión celular (variación del ancho de la barrera).
 
-\subsection{Contexto biológico}
+\end{abstract}
+
+\newcommand{\entrada}[2]{
+\vspace{1cm}
+
+\noindent
+{\large\textbf{Día #1}}
+
+\vspace{0.15cm}
+
+{\itshape #2}
+
+\vspace{0.3cm}
+
+\hrule
+
+\vspace{0.5cm}
+}
+
+\entrada{1}{Descubrimiento de las redes miceliares y fundamentos teóricos de nuestro experimento.}
+
+Buscando información sobre cómo solventar los problemas de la humanidad sin tener que recurrir a los materiales usados durante cientos de años, hemos encontrado algo maravilloso.
+
 El reino de los hongos presenta una arquitectura de red única. Su unidad estructural básica es la \textbf{hifa}, un filamento tubular microscópico que crece y se ramifica para formar una gran red interconectada conocida como \textbf{micelio}. Esta estructura es la que permite al hongo explorar el terreno y transportar nutrientes, agua y señales eléctricas a largas distancias.
 
 Las hifas no son tubos huecos y continuos, sino que están divididas en compartimentos o células individuales mediante unas paredes transversales denominadas \textbf{septos}. Sin embargo, estos septos no aíslan las células por completo; poseen poros centrales que actúan como cuellos de botella o válvulas, permitiendo y regulando el flujo de materia y señales entre compartimentos adyacentes.
@@ -85,16 +227,18 @@ En nuestro estudio, proponemos la siguiente analogía:
 
 De este modo, la propagación de una señal a lo largo del micelio queda matemáticamente descrita por la transmitancia de un electrón atravesando una superred de pozos y barreras acopladas.
 
-\subsection{Fundamentos teóricos}
 
-\subsubsection{Fundamentos del túnel resonante y formación de minibandas}
+\entrada{2}{Fundamentos teóricos}
+
+
+Para comprobar nuestras simulaciones, nos hemos basado en los fundamentos del túnel resonante, y la formación de minibandas.
 
 Un pozo cuántico ideal está rodeado por barreras de anchura infinita a ambos lados, de modo que la partícula permanece esencialmente confinada en el interior del pozo. En este caso, la probabilidad de encontrar al electrón lejos de la región confinada tiende a cero, y los estados con energía \(E<V_0\) se denominan \textit{estados ligados} (\textit{bound states}). 
 
 En nuestro modelo, sin embargo, las barreras poseen una anchura finita, lo que permite que el electrón escape mediante efecto túnel. Como consecuencia, los estados ligados dejan de existir estrictamente y son reemplazados por \textit{estados cuasi-ligados} o \textit{resonantes}. Aunque el electrón permanece temporalmente localizado dentro del pozo, existe una probabilidad finita de fuga a través de las barreras. Estos estados poseen un tiempo de vida finito \(\tau\), de manera que su energía presenta un ensanchamiento característico del orden de \(\hbar/\tau\).
 
 
-\begin{figure}[H]
+\begin{figure}[h]
   \centering
     \centering
     \includegraphics[width=\linewidth]{LigadovsResonante.png}
@@ -112,14 +256,13 @@ Si extendemos la estructura de doble barrera aumentando el número de barreras y
 
 A diferencia de los cristales naturales, donde la periodicidad viene determinada por la red atómica, en una superred el periodo está fijado por el grosor de las capas semiconductoras, típicamente del orden de nanómetros. Como consecuencia, las energías características asociadas a las minibandas y minigaps son mucho menores, situándose habitualmente en la escala de los meV. Una de las principales ventajas de estas estructuras es la posibilidad de diseñar de manera controlada la estructura electrónica del sistema mediante la modificación de parámetros como el espesor de los pozos y barreras o la composición de los materiales empleados.
 
-\newpage
+\entrada{7}{Primer modelo de hifa aislada}
 
-\section{Resultados}
-A continuación, se presentan los coeficientes de transmisión frente a la energía de los electrones incidentes. Todos los resultados han sido procesados y graficados mediante rutinas propias en Python a partir de los datos numéricos exportados del simulador.
+Hemos conseguido ya nuestra primera cepa de hifa aislada. Sin embargo, antes de ponernos directamente con los hongos, hemos querido simular qué es lo que debería ocurrir. No queríamos tentar a la suerte, estos organismos son muy sensibles.
 
 En primer lugar, se estudia el régimen de cadenas cortas (de 2 a 5 barreras). Las Figuras \ref{fig:Junto} y \ref{fig:Separado} muestran la comparativa directa del canal de transmisión. En la curva de la Figura \ref{fig:Junto} se aprecia el desdoblamiento de los niveles de energía resonantes al aumentar el número de pozos acoplados mediante un solapamiento directo, mientras que en la Figura \ref{fig:Separado} se muestran apilados, facilitando la identificación individualizada de cada pico de resonancia.
 
-\begin{figure}[H]
+\begin{figure}[h]
   \centering
     \centering
     \includegraphics[width=\linewidth, height=0.42 \textheight]{Junto.png}
@@ -131,7 +274,7 @@ Partiendo de que el rango de energías es el mismo para todas las curvas que apa
 Lo siguiente que se aprecia es que los primeros picos de resonancia se localizan en un pequeño entorno de $0.1\;eV$ de energía, independientemente del número de barreras y tras abandonar esta zona, las curvas pasan a tener un mínimo que es más pronunciado cuanto mayor es la cantidad de barreras para luego volver a un comportamiento similar en el que ocurren varios máximos de transmitancia en una zona de energía más alta, en torno a $0.4\;eV$.
 Energías más elevadas superarían las barreras de potencial, por lo que la transmitancia sería cada vez más cercana a 1, así que no resulta interesante analizarlas más a fondo. Los entornos mencionados pueden estudiarse más en profundidad en la imagen \ref{fig:Separado} a continuación:
 
-\begin{figure}[H]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=\linewidth, height=0.42 \textheight]{Fig_Apilada_TsuEsaki.png}
     \caption{Desglose de subplots apilados en español con marcas de ruptura de eje ($//$).}
@@ -140,128 +283,12 @@ Energías más elevadas superarían las barreras de potencial, por lo que la tra
 
 A medida que el número de barreras aumenta, los picos de resonancia se van desdoblando, es decir, cada máximo de energía se va fragmentando según aumenta el acoplamiento de los pozos. 
 Esto nos lleva a pensar que a medida que el número de pozos aumenta, los máximos que se apreciaban pasarán a formar parte de un continuo en el que no podrán diferenciarse del resto.
-Por ello, extendemos el análisis al régimen macroscópico (de 8 a 200 barreras), asimilable a un filamento de micelio consolidado. Las Figuras \ref{fig:Junto_N} y \ref{fig:Separado_N} ilustran cómo los picos discretos se fusionan definitivamente en una banda continua.
 
-\begin{figure}[H]
-  \centering
-  \begin{tikzpicture}
-    
-    \node at (0,0) {
-      \begin{ocg}{Capa 8}{capa8}{on}
-        \includegraphics[width=0.8\textwidth]{N_8.png}
-      \end{ocg}
-    };
-    \node at (0,0) {
-      \begin{ocg}{Capa 12}{capa12}{off}
-        \includegraphics[width=0.8\textwidth]{N_12.png}
-      \end{ocg}
-    };
-    \node at (0,0) {
-      \begin{ocg}{Capa 20}{capa20}{off}
-        \includegraphics[width=0.8\textwidth]{N_20.png}
-      \end{ocg}
-    };
-    \node at (0,0) {
-      \begin{ocg}{Capa 50}{capa50}{off}
-        \includegraphics[width=0.8\textwidth]{N_50.png}
-      \end{ocg}
-    };
-    \node at (0,0) {
-      \begin{ocg}{Capa 200}{capa200}{off}
-        \includegraphics[width=0.8\textwidth]{N_200.png}
-      \end{ocg}
-    };
-
-    \tikzstyle{boton}=[draw=blue!80, fill=blue!10, rounded corners, inner sep=6pt, font=\bfseries]
-
-    \node[boton] at (-4, -5.5) {\actionsocg{}{capa8}{capa12 capa20 capa50 capa200}{N = 8}};
-    \node[boton] at (-2, -5.5) {\actionsocg{}{capa12}{capa8 capa20 capa50 capa200}{N = 12}};
-    \node[boton] at (0, -5.5)  {\actionsocg{}{capa20}{capa8 capa12 capa50 capa200}{N = 20}};
-    \node[boton] at (2, -5.5)  {\actionsocg{}{capa50}{capa8 capa12 capa20 capa200}{N = 50}};
-    \node[boton] at (4, -5.5)  {\actionsocg{}{capa200}{capa8 capa12 capa20 capa50}{N = 200}};
-
-  \end{tikzpicture}
-  
-  \caption{Evolución macroscópica hacia el continuo de bandas. (Gráfico interactivo: requiere visor PDF compatible como Acrobat Reader o Foxit. Haz clic en los botones para alternar el número de barreras).}
-  \label{fig:Junto_N}
-\end{figure}
-
-
-
-
-Como se observa en la gráfica de curvas solapadas de la Figura \ref{fig:Junto_N}, las funciones individuales se agrupan hasta formar un continuo denso. 
-Además, aunque estudiando los casos con menor número de barreras de las figuras \ref{fig:Junto} y \ref{fig:Separado} 
-podía verse cómo la zona de picos resonantes era una región definida, es ahora donde puede apreciarse dicha región con claridad. De hecho, 
-en la imagen \ref{fig:Separado_N} siguiente: 
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\linewidth, height=0.52 \textheight]{Fig_Apilada_TsuEsaki_N.png}
-    \caption{Formación e individualización de la minibanda de conducción en ejes apilados.}
-    \label{fig:Separado_N}
-\end{figure}
-
-Puede verse cómo las curvas han pasado a ser totalmente verticales siguiendo la escala empleada en las gráficas, pues en realidad
-sigue habiendo un mínimo de transmitancia, aunque cada vez más pequeño según aumenta N.
-
-Permitir que el cultivo de hongos siguiera creciendo ha dotado al organismo de una red de transporte más eficiente, siendo este capaz de
-conducir señales empleando un rango de energías cada vez más amplio. Podríamos seguir aumentando el número de barreras, pero el esfuerzo
-computacional sería cada vez mayor y como se ha visto, la formación de las bandas es un hecho.
-
-Por último, se analiza la respuesta del dispositivo fúngico ante perturbaciones estructurales localizadas utilizando como base el modelo simétrico de 5 barreras (4 pozos). Se evalúan de forma independiente dos escenarios críticos de frustración de la transmisión.
-
-El primer escenario modela una alteración morfológica en la célula fúngica central, incrementando su longitud de $5\text{ nm}$ a $10\text{ nm}$ (estado asimilable a una célula dañada o hipertrofiada). Como se observa en la comparativa de la Figura \ref{fig:Interfase_Rota}, este cambio altera la simetría de la heteroestructura y rompe las condiciones de efecto túnel resonante global. Al ensancharse el pozo central, sus autovalores de energía permitidos se desplazan hacia valores inferiores ($E_n \propto 1/L^2$), desalineándose de los niveles cuánticos de los pozos adyacentes. Como consecuencia directa, el coeficiente de transmisión en la zona de la minibanda experimenta una drástica caída.
-
-El segundo escenario simula una obstrucción física o calcificación en la interconexión celular central, incrementando la anchura de la 
-barrera de potencial de $2\text{ nm}$ a $8\text{ nm}$. Los resultados de la Figura \ref{fig:Frustracion_Fuerte} muestran una atenuación 
-dramática de la transmitancia en todo el espectro energético analizado. A diferencia del caso anterior, aquí la frustración no se debe 
-únicamente a un desajuste de niveles resonantes, sino a la dependencia matemática exponencial de la probabilidad de penetración de la 
-barrera respecto a su espesor. Para ver esto, consideramos un electrón que actúa como una partícula libre y consideramos:
-\begin{equation*}
-V(x) = \begin{cases}
-0, & x < 0 \\
-V_0, & 0 < x < w \\
-0, & x > w,
-\end{cases}
-\end{equation*} 
-donde $w$ es el espesor de la barrera y el origen de coordenadas se sitúa en la interfase izquierda. Para una energía $E < V_0$, 
-dividimos el problema en zonas:
-\begin{equation*}
-\psi(x)=\begin{cases}
-Ae^{ikx}+Be^{-ikx}, & x < 0 \\
-Ce^{\kappa x}+De^{-\kappa x}, & 0 < x < w \\
-Fe^{ikx}, & x > w
-\end{cases} \text{ con } k=\frac{\sqrt{2m^*E}}{\hbar}, \quad \kappa = \frac{\sqrt{2m^*(V_0-E)}}{\hbar}.
-\end{equation*}
-Aplicando las condiciones de contorno de continuidad de la función de onda y su derivada en $x=0$ y $x=w$, se obtiene el coeficiente de transmisión:
-\begin{equation*}
-T = \left|\frac{F}{A}\right|^2 = \left[1+\frac{V_0^2\sinh^2(\kappa w)}{4E(V_0-E)}\right]^{-1}.
-\end{equation*}
-Para barreras suficientemente anchas, ($\kappa w\gg 1$), se cumple que $\sinh^2(\kappa w) \approx \frac{1}{4}e^{2\kappa w}$, luego $T$ 
-cae exponencialmente con el espesor de la barrera. Al cuadruplicar el espesor del septo la función de onda del electrón decae 
-casi por completo en su interior, aislando eléctricamente ambas mitades de la hifa y anulando la capacidad de conducción del micelio.
-
-\begin{figure}[H]
-  \centering
-    \includegraphics[width=0.8\linewidth, height=0.3 \textheight]{Fig_Interfase_Rota.png}
-    \caption{Efecto de la frustración por desalineación energética (célula mutada de $10\text{ nm}$).}
-    \label{fig:Interfase_Rota}
-\end{figure}  
-  \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth, height=0.3 \textheight]{Fig_Frustracion_Fuerte.png}
-    \caption{Efecto de la frustración por bloqueo de interfase (septo calcificado de $8\text{ nm}$).}
-    \label{fig:Frustracion_Fuerte}
-\end{figure}
-
-
-\section{Análisis de los resultados}
-
-\subsection{Validación de la simulación frente al modelo de Tsu y Esaki (1973)}
 La configuración empleada en nuestro dispositivo ($L=5\text{ nm}$, $b=2\text{ nm}$, $V_0=0.5\text{ eV}$) es homóloga a la del estudio fundacional de R. Tsu y L. Esaki (1973) sobre transporte en redes finitas \cite{tsu_esaki1973}, cuyos resultados se muestran a continuación:
-\begin{figure}[H]
+
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.65\textwidth]{image.png}
+  \includegraphics[width=0.45\textwidth]{image.png}
   \caption{Resultados de Tsu y Esaki (\cite{tsu_esaki1973}) para una red de 5 barreras con parámetros similares a los nuestros.}
   \label{fig:TsuEsaki}
 \end{figure}
@@ -288,10 +315,21 @@ donde el desfase $\rho$ provocado por la penetración de la función de onda en 
 \end{equation}
 siendo $\kappa = \sqrt{2m^*(V_0-E)}/\hbar$ el factor de decaimiento en la región clásicamente prohibida. Resolviendo numéricamente este sistema de ecuaciones trascendentales para los parámetros de nuestro diseño ($m^* = 0.067m_e$, $L = 5\text{ nm}$, $b = 2\text{ nm}$, $V_0 = 0.5\text{ eV}$), el desfase adicional $\rho$ en las interfases compensa de manera exacta el término espacial $2kL$, prediciendo las energías de resonancia fundamental ($n=1$) y excitada ($n=2$) justamente en los valores de $0.1056\text{ eV}$ y $0.405\text{ eV}$ validados por el simulador.
 
-Nótese que las energías resonantes para el caso de triple barrera se desdoblan en dobletes, y las del caso de cinco barreras se desdoblan en cuadrupletes, como podemos observar también en nuestra simulación. Las anchuras de línea están determinadas aproximadamente por la probabilidad de efecto túnel a través de la anchura de la barrera. Para $N$ barreras, se producirá un desdoblamiento en $(N-1)$ niveles. Para un $N$ grande, estas energías resonantes convergerán finalmente hacia el modelo de bandas que comentaremos posteriormente \cite{tsu_esaki1973}.
+Nótese que las energías resonantes para el caso de triple barrera se desdoblan en dobletes, y las del caso de cinco barreras se desdoblan en cuadrupletes, como podemos observar también en nuestra simulación. Las anchuras de línea están determinadas aproximadamente por la probabilidad de efecto túnel a través de la anchura de la barrera. Para $N$ barreras, se producirá un desdoblamiento en $(N-1)$ niveles. Para un $N$ grande, estas energías resonantes convergerán finalmente hacia el modelo de bandas.
 
 
-\subsection{Acoplamiento túnel entre pozos: aproximación \textit{tight-binding}}
+Esto es justo lo que buscamos, formar bandas de conducción. Por tanto, necesitamos que el hongo crezca a toda costa. Ya estamos encaminados, pero hay que hacer más. La humanidad depende de nosotros.
+
+
+
+\entrada{10}{El problema del desdoblamiento resonante: Aproximación tight-binding}
+
+
+Llevamos unos días dándole vueltas a una cuestión fundamental:
+
+¿Por qué un único pico resonante acaba fragmentándose en dos, tres o incluso cuatro resonancias distintas? Si realmente cada célula fúngica se comporta como un pozo cuántico independiente, el origen de este desdoblamiento no resulta evidente. Necesitamos un modelo teórico capaz de explicar cómo interactúan entre sí las distintas células de nuestra hifa artificial.
+
+Revisando antiguos textos de física del estado sólido encontramos una posible respuesta: el modelo de enlace fuerte o tight-binding. Esto nos condujo a pensar que puede que nuestros hongos se estén comportando como átomos en cadenas finitas.
 
 Partiendo del caso elemental de doble barrera ($N=2$), donde el sistema presenta un único estado resonante dominante, el aumento progresivo del número de pozos revela un fenómeno de desdoblamiento energético. Los máximos de transmisión dejan de aparecer como resonancias aisladas y evolucionan hacia estructuras cada vez más densas, indicando que los estados cuasi ligados de pozos vecinos comienzan a acoplarse mediante efecto túnel.
 
@@ -424,10 +462,83 @@ La relativa estabilidad del parámetro de acoplamiento $t$ al variar el número 
 
 En conjunto, los resultados muestran que el progresivo desdoblamiento de las resonancias puede interpretarse de forma natural como consecuencia del acoplamiento túnel entre pozos vecinos, reproduciendo de manera efectiva la física básica de formación de minibandas en estructuras periódicas finitas.
 
+Los cálculos parecen confirmar nuestra hipótesis. Lo que comenzó como un conjunto de células aisladas empieza a comportarse como una única estructura colectiva. Si el patrón continúa para redes más extensas, quizá podamos reproducir algo parecido a una banda de conducción. Aún es pronto para sacar conclusiones, pero por primera vez desde que comenzó este proyecto, la idea parece menos descabellada.
+
+\entrada{73}{Cultivo extendido}
+
+Han pasado varios meses, y hemos conseguido que nuestro cultivo crezca lo suficiente como para obtener resultados más que satisfactorios. El sistema crece a pasos agigantados, justo como queríamos.
+
+A medida que el número de barreras aumenta, los picos de resonancia se van desdoblando, es decir, cada máximo de energía se va fragmentando según aumenta el acoplamiento de los pozos. 
+Esto nos lleva a pensar que a medida que el número de pozos aumenta, los máximos que se apreciaban pasarán a formar parte de un continuo en el que no podrán diferenciarse del resto.
+Por ello, extendemos el análisis al régimen macroscópico (de 8 a 200 barreras), asimilable a un filamento de micelio consolidado. Las Figuras \ref{fig:Junto_N} y \ref{fig:Separado_N} ilustran cómo los picos discretos se fusionan definitivamente en una banda continua.
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}
+    
+    \node at (0,0) {
+      \begin{ocg}{Capa 8}{capa8}{1}
+        \includegraphics[width=0.8\textwidth]{N_8.png}
+      \end{ocg}
+    };
+    \node at (0,0) {
+      \begin{ocg}{Capa 12}{capa12}{0}
+        \includegraphics[width=0.8\textwidth]{N_12.png}
+      \end{ocg}
+    };
+    \node at (0,0) {
+      \begin{ocg}{Capa 20}{capa20}{0}
+        \includegraphics[width=0.8\textwidth]{N_20.png}
+      \end{ocg}
+    };
+    \node at (0,0) {
+      \begin{ocg}{Capa 50}{capa50}{0}
+        \includegraphics[width=0.8\textwidth]{N_50.png}
+      \end{ocg}
+    };
+    \node at (0,0) {
+      \begin{ocg}{Capa 200}{capa200}{0}
+        \includegraphics[width=0.8\textwidth]{N_200.png}
+      \end{ocg}
+    };
+
+    \tikzstyle{boton}=[draw=blue!80, fill=blue!10, rounded corners, inner sep=6pt, font=\bfseries]
+
+    \node[boton] at (-4, -5.5) {\actionsocg{}{capa8}{capa12,capa20,capa50,capa200}{N = 8}};
+    \node[boton] at (-2, -5.5) {\actionsocg{}{capa12}{capa8,capa20,capa50,capa200}{N = 12}};
+    \node[boton] at (0, -5.5)  {\actionsocg{}{capa20}{capa8,capa12,capa50,capa200}{N = 20}};
+    \node[boton] at (2, -5.5)  {\actionsocg{}{capa50}{capa8,capa12,capa20,capa200}{N = 50}};
+    \node[boton] at (4, -5.5)  {\actionsocg{}{capa200}{capa8,capa12,capa20,capa50}{N = 200}};
+
+  \end{tikzpicture}
+  
+  \caption{Evolución macroscópica hacia el continuo de bandas. (Gráfico interactivo: requiere visor PDF compatible como Acrobat Reader o Foxit. Haz clic en los botones para alternar el número de barreras).}
+  \label{fig:Junto_N}
+\end{figure}
 
 
 
-\subsection{Formación de bandas: Modelo de Kronig-Penney}
+Como se observa en la gráfica de curvas solapadas de la Figura \ref{fig:Junto_N}, las funciones individuales se agrupan hasta formar un continuo denso. 
+Además, aunque estudiando los casos con menor número de barreras de las figuras \ref{fig:Junto} y \ref{fig:Separado} 
+podía verse cómo la zona de picos resonantes era una región definida, es ahora donde puede apreciarse dicha región con claridad. De hecho, 
+en la imagen \ref{fig:Separado_N} siguiente: 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth, height=0.52 \textheight]{Fig_Apilada_TsuEsaki_N.png}
+    \caption{Formación e individualización de la minibanda de conducción en ejes apilados.}
+    \label{fig:Separado_N}
+\end{figure}
+
+Puede verse cómo las curvas han pasado a ser totalmente verticales siguiendo la escala empleada en las gráficas, pues en realidad
+sigue habiendo un mínimo de transmitancia, aunque cada vez más pequeño según aumenta N.
+
+Permitir que el cultivo de hongos siguiera creciendo ha dotado al organismo de una red de transporte más eficiente, siendo este capaz de
+conducir señales empleando un rango de energías cada vez más amplio. Podríamos seguir aumentando el número de barreras, pero el esfuerzo
+computacional sería cada vez mayor y como se ha visto, la formación de las bandas es un hecho.
+
+Todo esto no se sale de lo que esperábamos, pues concuerda con el modelo de Kronig-Penney.
+
 Para un número elevado de barreras, como \(N=200\), la heteroestructura deja de comportarse como un conjunto pequeño de pozos acoplados y puede aproximarse por una red periódica unidimensional. En este límite, el sistema se asemeja al modelo de Kronig--Penney, formado por una sucesión periódica de pozos y barreras rectangulares.
 
 En nuestro caso, cada celda elemental está formada por un pozo de anchura \(L=5\,\mathrm{nm}\), y una barrera de anchura \(b=2\,\mathrm{nm}\). Por tanto, el periodo de la red es \(a=L+b=7\,\mathrm{nm}\).
@@ -457,13 +568,42 @@ Esta ecuación determina qué valores de energía están permitidos en la red. C
 
 La primera banda observada procede del estado fundamental del pozo, mientras que la segunda banda se asocia al segundo modo cuantizado permitido. Así, cada nivel ligado del pozo aislado evoluciona hacia una banda de conducción cuando el número de barreras aumenta significativamente.
 
+Parece que lo hemos conseguido. Aquí en el laboratorio todo son gritos de alegría. Mañana comenzaremos las pruebas de robustez. Si la conducción sobrevive a las imperfecciones inevitables de un organismo vivo, tal vez la reconstrucción tecnológica de nuestra especie no dependa de fábricas ni de minerales escasos.
+
+\entrada{100}{Limitaciones de nuestras simulaciones}
+
+Durante meses hemos trabajado bajo la hipótesis de una red perfecta: pozos idénticos, barreras idénticas y transporte completamente coherente. Sin embargo, los organismos vivos no son heteroestructuras ideales. Conforme los cultivos comenzaron a crecer, aparecieron discrepancias sistemáticas entre las predicciones teóricas y las medidas experimentales.
+
+Aunque el método matricial empleado captura con precisión la física fundamental del efecto túnel resonante y la formación de minibandas, se basa en una aproximación. En la traslación de este modelo a un dispositivo físico real a temperatura ambiente, o a su analogía biofísica, intervendrían fenómenos adicionales que atenuarían la transmitancia ideal observada ($T=1$):
+\begin{itemize}
+    \item \textbf{Scattering y decoherencia cuántica:} El modelo asume que el electrón mantiene su fase cuántica intacta durante las múltiples reflexiones de Fabry-Pérot. En la realidad, la dispersión con fonones (responsables de las vibraciones térmicas de la red) o la interacción con impurezas y defectos de la interfase provocan eventos inelásticos. Estos eventos rompen la coherencia de fase de la función de onda, lo que se traduciría en un ensanchamiento espectral de las resonancias y en una disminución de la amplitud máxima del coeficiente de transmisión.
+    \item \textbf{Dimensión:} Nuestro análisis asume un perfil de potencial estrictamente unidimensional (1D). En sistemas reales, los electrones poseen momentos transversales que actúan como una energía cinética paralela a las barreras. Esta distribución de energías transversales provoca que no todos los electrones resuenen a la misma energía longitudinal, difuminando los bordes abruptos de la minibanda de conducción.
+    \item \textbf{Temperatura:} El modelo se basa en un análisis a temperatura cero, donde la función de distribución de los electrones es un escalón de Heaviside. A temperatura ambiente, la función de distribución de Fermi-Dirac se suaviza, lo que implica que algunos electrones con energías ligeramente por debajo o por encima de las resonancias también contribuirían al transporte dando lugar a una transmitancia menor.
+    \item \textbf{Efectos de carga espacial:} El simulador calcula el paso de electrones individuales. En un dispositivo real, los electrones pasan un tiempo finito rebotando dentro de las cavidades antes de salir, generando una acumulación de carga negativa. Esta nube estacionaria repele a los nuevos electrones entrantes, lo que empuja hacia arriba el fondo del pozo de potencial. Al elevarse el nivel del pozo, la energía exacta de la resonancia se desajusta, rompiendo la condición de transmisión perfecta calculada teóricamente. 
+\end{itemize}
+
+Los resultados obtenidos hasta ahora siguen siendo válidos. Las minibandas existen, las resonancias aparecen donde la teoría predice y el transporte colectivo emerge conforme la red crece. Sin embargo, la naturaleza parece empeñada en recordarnos una lección fundamental: ningún organismo vivo es perfecto.
+
+La verdadera pregunta es, ¿puede la conducción sobrevivir a la imperfección?
+
+Mañana comenzaremos a buscar la respuesta.
 
 
+\entrada{120}{Perturbaciones biológicas}
+
+Lo que más temíamos ha ocurrido.
+
+Al intentar replicar nuestro mismo experimento con otro micelio de las mismas características, observamos en este caso que, cuando se desarrollaban ya 5 septos, algunas presentaban un mayor crecimiento en la célula fúngica central, incrementando su longitud de 5nm a 10 nm. Al simular esta situación, observamos que este cambio alteraba la simetría de la heteroestructura, y rompía las condiciones de efecto túnel resonante global, como se observa en la comparativa de la Figura \ref{fig:Interfase_Rota}.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.8\linewidth, height=0.3 \textheight]{Fig_Interfase_Rota.png}
+    \caption{Efecto de la frustración por desalineación energética (célula mutada de $10\text{ nm}$).}
+    \label{fig:Interfase_Rota}
+\end{figure} 
 
 
-
-\subsection{Frustración estructural: El pozo unidimensional}
-Para el escenario de la alteración morfológica en la célula fúngica central, aunque la expresión exacta del pozo infinito no es aplicable cuantitativamente a una heteroestructura finita acoplada, la tendencia física se mantiene. 
+A la hora de intentar explicar por qué ocurría esto, hicimos el desarrollo con un pozo de potencial infinito unidimensional. Aunque la expresión exacta del pozo infinito no es aplicable cuantitativamente a una heteroestructura finita acoplada, la tendencia física se mantiene. 
 
 Supongamos un pozo de potencial infinito unidimensional:
 \begin{equation}
@@ -488,54 +628,84 @@ donde $k = \sqrt{2mE}/\hbar$. Aplicando las condiciones de frontera $\phi(0) = 0
 
 Esta dependencia $E_n \propto 1/L^2$ demuestra analíticamente que al mutar una única célula y aumentar su anchura $L$ (de $5\text{ nm}$ a $10\text{ nm}$), sus autoestados de energía caen dramáticamente hacia valores más bajos. Al no coincidir en energía con los pozos adyacentes, la probabilidad de efecto túnel resonante se destruye, colapsando el canal de transmisión de la hifa tal y como hemos validado en la Figura \ref{fig:Interfase_Rota}.
 
-\subsection{Tiempo de vida medio}
-Los electrones que permiten el transporte de información a lo largo de la red de hongos presentan un tiempo de vida medio $\tau$ en el 
-interior de cada pozo, es decir, antes de escapar por efecto túnel, los electrones permanecen un tiempo rebotando dentro de la cavidad. 
-Siguiendo la página 77 del capítulo 2 de \cite{tsu_resonant2011}, el tiempo de vida medio se relaciona con el factor de calidad $Q=\omega\tau=E/\Delta E$, 
-siendo $\omega$ la frecuencia angular verificando $E=\hbar\omega$ y $\Delta E$ el ancho a media altura asociado al pico de resonancia con energía $E$.
-Entonces, puede escribirse
+Por otro lado, otros de nuestros microorganismos presentaron una obstrucción física: la calcificación de la interconexión celular central, incrementando la anchura de la barrera de potencial de 2 nm a 8 nm. Los resultados de la Figura \ref{fig:Frustracion_Fuerte} muestran una atenuación 
+dramática de la transmitancia en todo el espectro energético analizado. A diferencia del caso anterior, aquí la frustración no se debe 
+únicamente a un desajuste de niveles resonantes, sino a la dependencia matemática exponencial de la probabilidad de penetración de la 
+barrera respecto a su espesor. Para ver esto, consideramos un electrón que actúa como una partícula libre y consideramos:
 \begin{equation*}
-  \tau=\frac{E}{\omega\Delta E}=\frac{\hbar}{\Delta E}.
-\end{equation*}
-
-En vista de la expresión, el tiempo de vida medio se relaciona con la inversa del ancho del pico de resonancia. Se ha comentado previamente 
-cómo el aumento en el número de barreras se traducía en un desdoblamiento de los picos de resonancia, como podía observarse sobre todo en las 
-figuras \ref{fig:Separado} y \ref{fig:Separado_N} y por tanto, disminuía la anchura de cada pico. Así, una mayor complejidad en la red de hongos
-implica un aumento de $\tau$, los electrones permanecen más tiempo en cada pozo y presentan un pico de resonancia más definido, por lo que 
-aunque la señal eléctrica tarda más tiempo en atravesar cada hongo, la energía es más precisa, mientras que en el caso de tener pocas barreras, 
-se tendría una señal más rápida para un rango de energías más amplio, por lo que la información que se transmite sería más difusa. Sin embargo, 
-el concepto de tiempo de vida medio para un número $N$ alto carece de sentido físico, pues al estar empleando la noción de función de onda 
-de Bloch, esta se encuentra deslocalizada y $\tau$ indicará el tiempo que tarda el electrón en atravesar todo el dispositivo.
-
-Cuantitativamente, usando los datos exportados, la diferencia entre el tiempo de vida medio para el primer pico en el caso $N=2$ y $N=5$ viene dado a continuación:
+V(x) = \begin{cases}
+0, & x < 0 \\
+V_0, & 0 < x < w \\
+0, & x > w,
+\end{cases}
+\end{equation*} 
+donde $w$ es el espesor de la barrera y el origen de coordenadas se sitúa en la interfase izquierda. Para una energía $E < V_0$, 
+dividimos el problema en zonas:
 \begin{equation*}
-  \tau_{N=2}=\frac{\hbar}{0.108375-0.1025}=1.12\cdot10^{-13}\;s,\qquad \tau_{N=5}=\frac{\hbar}{0.09125-0.090625}=1.05\cdot10^{-12}\;s
+\psi(x)=\begin{cases}
+Ae^{ikx}+Be^{-ikx}, & x < 0 \\
+Ce^{\kappa x}+De^{-\kappa x}, & 0 < x < w \\
+Fe^{ikx}, & x > w
+\end{cases} \text{ con } k=\frac{\sqrt{2m^*E}}{\hbar}, \quad \kappa = \frac{\sqrt{2m^*(V_0-E)}}{\hbar}.
 \end{equation*}
+Aplicando las condiciones de contorno de continuidad de la función de onda y su derivada en $x=0$ y $x=w$, se obtiene el coeficiente de transmisión:
+\begin{equation*}
+T = \left|\frac{F}{A}\right|^2 = \left[1+\frac{V_0^2\sinh^2(\kappa w)}{4E(V_0-E)}\right]^{-1}.
+\end{equation*}
+Para barreras suficientemente anchas, ($\kappa w\gg 1$), se cumple que $\sinh^2(\kappa w) \approx \frac{1}{4}e^{2\kappa w}$, luego $T$ 
+cae exponencialmente con el espesor de la barrera. Al cuadruplicar el espesor del septo la función de onda del electrón decae 
+casi por completo en su interior, aislando eléctricamente ambas mitades de la hifa y anulando la capacidad de conducción del micelio.
+ 
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth, height=0.3 \textheight]{Fig_Frustracion_Fuerte.png}
+    \caption{Efecto de la frustración por bloqueo de interfase (septo calcificado de $8\text{ nm}$).}
+    \label{fig:Frustracion_Fuerte}
+\end{figure}
 
-donde se ha considerado el primer valor de energía que supera o iguala a la energía asociada a la mitad del valor máximo de transmitancia 
-y como puede observarse, aumenta con $N$.
 
-\subsection{Limitaciones del modelo}
-Aunque el método matricial empleado captura con precisión la física fundamental del efecto túnel resonante y la formación de minibandas, se basa en una aproximación. En la traslación de este modelo a un dispositivo físico real a temperatura ambiente, o a su analogía biofísica, intervendrían fenómenos adicionales que atenuarían la transmitancia ideal observada ($T=1$):
-\begin{itemize}
-    \item \textbf{Scattering y decoherencia cuántica:} El modelo asume que el electrón mantiene su fase cuántica intacta durante las múltiples reflexiones de Fabry-Pérot. En la realidad, la dispersión con fonones (responsables de las vibraciones térmicas de la red) o la interacción con impurezas y defectos de la interfase provocan eventos inelásticos. Estos eventos rompen la coherencia de fase de la función de onda, lo que se traduciría en un ensanchamiento espectral de las resonancias y en una disminución de la amplitud máxima del coeficiente de transmisión.
-    \item \textbf{Dimensión:} Nuestro análisis asume un perfil de potencial estrictamente unidimensional (1D). En sistemas reales, los electrones poseen momentos transversales que actúan como una energía cinética paralela a las barreras. Esta distribución de energías transversales provoca que no todos los electrones resuenen a la misma energía longitudinal, difuminando los bordes abruptos de la minibanda de conducción.
-    \item \textbf{Temperatura:} El modelo se basa en un análisis a temperatura cero, donde la función de distribución de los electrones es un escalón de Heaviside. A temperatura ambiente, la función de distribución de Fermi-Dirac se suaviza, lo que implica que algunos electrones con energías ligeramente por debajo o por encima de las resonancias también contribuirían al transporte dando lugar a una transmitancia menor.
-    \item \textbf{Efectos de carga espacial:} El simulador calcula el paso de electrones individuales. En un dispositivo real, los electrones pasan un tiempo finito rebotando dentro de las cavidades antes de salir, generando una acumulación de carga negativa. Esta nube estacionaria repele a los nuevos electrones entrantes, lo que empuja hacia arriba el fondo del pozo de potencial. Al elevarse el nivel del pozo, la energía exacta de la resonancia se desajusta, rompiendo la condición de transmisión perfecta calculada teóricamente. 
-\end{itemize}
-\section{Conclusiones}
+Las anomalías observadas resultan más peligrosas de lo que imaginábamos. Una única célula hipertrofiada o un septo parcialmente bloqueado son suficientes para degradar significativamente el canal de transporte.
 
-En esta práctica se ha empleado el simulador \texttt{Piece-Wise Constant Potential Barrier Tool} de nanoHUB \cite{nano} para analizar el transporte cuántico a través de una red de pozos y barreras. El hilo conductor de la práctica ha sido la analogía entre la red de pozos y barreras y la estructura del micelio de los hongos, modlando los pozos como células fúngicas y las barreras como septos. En un primer lugar, se ha observado cómo el aumento del número de barreras provoca un desdoblamiento de los niveles energéticos en los que se produce resonancia, lo que significa que la señal tiene cada vez más ``caminos'' para cruzar, acabando por formar una minibanda de conducción cuando la red crece lo suficiente, un comportamiento macroscópico que se ha corroborado de forma analítica mediante el modelo de Kronig-Penney.
+La red funciona, pero también es vulnerable. Si queremos construir tecnología a partir de organismos vivos, no bastará con cultivarlos. Tendremos que aprender a mantenerlos sanos.
+
+
+\entrada{150}{Conclusiones}
+
+Han pasado casi cinco meses desde la primera anotación de este cuaderno.
+
+Al iniciar esta investigación, los hongos no eran más que una curiosidad biológica encontrada en un artículo olvidado de principios del siglo XXI. Hoy sabemos que una red miceliar puede reproducir, al menos de forma aproximada, algunos de los mecanismos fundamentales que hicieron posible la revolución electrónica de la antigua civilización.
+
+Hemos empleado el simulador \texttt{Piece-Wise Constant Potential Barrier Tool} de nanoHUB \cite{nano} para analizar el transporte cuántico a través de una red de pozos y barreras. El hilo conductor ha sido la analogía entre la red de pozos y barreras y la estructura del micelio de los hongos, modlando los pozos como células fúngicas y las barreras como septos. En un primer lugar, se ha observado cómo el aumento del número de barreras provoca un desdoblamiento de los niveles energéticos en los que se produce resonancia, lo que significa que la señal tiene cada vez más ``caminos'' para cruzar, acabando por formar una minibanda de conducción cuando la red crece lo suficiente, un comportamiento macroscópico que se ha corroborado de forma analítica mediante el modelo de Kronig-Penney.
 
 Por otro lado, uno de los puntos del trabajo ha sido comprobar que la simulación es más exacta que los modelos clásicos de los años 70, como el estudio de Tsu y Esaki \cite{tsu_esaki1973}. Al comparar las gráficas obtenidas con las de dicho estudio, se constató que los picos de resonancia se situaban en energías un poco más altas. Esta discrepancia se debe a que se ha empleado una masa efectiva más cercana a la realidad y a que el simulador aplica rigurosamente las condiciones de contorno de BenDaniel-Duke, lo que corrige la posición exacta de los picos.
 
 También se ha calculado analíticamente el caso más sencillo de dos barreras. Para ello, se ha usado el modelo del interferómetro de Fabry-Pérot, que analiza el pozo como si la onda rebotara entre dos espejos. Al resolver las ecuaciones, se obtuvieron exactamente los mismos números para las energías donde la transmisión es máxima ($0.1056\text{ eV}$ y $0.405\text{ eV}$).
 
-Asimismo, se han calculado los tiempos de vida medio de los electrones en el interior de los pozos.
+Se ha comprobado que el sistema es muy delicado: si una célula muta y se hace más grande, sus energías cambian y ya no encajan con las de las vecinas, cortando el paso de la señal. De la misma manera, si la pared entre dos células (el septo) se hace muy gruesa, el electrón se topa con un muro demasiado ancho y resulta incapaz de atravesarlo por efecto túnel.
 
-Finalmente, se ha puesto a prueba la resistencia de esta red simulando ``enfermedades'' o defectos. Se ha comprobado que el sistema es muy delicado: si una célula muta y se hace más grande, sus energías cambian y ya no encajan con las de las vecinas, cortando el paso de la señal. De la misma manera, si la pared entre dos células (el septo) se hace muy gruesa, el electrón se topa con un muro demasiado ancho y resulta incapaz de atravesarlo por efecto túnel.
+En conclusión, para que la red funcione y transmita información de forma perfecta, necesita ser muy simétrica y ordenada. Aunque en la vida real factores como el calor, el choque con otras partículas o las impurezas harían que la transmisión no fuera del $100\%$, este modelo ha permitido entender con una gran precisión cómo se comporta la física cuántica detrás de la propagación de señales en esta estructura.
 
-En conclusión, para que la red funcione y transmita información de forma perfecta, necesita ser muy simétrica y ordenada. Aunque en la vida real factores como el calor, el choque con otras partículas o las impurezas harían que la transmisión no fuera del $100\%$, este modelo ha permitido entender con una gran precisión cómo se comporta la física cuántica detrás de la propagación de señales en esta estructura.\newpage
-\bibliographystyle{plain} 
+Sin embargo, el resultado más importante de esta investigación no es haber construido un dispositivo funcional.
+
+Lo importante es haber demostrado que la idea no era imposible.
+
+Por primera vez desde la Gran Tormenta Solar, existe una alternativa.
+
+Quizá los dispositivos que reconstruyan la civilización serán muy distintos a lo que estamos acostumbrados. Quizá crezcan lentamente en la oscuridad, alimentándose de agua, nutrientes y tiempo.
+
+Hoy cerramos este cuaderno.
+
+Mañana comenzará el trabajo de quienes tengan que convertir estas observaciones en tecnología.
+
+Si alguien está leyendo estas páginas dentro de cien años, espero que ya no las considere ciencia ficción.
+
+\newpage
+
+\bibliographystyle{plain}
 \bibliography{refs}
+
+
+
 \end{document}
+
+
