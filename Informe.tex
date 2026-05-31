@@ -172,7 +172,7 @@ La reconstrucción resultó aún más difícil debido al agotamiento de numeroso
 
 En este contexto, iniciamos una búsqueda desesperada de nuevas arquitecturas para el procesamiento de información. El objetivo es encontrar sistemas capaces de reproducir el comportamiento de los antiguos dispositivos semiconductores sin depender de los materiales tradicionales.
 
-Durante nuestras investigaciones encontramos una antigua publicación científica fechada en 2024. En ella se describía un concepto experimental denominado Fungal Computer Interface, basado en las sorprendentes capacidades de procesamiento y adaptación de las redes miceliares.
+Durante nuestras investigaciones encontramos una antigua publicación científica fechada en 2024 \cite{mycosoft2024}. En ella se describía un concepto experimental denominado Fungal Computer Interface, basado en las sorprendentes capacidades de procesamiento y adaptación de las redes miceliares.
 
 Aquella idea aparentemente olvidada contenía una posibilidad revolucionaria: utilizar estructuras biológicas inspiradas en hongos como soporte para nuevos dispositivos electrónicos.
 
@@ -281,8 +281,9 @@ Energías más elevadas superarían las barreras de potencial, por lo que la tra
     \label{fig:Separado}
 \end{figure}
 
-A medida que el número de barreras aumenta, los picos de resonancia se van desdoblando, es decir, cada máximo de energía se va fragmentando según aumenta el acoplamiento de los pozos. 
-Esto nos lleva a pensar que a medida que el número de pozos aumenta, los máximos que se apreciaban pasarán a formar parte de un continuo en el que no podrán diferenciarse del resto.
+%está repetido en el cultivo extendido
+%A medida que el número de barreras aumenta, los picos de resonancia se van desdoblando, es decir, cada máximo de energía se va fragmentando según aumenta el acoplamiento de los pozos. 
+%Esto nos lleva a pensar que a medida que el número de pozos aumenta, los máximos que se apreciaban pasarán a formar parte de un continuo en el que no podrán diferenciarse del resto.
 
 La configuración empleada en nuestro dispositivo ($L=5\text{ nm}$, $b=2\text{ nm}$, $V_0=0.5\text{ eV}$) es homóloga a la del estudio fundacional de R. Tsu y L. Esaki (1973) sobre transporte en redes finitas \cite{tsu_esaki1973}, cuyos resultados se muestran a continuación:
 
@@ -292,7 +293,7 @@ La configuración empleada en nuestro dispositivo ($L=5\text{ nm}$, $b=2\text{ n
   \caption{Resultados de Tsu y Esaki (\cite{tsu_esaki1973}) para una red de 5 barreras con parámetros similares a los nuestros.}
   \label{fig:TsuEsaki}
 \end{figure}
-Sin embargo, en nuestra simulación, las resonancias del estado fundamental y excitado aparecen desplazadas hacia energías mayores en comparación con los resultados de su artículo original ($\approx 0.1\text{ eV}$ y $\approx 0.32\text{ eV}$) para $N=2$. Tras analizar los datos numéricos en crudo exportados de la simulación, se observa que estos picos de transmitancia máxima ($T \approx 1$) se localizan exactamente en $E_1 = 0.1056\text{ eV}$ y $E_2 = 0.405\text{ eV}$. Esta discrepancia frente al modelo histórico no constituye un error, sino una mejora sustancial en la precisión del cálculo por dos motivos físicos fundamentales \cite{tsu_resonant2011}:
+En nuestra simulación, las resonancias del estado fundamental y excitado aparecen desplazadas hacia energías mayores en comparación con los resultados de su artículo original ($\approx 0.1\text{ eV}$ y $\approx 0.32\text{ eV}$) para $N=2$. Tras analizar los datos numéricos en crudo exportados de la simulación, se observa que estos picos de transmitancia máxima ($T \approx 1$) se localizan exactamente en $E_1 = 0.1056\text{ eV}$ y $E_2 = 0.405\text{ eV}$. Esta discrepancia frente al modelo histórico no constituye un error, sino una mejora sustancial en la precisión del cálculo por dos motivos físicos fundamentales \cite{tsu_resonant2011}:
 
 \begin{enumerate}
     \item \textbf{La masa efectiva ($m^*$):} En los primeros modelos teóricos de los años 70, se asumían valores de masa efectiva genéricos (típicamente $m^* \approx 0.1 m_e$) para simplificar los cálculos matriciales. En nuestro trabajo, el simulador utiliza el valor riguroso del Arseniuro de Galio ($m^* = 0.067 m_e$). Dado que la energía de los autoestados está inversamente relacionada con la masa ($E_n \propto 1/m^*$), una masa menor empuja los niveles de energía hacia arriba, justificando el desplazamiento de nuestras resonancias.
@@ -315,7 +316,8 @@ donde el desfase $\rho$ provocado por la penetración de la función de onda en 
 \end{equation}
 siendo $\kappa = \sqrt{2m^*(V_0-E)}/\hbar$ el factor de decaimiento en la región clásicamente prohibida. Resolviendo numéricamente este sistema de ecuaciones trascendentales para los parámetros de nuestro diseño ($m^* = 0.067m_e$, $L = 5\text{ nm}$, $b = 2\text{ nm}$, $V_0 = 0.5\text{ eV}$), el desfase adicional $\rho$ en las interfases compensa de manera exacta el término espacial $2kL$, prediciendo las energías de resonancia fundamental ($n=1$) y excitada ($n=2$) justamente en los valores de $0.1056\text{ eV}$ y $0.405\text{ eV}$ validados por el simulador.
 
-Nótese que las energías resonantes para el caso de triple barrera se desdoblan en dobletes, y las del caso de cinco barreras se desdoblan en cuadrupletes, como podemos observar también en nuestra simulación. Las anchuras de línea están determinadas aproximadamente por la probabilidad de efecto túnel a través de la anchura de la barrera. Para $N$ barreras, se producirá un desdoblamiento en $(N-1)$ niveles. Para un $N$ grande, estas energías resonantes convergerán finalmente hacia el modelo de bandas.
+%Nótese que las energías resonantes para el caso de triple barrera se desdoblan en dobletes, y las del caso de cinco barreras se desdoblan en cuadrupletes, como podemos observar también en nuestra simulación. Las anchuras de línea están determinadas aproximadamente por la probabilidad de efecto túnel a través de la anchura de la barrera. Para $N$ barreras, se producirá un desdoblamiento en $(N-1)$ niveles. Para un $N$ grande, estas energías resonantes convergerán finalmente hacia el modelo de bandas.
+Nótese cómo se van desdoblando las energías resonantes. Para $N$ barreras, se producirá un desdoblamiento en $(N-1)$ niveles. Para un $N$ grande, estas energías resonantes convergerán finalmente hacia el modelo de bandas.
 
 
 Esto es justo lo que buscamos, formar bandas de conducción. Por tanto, necesitamos que el hongo crezca a toda costa. Ya estamos encaminados, pero hay que hacer más. La humanidad depende de nosotros.
@@ -337,13 +339,14 @@ Aunque las simulaciones se han realizado mediante el método de matriz de transf
 
 En dicho modelo, desarrollado en física del estado sólido \cite{kittel2005}, los electrones se consideran inicialmente localizados alrededor de determinados sitios de la red cristalina, mientras que el solapamiento entre funciones de onda vecinas introduce un acoplamiento débil que permite el transporte electrónico entre sitios próximos. En un cristal real, los estados locales corresponden a orbitales atómicos. En nuestro caso, puede considerarse que cada pozo cuántico desempeña el papel de un ``sitio efectivo'', pues alberga un estado resonante parcialmente localizado. Debido a que las barreras poseen espesor finito, la función de onda penetra evanescentemente en las regiones vecinas, produciendo un solapamiento entre estados de pozos contiguos y permitiendo el acoplamiento túnel entre ellos.
 
-La descripción anterior se basa en varias hipótesis físicas razonables para nuestra heteroestructura. En primer lugar, todos los pozos se consideran idénticos, con anchura fija $L=5\,\mathrm{nm}$, de modo que cada uno de ellos presenta aproximadamente el mismo estado resonante local. Además, se supone que el acoplamiento túnel dominante ocurre únicamente entre pozos vecinos, despreciándose el solapamiento directo entre regiones más alejadas.
+La descripción anterior se basa en varias hipótesis físicas razonables para nuestra heteroestructura. En primer lugar, todos los pozos se consideran idénticos, con anchura fija $L=5\,\mathrm{nm}$, de modo que cada uno de ellos presenta aproximadamente el mismo estado resonante local. Además, se supone que el acoplamiento túnel dominante ocurre entre pozos vecinos, despreciándose el solapamiento directo entre regiones más alejadas.
 
 Bajo estas hipótesis, el sistema puede modelarse como una cadena finita de $M=N-1$ pozos acoplados. La diagonalización del Hamiltoniano discreto asociado conduce a un conjunto de niveles energéticos:
-\[
+\begin{equation}
 E_m = E_0 - 2t\cos\left(\frac{m\pi}{M+1}\right),
 \qquad m=1,\dots,M,
-\]
+\label{eq:tightbinding}
+\end{equation}
 donde $E_0$ representaría la energía resonante del pozo aislado y $t$ cuantifica el acoplamiento túnel efectivo entre pozos vecinos.
 
 \subsubsection{Caso $N=3$: Sistema de doble pozo cuántico}
@@ -356,9 +359,9 @@ E_1=E_0-t, \qquad E_2=E_0+t.
 
 A partir de los máximos resonantes obtenidos en la simulación:
 \[
-E_1^{\mathrm{sim}}=0.0960938\,\mathrm{eV},
+E_1^{\mathrm{sim}}=0.0961\,\mathrm{eV},
 \qquad
-E_2^{\mathrm{sim}}=0.116563\,\mathrm{eV},
+E_2^{\mathrm{sim}}=0.1166\,\mathrm{eV},
 \]
 el parámetro de acoplamiento túnel puede estimarse directamente a partir del desdoblamiento energético del doblete:
 \[
@@ -367,21 +370,18 @@ t=\frac{E_2-E_1}{2}\simeq 10.23\,\mathrm{meV}.
 
 Usando este valor y tomando como referencia el estado resonante del caso $N=2$, el modelo \textit{tight-binding} predice las energías:
 \[
-E_1^{\mathrm{TB}}\approx 0.0953904\,\mathrm{eV},
+E_1^{\mathrm{TB}}\approx 0.09539\,\mathrm{eV},
 \qquad
-E_2^{\mathrm{TB}}\approx 0.1158596\,\mathrm{eV}.
+E_2^{\mathrm{TB}}\approx 0.11586\,\mathrm{eV}.
 \]
 
-El error absoluto obtenido es del orden de $7\times 10^{-4}\,\mathrm{eV}$, lo que muestra que el doblete observado se encuentra prácticamente centrado respecto al nivel resonante del caso $N=2$. Esta comparación debe entenderse como una validación semi-cuantitativa del mecanismo de desdoblamiento, ya que el parámetro $t$ se ha estimado a partir de la propia separación entre los dos picos simulados. Esta comparación indica, no obstante, un acuerdo notable entre el modelo efectivo y la simulación.
+%l error absoluto obtenido es del orden de $7\times 10^{-4}\,\mathrm{eV}$, lo que muestra que el doblete observado se encuentra prácticamente centrado respecto al nivel resonante del caso $N=2$.
+
+Los errores relativos son aproximadamente $0.73\%$ para el primer pico y $0.60\%$ para el segundo, lo que muestra que el doblete observado se encuentra prácticamente centrado respecto al nivel resonante del caso $N=2$. Esta comparación debe entenderse como una validación semi-cuantitativa del mecanismo de desdoblamiento, ya que el parámetro $t$ se ha estimado a partir de la propia separación entre los dos picos simulados. Esta comparación indica, no obstante, un acuerdo notable entre el modelo efectivo y la simulación.
 
 \subsubsection{Caso $N=4$: Cadena de tres pozos acoplados}
-El caso $N=4$ resulta especialmente ilustrativo, ya que el sistema contiene $M=N-1=3$ pozos acoplados. El modelo \textit{tight-binding} predice entonces la aparición de un triplete energético dado por:
-\[
-E_m=E_0-2t\cos\left(\frac{m\pi}{M+1}\right),
-\qquad m=1,2,3.
-\]
 
-Para $M=3$, esta expresión toma la forma:
+En el caso $N=4$ , el modelo predice un triplete energético dado por (\ref{eq:tightbinding}) con $m=1, 2, 3$. Por tanto, para $M=3$, esta expresión toma la forma:
 \[
 E_1=E_0-\sqrt{2}t,
 \qquad
@@ -392,28 +392,28 @@ E_3=E_0+\sqrt{2}t.
 
 A partir de las simulaciones obtenemos que los máximos resonantes de la primera minibanda aparecen en las energías:
 \[
-E_1^{\mathrm{sim}}=0.0925781\,\mathrm{eV},
+E_1^{\mathrm{sim}}=0.09258\,\mathrm{eV},
 \qquad
-E_2^{\mathrm{sim}}=0.105625\,\mathrm{eV},
+E_2^{\mathrm{sim}}=0.10563\,\mathrm{eV},
 \qquad
-E_3^{\mathrm{sim}}=0.121719\,\mathrm{eV}.
+E_3^{\mathrm{sim}}=0.12172\,\mathrm{eV}.
 \]
 
 En los casos de cadenas finitas, $E_0$ debe entenderse como una energía local efectiva. Aunque el valor de referencia viene dado por la resonancia del caso $N=2$, el centro energético del multiplete puede desplazarse ligeramente al considerar una estructura finita y abierta. Por tanto, tomando como referencia el nivel central, $E_0=0.105625\,\mathrm{eV}$, el acoplamiento túnel efectivo puede estimarse a partir de la separación entre los niveles extremos:
 \[
-t=\frac{E_3-E_1}{2\sqrt{2}} \simeq 0.010303\,\mathrm{eV}.
+t=\frac{E_3-E_1}{2\sqrt{2}} \simeq 10.303\,\mathrm{meV}.
 \]
 
 Con este valor, el modelo \textit{tight-binding} predice las energías:
 \[
-E_1^{\mathrm{TB}}\approx 0.091053\,\mathrm{eV},
+E_1^{\mathrm{TB}}\approx 0.09105\,\mathrm{eV},
 \qquad
-E_2^{\mathrm{TB}}=0.105625\,\mathrm{eV},
+E_2^{\mathrm{TB}}=0.10562\,\mathrm{eV},
 \qquad
-E_3^{\mathrm{TB}}\approx 0.120197\,\mathrm{eV}.
+E_3^{\mathrm{TB}}\approx 0.12020\,\mathrm{eV}.
 \]
-
-Los errores absolutos respecto a los resultados simulados son del orden de $10^{-3}\,\mathrm{eV}$, lo que indica un acuerdo notable teniendo en cuenta que el modelo \textit{tight-binding} constituye una aproximación discreta efectiva.
+Los errores relativos respecto a los resultados simulados están en torno al $1.5\%$, lo que indica un acuerdo notable teniendo en cuenta que el modelo \textit{tight-binding} constituye una aproximación discreta efectiva.
+%Los errores absolutos respecto a los resultados simulados son del orden de $10^{-3}\,\mathrm{eV}$,
 
 \subsubsection{Caso $N=5$: Cadena de cuatro pozos acoplados}
 En este caso, el sistema contiene $M=4$ pozos cuánticos acoplados, por lo que el modelo \textit{tight-binding} predice el desdoblamiento del nivel resonante original en un cuadruplete energético. Las energías en este modelo vienen dadas por:
@@ -422,23 +422,23 @@ E_m=E_0-2t\cos\left(\frac{m\pi}{5}\right),
 \qquad m=1,2,3,4.
 \]
 
-A partir de las simulaciones obtenidas mediante el método de matriz de transferencia, los máximos resonantes de la primera minibanda aparecen en:
+Los máximos resonantes de la primera minibanda obtenidos a partir de las simulaciones aparecen en:
 \[
-E_1^{\mathrm{sim}}=0.0908984\,\mathrm{eV},
+E_1^{\mathrm{sim}}=0.09089\,\mathrm{eV},
 \qquad
-E_2^{\mathrm{sim}}=0.0996094\,\mathrm{eV},
+E_2^{\mathrm{sim}}=0.09961\,\mathrm{eV},
 \]
 \[
-E_3^{\mathrm{sim}}=0.112187\,\mathrm{eV},
+E_3^{\mathrm{sim}}=0.11219\,\mathrm{eV},
 \qquad
-E_4^{\mathrm{sim}}=0.124375\,\mathrm{eV}.
+E_4^{\mathrm{sim}}=0.12438\,\mathrm{eV}.
 \]
 
-A diferencia del caso $M=3$, donde el nivel central coincide directamente con $E_0$, para $M=4$ no existe un estado exactamente centrado. Por ello, el parámetro $E_0$ se estima como el centro energético medio del cuadruplete:
-\[
-E_0 \simeq \frac{E_1+E_2+E_3+E_4}{4}\simeq 0.10677\,\mathrm{eV}.
-\]
+A diferencia del caso $M=3$, donde el nivel central coincide directamente con $E_0$, para $M=4$ no existe un estado exactamente centrado. Por ello, el parámetro $E_0$ se estima como el centro energético medio del cuadruplete: $E_0 \simeq 0.10677\,\mathrm{eV}$.
 
+%\[
+%E_0 \simeq \frac{E_1+E_2+E_3+E_4}{4}\simeq 0.10677\,\mathrm{eV}.
+%\]
 Una vez fijado este valor, el parámetro de acoplamiento $t$ puede determinarse ajustando la separación energética observada al patrón cosenoidal predicho por el modelo \textit{tight-binding}. El ajuste proporciona:
 \[
 t\simeq 0.01032\,\mathrm{eV}=10.32\,\mathrm{meV}.
@@ -446,17 +446,17 @@ t\simeq 0.01032\,\mathrm{eV}=10.32\,\mathrm{meV}.
 
 Con estos parámetros, las energías predichas por el modelo resultan:
 \[
-E_1^{\mathrm{TB}}\approx 0.0900640\,\mathrm{eV},
+E_1^{\mathrm{TB}}\approx 0.090064\,\mathrm{eV},
 \qquad
-E_2^{\mathrm{TB}}\approx 0.1003873\,\mathrm{eV},
+E_2^{\mathrm{TB}}\approx 0.10038\,\mathrm{eV},
 \]
 \[
-E_3^{\mathrm{TB}}\approx 0.1131476\,\mathrm{eV},
+E_3^{\mathrm{TB}}\approx 0.11315\,\mathrm{eV},
 \qquad
-E_4^{\mathrm{TB}}\approx 0.1234709\,\mathrm{eV}.
+E_4^{\mathrm{TB}}\approx 0.12347\,\mathrm{eV}.
 \]
 
-Los errores absolutos respecto a las simulaciones permanecen por debajo de $10^{-3}\,\mathrm{eV}$, es decir, del orden del meV. Por tanto, el comportamiento observado para $N=5$ refuerza claramente la interpretación física basada en pozos cuánticos acoplados.
+Los errores relativos respecto a las simulaciones están por debajo del $1\%$. Por tanto, el comportamiento observado para $N=5$ refuerza claramente la interpretación física basada en pozos cuánticos acoplados.
 
 La relativa estabilidad del parámetro de acoplamiento $t$ al variar el número total de pozos (valores del orden de $t\sim 10\,\mathrm{meV}$), resulta coherente con la hipótesis fundamental del modelo \textit{tight-binding}, donde el acoplamiento electrónico depende principalmente del solapamiento local entre pozos vecinos y no de la longitud global de la cadena. La ligerísima tendencia al alza de $t$ refleja las sutiles correcciones energéticas introducidas por el acoplamiento de los pozos de los extremos a los contactos externos abiertos del simulador.
 
@@ -468,8 +468,10 @@ Los cálculos parecen confirmar nuestra hipótesis. Lo que comenzó como un conj
 
 Han pasado varios meses, y hemos conseguido que nuestro cultivo crezca lo suficiente como para obtener resultados más que satisfactorios. El sistema crece a pasos agigantados, justo como queríamos.
 
-A medida que el número de barreras aumenta, los picos de resonancia se van desdoblando, es decir, cada máximo de energía se va fragmentando según aumenta el acoplamiento de los pozos. 
-Esto nos lleva a pensar que a medida que el número de pozos aumenta, los máximos que se apreciaban pasarán a formar parte de un continuo en el que no podrán diferenciarse del resto.
+%A medida que el número de barreras aumenta, los picos de resonancia se van desdoblando, es decir, cada máximo de energía se va fragmentando según aumenta el acoplamiento de los pozos. 
+%Esto nos lleva a pensar que a medida que el número de pozos aumenta, los máximos que se apreciaban pasarán a formar parte de un continuo en el que no podrán diferenciarse del resto.
+A medida que el número de barreras aumenta, los picos de resonancia se van desdoblando, es decir, cada máximo de energía se va fragmentando debido al acoplamiento túnel entre pozos vecinos.
+Esto sugiere que, al incrementar progresivamente el número de pozos, los estados resonantes se vuelven cada vez más densos, hasta el punto de resultar prácticamente indistinguibles entre sí. Como consecuencia, el conjunto de resonancias evoluciona hacia una estructura de minibandas de transmisión permitida.
 Por ello, extendemos el análisis al régimen macroscópico (de 8 a 200 barreras), asimilable a un filamento de micelio consolidado. Las Figuras \ref{fig:Junto_N} y \ref{fig:Separado_N} ilustran cómo los picos discretos se fusionan definitivamente en una banda continua.
 
 \begin{figure}[H]
@@ -626,7 +628,7 @@ donde $k = \sqrt{2mE}/\hbar$. Aplicando las condiciones de frontera $\phi(0) = 0
   E_n = \frac{\hbar^2 k_n^2}{2m} = \frac{\hbar^2 \pi^2 n^2}{2mL^2}.
 \end{equation}
 
-Esta dependencia $E_n \propto 1/L^2$ demuestra analíticamente que al mutar una única célula y aumentar su anchura $L$ (de $5\text{ nm}$ a $10\text{ nm}$), sus autoestados de energía caen dramáticamente hacia valores más bajos. Al no coincidir en energía con los pozos adyacentes, la probabilidad de efecto túnel resonante se destruye, colapsando el canal de transmisión de la hifa tal y como hemos validado en la Figura \ref{fig:Interfase_Rota}.
+Esta dependencia $E_n \propto 1/L^2$ demuestra analíticamente que al mutar una única célula y aumentar su anchura $L$ (de $5\text{ nm}$ a $10\text{ nm}$), sus autoestados de energía se desplazan drásticamente hacia valores más bajos. Al no coincidir en energía con los pozos adyacentes, la probabilidad de efecto túnel resonante se destruye, colapsando el canal de transmisión de la hifa tal y como hemos validado en la Figura \ref{fig:Interfase_Rota}.
 
 Por otro lado, otros de nuestros microorganismos presentaron una obstrucción física: la calcificación de la interconexión celular central, incrementando la anchura de la barrera de potencial de 2 nm a 8 nm. Los resultados de la Figura \ref{fig:Frustracion_Fuerte} muestran una atenuación 
 dramática de la transmitancia en todo el espectro energético analizado. A diferencia del caso anterior, aquí la frustración no se debe 
@@ -675,13 +677,21 @@ Han pasado casi cinco meses desde la primera anotación de este cuaderno.
 
 Al iniciar esta investigación, los hongos no eran más que una curiosidad biológica encontrada en un artículo olvidado de principios del siglo XXI. Hoy sabemos que una red miceliar puede reproducir, al menos de forma aproximada, algunos de los mecanismos fundamentales que hicieron posible la revolución electrónica de la antigua civilización.
 
-Hemos empleado el simulador \texttt{Piece-Wise Constant Potential Barrier Tool} de nanoHUB \cite{nano} para analizar el transporte cuántico a través de una red de pozos y barreras. El hilo conductor ha sido la analogía entre la red de pozos y barreras y la estructura del micelio de los hongos, modelando los pozos como células fúngicas y las barreras como septos. En un primer lugar, se ha observado cómo el aumento del número de barreras provoca un desdoblamiento de los niveles energéticos en los que se produce resonancia, lo que significa que la señal tiene cada vez más ``caminos'' para cruzar, acabando por formar una minibanda de conducción cuando la red crece lo suficiente, un comportamiento macroscópico que se ha corroborado de forma analítica mediante el modelo de Kronig-Penney.
+Hemos empleado el simulador \texttt{Piece-Wise Constant Potential Barrier Tool} de nanoHUB \cite{nano} para analizar el transporte cuántico a través de una red de pozos y barreras. El hilo conductor ha sido la analogía entre la red de pozos y barreras y la estructura del micelio de los hongos, modelando los pozos como células fúngicas y las barreras como septos. 
 
-Por otro lado, uno de los puntos del trabajo ha sido comprobar que la simulación es más exacta que los modelos clásicos de los años 70, como el estudio de Tsu y Esaki \cite{tsu_esaki1973}. Al comparar las gráficas obtenidas con las de dicho estudio, se constató que los picos de resonancia se situaban en energías un poco más altas. Esta discrepancia se debe a que se ha empleado una masa efectiva más cercana a la realidad y a que el simulador aplica rigurosamente las condiciones de contorno de BenDaniel-Duke, lo que corrige la posición exacta de los picos.
+%En un primer lugar, se ha observado cómo el aumento del número de barreras provoca un desdoblamiento de los niveles energéticos en los que se produce resonancia, lo que significa que la señal tiene cada vez más ``caminos'' para cruzar, acabando por formar una minibanda de conducción cuando la red crece lo suficiente, un comportamiento macroscópico que se ha corroborado de forma analítica mediante el modelo de Kronig-Penney.
+%Por otro lado, uno de los puntos del trabajo ha sido comprobar que la simulación es más exacta que los modelos clásicos de los años 70, como el estudio de Tsu y Esaki \cite{tsu_esaki1973}. Al comparar las gráficas obtenidas con las de dicho estudio, se constató que los picos de resonancia se situaban en energías un poco más altas. Esta discrepancia se debe a que se ha empleado una masa efectiva más cercana a la realidad y a que el simulador aplica rigurosamente las condiciones de contorno de BenDaniel-Duke, lo que corrige la posición exacta de los picos.
+%También se ha calculado analíticamente el caso más sencillo de dos barreras. Para ello, se ha usado el modelo del interferómetro de Fabry-Pérot, que analiza el pozo como si la onda rebotara entre dos espejos. Al resolver las ecuaciones, se obtuvieron exactamente los mismos números para las energías donde la transmisión es máxima ($0.1056\text{ eV}$ y $0.405\text{ eV}$).
+
+En primer lugar, hemos comprobado que la simulación nos ha proporcionado resultados más exactos que los modelos clásicos de los años 70 aplicados en el estudio de Tsu y Esaki \cite{tsu_esaki1973}. Al comparar las gráficas obtenidas con las de dicho estudio, se constató que los picos de resonancia se situaban en energías un poco más altas. Esta discrepancia se debe a que se ha empleado una masa efectiva más cercana a la realidad y a que el simulador aplica rigurosamente las condiciones de contorno de BenDaniel-Duke, lo que corrige la posición exacta de los picos.
 
 También se ha calculado analíticamente el caso más sencillo de dos barreras. Para ello, se ha usado el modelo del interferómetro de Fabry-Pérot, que analiza el pozo como si la onda rebotara entre dos espejos. Al resolver las ecuaciones, se obtuvieron exactamente los mismos números para las energías donde la transmisión es máxima ($0.1056\text{ eV}$ y $0.405\text{ eV}$).
 
-Se ha comprobado que el sistema es muy delicado: si una célula muta y se hace más grande, sus energías cambian y ya no encajan con las de las vecinas, cortando el paso de la señal. De la misma manera, si la pared entre dos células (el septo) se hace muy gruesa, el electrón se topa con un muro demasiado ancho y resulta incapaz de atravesarlo por efecto túnel.
+A continuación, se ha analizado cómo evoluciona el sistema al aumentar progresivamente el número de pozos acoplados. Mediante una aproximación inspirada en el modelo \textit{tight-binding}, se comprobó que los estados resonantes se desdoblan de forma sistemática en dobletes, tripletes y cuadrupletes. El excelente acuerdo obtenido entre las predicciones analíticas y las simulaciones numéricas indica que el comportamiento observado está gobernado por un mismo mecanismo físico de acoplamiento túnel entre pozos vecinos, proporcionando una interpretación microscópica de la formación progresiva de estructuras de banda.
+
+Finalmente, se ha observado cómo el aumento del número de barreras provoca que los niveles resonantes se vuelvan cada vez más densos, agrupándose en minibandas de transmisión permitida cuando la red crece lo suficiente. Este comportamiento se ha corroborado de forma analítica mediante el modelo de Kronig-Penney, estableciendo una conexión natural entre las resonancias individuales observadas en sistemas pequeños y la aparición de bandas de energía en estructuras periódicas.
+
+Se ha comprobado además que el sistema es muy delicado: si una célula muta y se hace más grande, sus energías cambian y ya no encajan con las de las vecinas, cortando el paso de la señal. De la misma manera, si la pared entre dos células (el septo) se hace muy gruesa, el electrón se topa con un muro demasiado ancho y resulta incapaz de atravesarlo por efecto túnel.
 
 En conclusión, para que la red funcione y transmita información de forma perfecta, necesita ser muy simétrica y ordenada. Aunque en la vida real factores como el calor, el choque con otras partículas o las impurezas harían que la transmisión no fuera del $100\%$, este modelo ha permitido entender con una gran precisión cómo se comporta la física cuántica detrás de la propagación de señales en esta estructura.
 
